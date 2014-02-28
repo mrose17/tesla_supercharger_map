@@ -63,8 +63,8 @@ define(
             var mapOptions = {
                 center: new google.maps.LatLng(MapView.INITIAL_LAT, MapView.INITIAL_LNG),
                 zoom: MapView.INITIAL_ZOOM,
-                mapTypeControl: true,
                 scaleControl: true,
+                mapTypeControl: true,
                 mapTypeControlOptions: {
                     mapTypeIds: [google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.HYBRID, google.maps.MapTypeId.TERRAIN],
                     style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR
