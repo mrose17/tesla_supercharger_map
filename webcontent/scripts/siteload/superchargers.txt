@@ -301,14 +301,14 @@ url: http://www.teslamotors.com/supercharger/grandjunction
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24867-Grand-Junction-CO-Supercharger
 dateOpened: 2014-01-10
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-name: Lonetree, CO
+name: Lone Tree, CO
 street: 8401 Park Meadows Center Dr
-city: Lonetree
+city: Lone Tree
 state: CO
 zip: 80124
 country: USA
-gps: 39.562125, -104.8761924
-url: http://www.teslamotorsclub.com/showthread.php/27255-Supercharger-Lonetree-CO
+gps: 39.563776 -104.875651
+url: http://www.teslamotors.com/supercharger/lonetree
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/27255-Supercharger-Lonetree-CO
 dateOpened: 2014-02-26
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
