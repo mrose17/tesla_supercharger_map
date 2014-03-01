@@ -306,7 +306,7 @@ city: Lone Tree
 state: CO
 zip: 80124
 country: USA
-gps: 39.563776 -104.875651
+gps: 39.563776, -104.875651
 url: http://www.teslamotors.com/supercharger/lonetree
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/27255-Supercharger-Lonetree-CO
 dateOpened: 2014-02-26
