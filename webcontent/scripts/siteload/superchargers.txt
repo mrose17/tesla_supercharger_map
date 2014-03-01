@@ -26,7 +26,6 @@
 # url          | string       | yes      |         | URL pointing to Tesla's web page for this supercharger
 # urlDiscuss   | string       | no       |         | URL pointing to discussion forum/thread for this supercharger
 # dateOpened   | string       | no       |         | date opened
-# construction | boolean      | no       |         | true indicates that this location is under construction
 # status       | enum         | yes      | OPEN    | must be one of OPEN, CONSTRUCTION, PERMIT.
 # count        | boolean      | no       | true    | false means this location should NOT be counted (because part of pair Tesla counts as 1).
 #              |              |          |
