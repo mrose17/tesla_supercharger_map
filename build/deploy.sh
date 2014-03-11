@@ -4,8 +4,8 @@
 #==============================================================================================
 
 WEB_APP_DIR='../webcontent-built'
-REMOTE_HOST=dev.redshiftsoft.com
-SSH_USER=keith
+REMOTE_HOST=supercharge.info
+SSH_USER=tomcat
 DIR_DEPLOY=/var/www/supercharge.info
 BANNER="##########################################################"
 
@@ -25,5 +25,5 @@ echo "${BANNER} deleting locally     : ${WEB_APP_DIR}"
 rm -r ${WEB_APP_DIR}
 
 echo "${BANNER} changing dir perms   : ${DIR_DEPLOY}"
-ssh ${SSH_USER}@${REMOTE_HOST} chown -R keith:www-data ${DIR_DEPLOY}
+ssh ${SSH_USER}@${REMOTE_HOST} chown -R ${SSH_USER}:www-data ${DIR_DEPLOY}
 
