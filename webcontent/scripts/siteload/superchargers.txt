@@ -664,10 +664,10 @@ city: Plymouth
 state: NC
 zip: 27962
 country: USA
-gps: 35.850609, -76.756162
-url: http://www.teslamotorsclub.com/showthread.php/22396-Plymouth-NC-Supercharger-Location
+gps: 35.850587, -76.756116
+url: http://www.teslamotors.com/supercharger/plymouth
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/22396-Plymouth-NC-Supercharger-Location
-status: CONSTRUCTION
+dateOpened: 2014-03-12
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Rocky Mount, NC
 street: 651 N. Winstead Avenue
