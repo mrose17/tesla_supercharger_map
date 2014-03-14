@@ -226,6 +226,17 @@ gps: 33.921068, -118.330054
 url: http://www.teslamotors.com/supercharger/losangeles
 dateOpened: 2012-11-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Indio, CA
+street: 42100 Jackson St
+city: Indio
+state: CA
+zip: 92203
+country: USA
+gps: 33.741484, -116.215019
+url: http://www.teslamotors.com/forum/forums/supercharger-dashboard-update
+urlDiscuss: http://www.teslamotors.com/forum/forums/supercharger-dashboard-update
+status: PERMIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Mt Shasta, CA
 street: 111 Morgan Way
 city: Mt. Shasta
