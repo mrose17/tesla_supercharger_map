@@ -277,7 +277,7 @@ country: USA
 gps: 38.771576, -121.268783
 url: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
-status: PERMIT
+status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Vacaville, CA
 street: 321 Nut Tree RD
