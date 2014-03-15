@@ -247,6 +247,17 @@ gps: 41.310233, -122.317278
 url: http://www.teslamotors.com/supercharger/mtshasta
 dateOpened: 2013-10-23
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Oxnard, CA
+street: Collection at Riverpark
+city: Oxnard
+state: CA
+zip: 93036
+country: USA
+gps: 34.238654, -119.177398
+url: http://www.teslamotorsclub.com/showthread.php/23621-Oxnard-Supercharger-Station
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/23621-Oxnard-Supercharger-Station
+status: PERMIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Tejon Ranch, CA
 street: 5602 Dennis McCarthy Dr
 city: Lebec
