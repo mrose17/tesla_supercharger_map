@@ -897,15 +897,15 @@ urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21121-Utah-Super-Charg
 dateOpened: 2014-01-13
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Green River, UT
-street: 1765 E Main St
+street: 1765 East Main St
 city: Green River
 state: UT
 zip: 84525
 country: USA
-gps: 38.9930036, -110.1400054
-url: http://www.teslamotorsclub.com/showthread.php/26516-Supercharger-Green-River-UT
+gps: 38.993577, -110.140513
+url: http://www.teslamotors.com/supercharger/greenriver
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26516-Supercharger-Green-River-UT
-status: CONSTRUCTION
+dateOpened: 2014-03-17
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Moab, UT
 street: 16 South Main St.
