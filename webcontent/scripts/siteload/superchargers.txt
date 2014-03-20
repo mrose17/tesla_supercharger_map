@@ -626,6 +626,16 @@ gps: 40.5448144,-74.333248
 url: http://www.teslamotorsclub.com/showthread.php/26730-Supercharger-Edison-NJ
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26730-Supercharger-Edison-NJ
 status: PERMIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Hamilton Marketplace, NJ
+street: 425 Marketplace Blvd
+city: Hamilton Township
+state: NJ
+zip: 08691
+country: USA
+gps: 40.195655, -74.641185
+url: http://www.teslamotorsclub.com/forumdisplay.php/77-Charging-Standards-and-Infrastructure
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| New York
 name: Albany, NY
 street: 131 Colonie Center
