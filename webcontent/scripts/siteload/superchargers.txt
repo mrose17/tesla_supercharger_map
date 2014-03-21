@@ -634,7 +634,8 @@ state: NJ
 zip: 08691
 country: USA
 gps: 40.195655, -74.641185
-url: http://www.teslamotorsclub.com/forumdisplay.php/77-Charging-Standards-and-Infrastructure
+url: http://www.teslamotorsclub.com/showthread.php/28931-Supercharger-Hamilton-Marketplace-NJ
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/28931-Supercharger-Hamilton-Marketplace-NJ
 status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| New York
 name: Albany, NY
