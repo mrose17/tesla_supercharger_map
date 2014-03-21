@@ -39,16 +39,15 @@
 
 #-----------------------------------------------------------------------------------------------------------------------------| Arizona
 name: Buckeye, AZ
-street: 444 S Watson RD
+street: 416 S Watson RD
 city: Buckeye
 state: AZ
 zip: 85326
 country: USA
-gps: 33.443242, -112.557378
+gps: 33.443011, -112.556876
 url: http://www.teslamotors.com/supercharger/buckeye
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25317-Supercharger-Buckeye-AZ
 dateOpened: 2014-03-20
-status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Flagstaff, AZ
 street: 2650 S Beulah Blvd
