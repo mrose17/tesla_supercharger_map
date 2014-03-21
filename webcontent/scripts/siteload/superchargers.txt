@@ -45,8 +45,9 @@ state: AZ
 zip: 85326
 country: USA
 gps: 33.443242, -112.557378
-url: http://www.teslamotorsclub.com/showthread.php/25317-Supercharger-Buckeye-AZ
+url: http://www.teslamotors.com/supercharger/buckeye
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25317-Supercharger-Buckeye-AZ
+dateOpened: 2014-03-20
 status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Flagstaff, AZ
