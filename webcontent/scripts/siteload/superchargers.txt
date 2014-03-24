@@ -285,7 +285,7 @@ city: Roseville
 state: CA
 zip: 95678
 country: USA
-gps: 38.771576, -121.268783
+gps: 38.771277, -121.266362
 url: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
 status: CONSTRUCTION
