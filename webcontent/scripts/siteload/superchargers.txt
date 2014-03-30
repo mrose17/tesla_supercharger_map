@@ -929,6 +929,17 @@ url: http://www.teslamotors.com/supercharger/moab
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21121-Utah-Super-Charger-Locations
 dateOpened: 2014-01-22
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Richfield, UT
+street: 20 W 1400 N
+city: Richfield
+state: UT
+zip: 84701
+country: USA
+gps: 38.788161, -112.083841
+url: http://www.teslamotorsclub.com/showthread.php/29281-Richfield-Utah-Supercharger
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29281-Richfield-Utah-Supercharger
+status: CONSTRUCTION
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: St George, UT
 street: 1091 N Bluff St
 city: Saint George
