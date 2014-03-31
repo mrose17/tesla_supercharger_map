@@ -1,6 +1,6 @@
 define(
-    ['util/Events', 'util/Objects', 'site/SiteIterator', 'site/Sites', 'page/map/MapViewContextMenu', 'page/map/InfoWindowRender', 'page/map/MarkerFactory', 'page/map/RoutingWaypoint'],
-    function (Events, Objects, SiteIterator, Sites, MapViewContextMenu, InfoWindowRender, MarkerFactory, RoutingWaypoint) {
+	    ['util/Events', 'util/Objects', 'site/SiteIterator', 'site/Sites', 'page/map/MapViewContextMenu', 'page/map/InfoWindowRender', 'page/map/MarkerFactory', 'page/map/RoutingWaypoint', 'util/QueryStrings'],
+	    function (Events, Objects, SiteIterator, Sites, MapViewContextMenu, InfoWindowRender, MarkerFactory, RoutingWaypoint, QueryStrings) {
 
 
         /**
@@ -31,12 +31,28 @@ define(
 
         };
 
-        /**
-         * Constants
-         */
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// Map Initial Settings
+//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         MapView.INITIAL_LAT = 38.0;
         MapView.INITIAL_LNG = -96.5;
         MapView.INITIAL_ZOOM = 5;
+
+        try	// We don't want to interrupt the load because of bad parameters
+        {
+        	var initialCenter = QueryStrings.getByName("Center");
+	        if (QueryStrings.getByName("Center")) {
+	        	MapView.INITIAL_LAT = parseFloat(initialCenter.split(",")[0]);
+	        	MapView.INITIAL_LNG = parseFloat(initialCenter.split(",")[1]);
+	        };
+	        
+	        var initialZoom = QueryStrings.getByName("Zoom");
+	        if ((initialZoom) && (!isNaN(initialZoom))) {
+	        	MapView.INITIAL_ZOOM = parseInt(initialZoom)
+        };
+        } catch(e) {
+        	if (window.console) console.log(e);
+        }
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // Event methods that delegate to jquery object for triggering/observing custom events.
