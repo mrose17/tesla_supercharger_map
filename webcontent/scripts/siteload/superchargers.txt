@@ -896,6 +896,17 @@ gps: 31.58224, -97.10915
 url: http://www.teslamotors.com/supercharger/waco
 dateOpened: 2013-09-07
 #-----------------------------------------------------------------------------------------------------------------------------| Utah
+name: Beaver, UT
+street: 15 N and 160
+city: Beaver
+state: UT
+zip: 84713
+country: USA
+gps: 38.249281, -112.652903
+url: http://www.teslamotorsclub.com/showthread.php/29316-Supercharger-Beaver-UT
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29316-Supercharger-Beaver-UT
+status: CONSTRUCTION
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Blanding, UT
 street: 12 N Grayson Pkwy
 city: Blanding
