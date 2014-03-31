@@ -2,7 +2,7 @@ requirejs.config({});
 
 
 // Start the main app logic.
-requirejs([ 'nav/NavBar', 'util/Querystrings' ], function (NavBar, QueryStrings) {
+requirejs([ 'nav/NavBar', 'util/QueryStrings' ], function (NavBar, QueryStrings) {
 
     /**
      * ON DOCUMENT READY
@@ -15,7 +15,7 @@ requirejs([ 'nav/NavBar', 'util/Querystrings' ], function (NavBar, QueryStrings)
             navBar.changePage(directNav);
         } else {
             navBar.changePage("map");
-        };
+        }
     });
 
 });
