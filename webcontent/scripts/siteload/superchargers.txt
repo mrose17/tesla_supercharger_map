@@ -981,7 +981,7 @@ country: USA
 gps: 38.6422662,-77.294923
 url: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
-status: PERMIT
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| Washington
 name: Burlington, WA
 street: 9384 Old Highway 99
