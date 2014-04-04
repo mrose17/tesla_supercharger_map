@@ -55,6 +55,7 @@ define(['siteload/FieldDefinition', 'util/Dates', 'site/SiteStatus'], function (
         'country': new FieldDefinition('country', true, ADDRESS),
 
         'gps': new FieldDefinition('gps', true, GPS),
+        'elevation': new FieldDefinition('elevation', true, I),
 
         'url': new FieldDefinition('url', true, I),
 

@@ -22,7 +22,8 @@
 # Name         | Type         | Required | Default | Description
 # ----------------------------------------------------------------------------------------------------------------------------------------------------
 # name         | string       | yes      |         | display name for the site
-# location     | float, float | yes      |         | GPS coordinates
+# gps          | float, float | yes      |         | GPS coordinates
+# elevation    | integer      | yes      |         | Elevation relative to sea level in meters.
 # url          | string       | yes      |         | URL pointing to Tesla's web page for this supercharger
 # urlDiscuss   | string       | no       |         | URL pointing to discussion forum/thread for this supercharger
 # dateOpened   | string       | no       |         | date opened
@@ -45,6 +46,7 @@ state: AZ
 zip: 85326
 country: USA
 gps: 33.443011, -112.556876
+elevation: 338
 url: http://www.teslamotors.com/supercharger/buckeye
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25317-Supercharger-Buckeye-AZ
 dateOpened: 2014-03-20
@@ -56,6 +58,7 @@ state: AZ
 zip: 86001
 country: USA
 gps: 35.174272, -111.66328
+elevation: 2106
 url: http://www.teslamotors.com/supercharger/flagstaff
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24922-Supercharger-Flagstaff-AZ
 dateOpened: 2014-01-10
@@ -67,6 +70,7 @@ state: AZ
 zip: 85337
 country: USA
 gps: 32.943969, -112.733506
+elevation: 221
 url: http://www.teslamotorsclub.com/showthread.php/26077-Supercharger-Gila-Bend-AZ
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26077-Supercharger-Gila-Bend-AZ
 status: CONSTRUCTION
@@ -78,6 +82,7 @@ state: AZ
 zip: 86025
 country: USA
 gps: 34.922962, -110.145558
+elevation: 1596
 url: http://www.teslamotors.com/supercharger/holbrook
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25375-Supercharger-Holbrook-AZ
 dateOpened: 2014-01-15
@@ -89,6 +94,7 @@ state: AZ
 zip: 86401
 country: USA
 gps: 35.191331, -114.065592
+elevation: 1025
 url: http://www.teslamotors.com/supercharger/kingman
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25072-Supercharger-Kingman-AZ
 dateOpened: 2014-01-22
@@ -100,6 +106,7 @@ state: AZ
 zip: 85346
 country: USA
 gps: 33.661314, -114.242174
+elevation: 280
 url: http://www.teslamotors.com/supercharger/quartzsite
 dateOpened: 2013-11-14
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -110,6 +117,7 @@ state: AZ
 zip: 85390
 country: USA
 gps: 33.9702333, -112.73165
+elevation: 628
 url: http://www.teslamotorsclub.com/showthread.php/26363-Supercharger-Wickenburg-AZ
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26363-Supercharger-Wickenburg-AZ
 status: PERMIT
@@ -121,6 +129,7 @@ state: AZ
 zip: 85364
 country: USA
 gps: 32.726686, -114.619093
+elevation: 43
 url: http://www.teslamotors.com/supercharger/yuma
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26337-Supercharger-Yuma-AZ
 dateOpened: 2014-02-04
@@ -132,6 +141,7 @@ state: CA
 zip: 93422
 country: USA
 gps: 35.48656, -120.66633
+elevation: 262
 url: http://www.teslamotors.com/supercharger/atascadero
 dateOpened: 2013-07-03
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -142,6 +152,7 @@ state: CA
 zip: 92311
 country: USA
 gps: 34.849129, -117.085446
+elevation: 725
 url: http://www.teslamotors.com/supercharger/barstow
 dateOpened: 2012-11-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -152,6 +163,7 @@ state: CA
 zip: 93427
 country: USA
 gps: 34.614560, -120.188387
+elevation: 114
 url: http://www.teslamotors.com/supercharger/buellton
 dateOpened: 2012-07-03
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -162,6 +174,7 @@ state: CA
 zip: 96021
 country: USA
 gps: 39.926454, -122.198393
+elevation: 87
 url: http://www.teslamotors.com/supercharger/corning
 dateOpened: 2013-10-18
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -172,6 +185,7 @@ state: CA
 zip: 92243
 country: USA
 gps: 32.7637233, -115.5315171
+elevation: -8
 url: http://www.teslamotorsclub.com/showthread.php/26691-Supercharger-El-Centro-CA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26691-Supercharger-El-Centro-CA
 status: PERMIT
@@ -183,6 +197,7 @@ state: CA
 zip: 95630
 country: USA
 gps: 38.64258, -121.18806
+elevation: 63
 url: http://www.teslamotors.com/supercharger/folsom
 dateOpened: 2013-11-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -193,6 +208,7 @@ state: CA
 zip: 94538
 country: USA
 gps: 37.493447, -121.945654
+elevation: 6
 url: http://www.teslamotors.com/supercharger/fremont
 dateOpened: 2013-08-16
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -203,6 +219,7 @@ state: CA
 zip: 95020
 country: USA
 gps: 37.02493, -121.56542
+elevation: 63
 url: http://www.teslamotors.com/supercharger/gilroy
 dateOpened: 2012-11-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -213,6 +230,7 @@ state: CA
 zip: 93210
 country: USA
 gps: 36.254150, -120.237896
+elevation: 139
 url: http://www.teslamotors.com/supercharger/harrisranch
 dateOpened: 2012-11-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -223,6 +241,7 @@ state: CA
 zip: 90250
 country: USA
 gps: 33.921068, -118.330054
+elevation: 18
 url: http://www.teslamotors.com/supercharger/losangeles
 dateOpened: 2012-11-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -233,6 +252,7 @@ state: CA
 zip: 92203
 country: USA
 gps: 33.741484, -116.215019
+elevation: -3
 url: http://www.teslamotors.com/forum/forums/supercharger-dashboard-update
 urlDiscuss: http://www.teslamotors.com/forum/forums/supercharger-dashboard-update
 status: PERMIT
@@ -244,6 +264,7 @@ state: CA
 zip: 96067
 country: USA
 gps: 41.310233, -122.317278
+elevation: 1066
 url: http://www.teslamotors.com/supercharger/mtshasta
 dateOpened: 2013-10-23
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -254,6 +275,7 @@ state: CA
 zip: 93036
 country: USA
 gps: 34.238654, -119.177398
+elevation: 24
 url: http://www.teslamotorsclub.com/showthread.php/23621-Oxnard-Supercharger-Station
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/23621-Oxnard-Supercharger-Station
 status: PERMIT
@@ -265,6 +287,7 @@ state: CA
 zip: 93243
 country: USA
 gps: 34.98734, -118.94623
+elevation: 337
 url: http://www.teslamotors.com/supercharger/tejonranch
 dateOpened: 2012-11-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -275,6 +298,7 @@ state: CA
 zip: 92675
 country: USA
 gps: 33.498458, -117.6632
+elevation: 30
 url: http://www.teslamotorsclub.com/showthread.php/24984-Supercharger-San-Juan-Capistrano-CA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24984-Supercharger-San-Juan-Capistrano-CA
 status: CONSTRUCTION
@@ -286,6 +310,7 @@ state: CA
 zip: 95678
 country: USA
 gps: 38.771277, -121.266362
+elevation: 66
 url: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
 status: CONSTRUCTION
@@ -297,6 +322,7 @@ state: CA
 zip: 95687
 country: USA
 gps: 38.366645, -121.958136
+elevation: 34
 url: http://www.teslamotors.com/supercharger/vacaville
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24773-Supercharger-Vacaville-CA
 dateOpened: 2013-12-19
@@ -308,6 +334,7 @@ state: CO
 zip: 81601
 country: USA
 gps: 39.552680, -107.340168
+elevation: 1762
 url: http://www.teslamotors.com/supercharger/glenwoodsprings
 dateOpened: 2012-09-17
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -318,6 +345,7 @@ state: CO
 zip: 81505
 country: USA
 gps: 39.090758, -108.604325
+elevation: 1386
 url: http://www.teslamotors.com/supercharger/grandjunction
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24867-Grand-Junction-CO-Supercharger
 dateOpened: 2014-01-10
@@ -329,6 +357,7 @@ state: CO
 zip: 80124
 country: USA
 gps: 39.563776, -104.875651
+elevation: 1785
 url: http://www.teslamotors.com/supercharger/lonetree
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/27255-Supercharger-Lonetree-CO
 dateOpened: 2014-02-26
@@ -340,6 +369,7 @@ state: CO
 zip: 80498
 country: USA
 gps: 39.631457, -106.070816
+elevation: 2670
 url: http://www.teslamotors.com/supercharger/silverthorne
 dateOpened: 2013-10-03
 #-----------------------------------------------------------------------------------------------------------------------------| Connecticut
@@ -350,6 +380,7 @@ state: CT
 zip: 06460
 country: USA
 gps: 41.245814, -73.008988
+elevation: 19
 url: http://www.teslamotors.com/supercharger/milfordnorth
 dateOpened: 2012-12-16
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -360,10 +391,11 @@ state: CT
 zip: 06460
 country: USA
 gps: 41.246232, -73.010529
+elevation: 19
 url: http://www.teslamotors.com/supercharger/milfordsouth
 dateOpened: 2012-12-16
 count: false
-#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Darien, CT (north)
 street: Connecticut Welcome Center
 city: North Darien
@@ -371,6 +403,7 @@ state: CT
 zip: 06820
 country: USA
 gps: 41.080599, -73.461905
+elevation: 13
 url: http://www.teslamotors.com/supercharger/dariennorth
 dateOpened: 2013-06-19
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -381,10 +414,11 @@ state: CT
 zip: 06820
 country: USA
 gps: 41.068167, -73.504659
+elevation: 14
 url: http://www.teslamotors.com/supercharger/dariensouth
 dateOpened: 2013-06-19
 count: false
-#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Greenwich, CT (north)
 street: 3000 Merritt Parkway
 city: Greenwich
@@ -392,6 +426,7 @@ state: CT
 zip: 06830
 country: USA
 gps: 41.041538, -73.671661
+elevation: 82
 url: http://www.teslamotors.com/supercharger/greenwichnorth
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25176-Greenwich-CT-Merritt-Parkway-Supercharger
 dateOpened: 2014-02-12
@@ -403,6 +438,7 @@ state: CT
 zip: 06830
 country: USA
 gps: 41.040555, -73.673445
+elevation: 81
 url: http://www.teslamotors.com/supercharger/greenwichsouth
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25176-Greenwich-CT-Merritt-Parkway-Supercharger
 dateOpened: 2014-02-12
@@ -415,6 +451,7 @@ state: DE
 zip: 19725
 country: USA
 gps: 39.662313, -75.691980
+elevation: 18
 url: http://www.teslamotors.com/supercharger/newark
 dateOpened: 2012-12-21
 #-----------------------------------------------------------------------------------------------------------------------------| Florida
@@ -425,6 +462,7 @@ state: FL
 zip: 33913
 country: USA
 gps: 26.485640, -81.787136
+elevation: 6
 url: http://www.teslamotors.com/supercharger/fortmyers
 dateOpened: 2013-07-25
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -435,6 +473,7 @@ state: FL
 zip: 32128
 country: USA
 gps: 29.108566, -81.034569
+elevation: 7
 url: http://www.teslamotors.com/supercharger/portorange
 dateOpened: 2013-09-13
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -445,6 +484,7 @@ state: FL
 zip: 34986
 country: USA
 gps: 27.313023, -80.406688
+elevation: 8
 url: http://www.teslamotors.com/supercharger/portstlucie
 dateOpened: 2013-07-24
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -455,6 +495,7 @@ state: FL
 zip: 32092
 country: USA
 gps: 29.9207352, -81.416337
+elevation: 14
 url: http://www.teslamotorsclub.com/showthread.php/25177-St-Augustine-Supercharger
 dateOpened: 2014-01-03
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -467,6 +508,7 @@ state: GA
 zip: 31408
 country: USA
 gps: 32.135507, -81.212767
+elevation: 6
 url: http://www.teslamotors.com/supercharger/savannah
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24771-Supercharger-Savannah-GA
 dateOpened: 2014-01-15
@@ -478,6 +520,7 @@ state: IL
 zip: 60505
 country: USA
 gps: 41.760671, -88.309184
+elevation: 197
 url: http://www.teslamotors.com/supercharger/aurora
 dateOpened: 2014-02-24
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -488,6 +531,7 @@ state: IL
 zip: 60035
 country: USA
 gps: 42.17434, -87.816626
+elevation: 195
 url: http://www.teslamotors.com/supercharger/highlandpark
 dateOpened: 2013-12-20
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -498,6 +542,7 @@ state: IL
 zip: 61112
 country: USA
 gps: 42.243896, -88.978877
+elevation: 238
 url: http://www.teslamotors.com/supercharger/rockford
 dateOpened: 2013-09-12
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -508,6 +553,7 @@ state: IL
 zip: 61761
 country: USA
 gps: 40.508497, -88.985575
+elevation: 236
 url: http://www.teslamotors.com/supercharger/normal
 dateOpened: 2013-06-26
 #-----------------------------------------------------------------------------------------------------------------------------| Indiana
@@ -518,6 +564,7 @@ state: IN
 zip: 46703
 country: USA
 gps: 41.699048, -85.000326
+elevation: 329
 url: http://www.teslamotors.com/supercharger/angola
 dateOpened: 2013-12-09
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -528,6 +575,7 @@ state: IN
 zip: 46545
 country: USA
 gps: 41.7174, -86.1887
+elevation: 234
 url: http://www.teslamotors.com/supercharger/mishawaka
 dateOpened: 2013-12-11
 #-----------------------------------------------------------------------------------------------------------------------------| Maryland
@@ -538,6 +586,7 @@ state: MD
 zip: 20817
 country: USA
 gps: 39.023876, -77.144352
+elevation: 92
 url: http://www.teslamotors.com/supercharger/bethesda
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26484-Supercharger-Bethesda-MD
 dateOpened: 2014-01-30
@@ -549,6 +598,7 @@ state: MD
 zip: 21740
 country: USA
 gps: 39.605859, -77.733324
+elevation: 164
 url: http://www.teslamotors.com/supercharger/hagerstown
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25085-Maryland-Superchargers?p=523453#post523453
 dateOpened: 2014-01-23
@@ -560,6 +610,7 @@ state: MN
 zip: 56007
 country: USA
 gps: 43.68606, -93.357721
+elevation: 383
 url: http://www.teslamotors.com/supercharger/albertlea
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25097-Minnesota-Supercharging-Discussion-amp-Tracking
 dateOpened: 2014-01-15
@@ -571,6 +622,7 @@ state: MN
 zip: 56187
 country: USA
 gps: 43.63385, -95.595647
+elevation: 478
 url: http://www.teslamotors.com/supercharger/worthington
 dateOpened: 2013-12-11
 #-----------------------------------------------------------------------------------------------------------------------------| Michigan
@@ -581,6 +633,7 @@ state: MI
 zip: 49085
 country: USA
 gps: 42.056357, -86.456352
+elevation: 210
 url: http://www.teslamotors.com/supercharger/stjoseph
 dateOpened: 2013-11-26
 #-----------------------------------------------------------------------------------------------------------------------------| New Mexico
@@ -591,6 +644,7 @@ state: NM
 zip: 87402
 country: USA
 gps: 36.766371, -108.144047
+elevation: 1673
 url: http://www.teslamotors.com/supercharger/farmington
 dateOpened: 2014-01-10
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -601,6 +655,7 @@ state: NM
 zip: 87301
 country: USA
 gps: 35.505278, -108.828094
+elevation: 1970
 url: http://www.teslamotors.com/supercharger/gallup
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24954-Supercharger-Gallup-NM
 dateOpened: 2014-01-07
@@ -612,6 +667,7 @@ state: NV
 zip: 89101
 country: USA
 gps: 36.165906, -115.138655
+elevation: 609
 url: http://www.teslamotors.com/supercharger/lasvegas
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24924-Supercharger-Las-Vegas-NV
 dateOpened: 2014-02-19
@@ -623,6 +679,7 @@ state: NJ
 zip: 08837
 country: USA
 gps: 40.5448144,-74.333248
+elevation: 30
 url: http://www.teslamotorsclub.com/showthread.php/26730-Supercharger-Edison-NJ
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26730-Supercharger-Edison-NJ
 status: PERMIT
@@ -634,6 +691,7 @@ state: NJ
 zip: 08691
 country: USA
 gps: 40.195655, -74.641185
+elevation: 21
 url: http://www.teslamotorsclub.com/showthread.php/28931-Supercharger-Hamilton-Marketplace-NJ
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/28931-Supercharger-Hamilton-Marketplace-NJ
 status: CONSTRUCTION
@@ -645,6 +703,7 @@ state: NJ
 zip: 12205
 country: USA
 gps: 42.7111943,-73.8180484
+elevation: 88
 url: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
 status: PERMIT
@@ -656,6 +715,7 @@ state: NY
 zip: 11430
 country: USA
 gps: 40.66319, -73.793192
+elevation: 3
 url: http://www.teslamotors.com/supercharger/jfk
 dateOpened: 2013-12-23
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -666,6 +726,7 @@ state: NY
 zip: 11791
 country: USA
 gps: 40.7998387, -73.5152669
+elevation: 56
 url: http://www.teslamotors.com/supercharger/syosset
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26175-Supercharger-Syosset-NY
 dateOpened: 2014-01-18
@@ -677,6 +738,7 @@ state: NC
 zip: 27215
 country: USA
 gps: 36.070790, -79.511211
+elevation: 197
 url: http://www.teslamotors.com/supercharger/burlingtonnc
 dateOpened: 2013-10-16
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -687,6 +749,7 @@ state: NC
 zip: 28358
 country: USA
 gps: 34.667629, -79.002343
+elevation: 40
 url: http://www.teslamotors.com/supercharger/lumberton
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24770-Supercharger-Lumberton-NC
 dateOpened: 2014-01-17
@@ -698,6 +761,7 @@ state: NC
 zip: 27962
 country: USA
 gps: 35.850587, -76.756116
+elevation: 5
 url: http://www.teslamotors.com/supercharger/plymouth
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/22396-Plymouth-NC-Supercharger-Location
 dateOpened: 2014-03-12
@@ -709,6 +773,7 @@ state: NC
 zip: 27804
 country: USA
 gps: 35.972874, -77.846870
+elevation: 40
 url: http://www.teslamotors.com/supercharger/rockymount
 dateOpened: 2013-11-08
 #-----------------------------------------------------------------------------------------------------------------------------| Ohio
@@ -719,6 +784,7 @@ state: OH
 zip: 44056
 country: USA
 gps: 41.313663, -81.517018
+elevation: 296
 url: http://www.teslamotors.com/supercharger/macedonia
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24872-Supercharger-Macedonia-OH
 dateOpened: 2014-01-15
@@ -730,6 +796,7 @@ state: OH
 zip: 43537
 country: USA
 gps: 41.57835, -83.66465
+elevation: 192
 url: http://www.teslamotors.com/supercharger/maumee
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25482-Supercharger-Maumee-OH
 dateOpened: 2014-01-13
@@ -741,6 +808,7 @@ state: OR
 zip: 97342
 country: USA
 gps: 44.737025, -122.152108
+elevation: 492
 url: http://www.teslamotors.com/supercharger/detroitlake
 dateOpened: 2013-12-23
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -751,6 +819,7 @@ state: OR
 zip: 97526
 country: USA
 gps: 42.460883, -123.324124
+elevation: 335
 url: http://www.teslamotors.com/supercharger/grantspass
 dateOpened: 2013-10-22
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -761,6 +830,7 @@ state: OR
 zip: 97477
 country: USA
 gps: 44.082605, -123.037471
+elevation: 133
 url: http://www.teslamotors.com/supercharger/springfield
 dateOpened: 2013-11-02
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -771,6 +841,7 @@ state: OR
 zip: 97071
 country: USA
 gps: 45.15313, -122.881254
+elevation: 56
 url: http://www.teslamotors.com/supercharger/woodburn
 dateOpened: 2013-08-28
 #-----------------------------------------------------------------------------------------------------------------------------| Pennsylvania
@@ -781,6 +852,7 @@ state: PA
 zip: 16066
 country: USA
 gps: 40.683982, -80.10839
+elevation: 312
 url: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-PA-Supercharger-Location-(NW-of-Pittsburgh)
 status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -791,6 +863,7 @@ state: PA
 zip: 15501
 country: USA
 gps: 40.0173833333, -79.0771166667
+elevation: 640
 url: http://www.teslamotors.com/supercharger/somerset
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25319-Somerset-PA-Supercharger-(confirmed!)
 dateOpened: 2014-01-10
@@ -802,6 +875,7 @@ state: RI
 zip: 02818
 country: USA
 gps: 41.660517, -71.497242
+elevation: 73
 url: http://www.teslamotors.com/supercharger/eastgreenwich
 dateOpened: 2014-01-06
 #-----------------------------------------------------------------------------------------------------------------------------| South Carolina
@@ -812,6 +886,7 @@ state: SC
 zip: 29142
 country: USA
 gps: 33.485858, -80.475763
+elevation: 39
 url: http://www.teslamotors.com/supercharger/santee
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25065-Supercharger-Santee-SC
 dateOpened: 2013-12-27
@@ -823,6 +898,7 @@ state: SD
 zip: 57301
 country: USA
 gps: 43.701129, -98.04449999999997
+elevation: 410
 url: http://www.teslamotors.com/supercharger/mitchell
 dateOpened: 2013-12-18
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -833,6 +909,7 @@ state: SD
 zip: 57559
 country: USA
 gps: 43.886915, -100.716887
+elevation: 691
 url: http://www.teslamotors.com/supercharger/murdo
 dateOpened: 2013-12-31
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -843,6 +920,7 @@ state: SD
 zip: 57701
 country: USA
 gps: 44.105601, -103.212569
+elevation: 1006
 url: http://www.teslamotors.com/supercharger/rapidcity
 dateOpened: 2013-11-25
 #-----------------------------------------------------------------------------------------------------------------------------| Texas
@@ -853,6 +931,7 @@ state: TX
 zip: 78934
 country: USA
 gps: 29.690062, -96.537725
+elevation: 57
 url: http://www.teslamotors.com/supercharger/columbus
 dateOpened: 2013-10-07
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -863,6 +942,7 @@ state: TX
 zip: 75109
 country: USA
 gps: 32.068577, -96.448229
+elevation: 132
 url: http://www.teslamotors.com/supercharger/corsicana
 dateOpened: 2013-11-15
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -873,6 +953,7 @@ state: TX
 zip: 77340
 country: USA
 gps: 30.716158, -95.565944
+elevation: 123
 url: http://www.teslamotors.com/supercharger/huntsville
 dateOpened: 2013-11-20
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -883,6 +964,7 @@ state: TX
 zip: 78666
 country: USA
 gps: 29.827692, -97.979677
+elevation: 202
 url: http://www.teslamotors.com/supercharger/sanmarcos
 dateOpened: 2013-08-20
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -893,6 +975,7 @@ state: TX
 zip: 76705
 country: USA
 gps: 31.58224, -97.10915
+elevation: 124
 url: http://www.teslamotors.com/supercharger/waco
 dateOpened: 2013-09-07
 #-----------------------------------------------------------------------------------------------------------------------------| Utah
@@ -903,6 +986,7 @@ state: UT
 zip: 84713
 country: USA
 gps: 38.249281, -112.652903
+elevation: 1790
 url: http://www.teslamotorsclub.com/showthread.php/29316-Supercharger-Beaver-UT
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29316-Supercharger-Beaver-UT
 status: CONSTRUCTION
@@ -914,6 +998,7 @@ state: UT
 zip: 84511
 country: USA
 gps: 37.6255534, -109.47384199999999
+elevation: 1849
 url: http://www.teslamotors.com/supercharger/blanding
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21121-Utah-Super-Charger-Locations
 dateOpened: 2014-01-13
@@ -925,6 +1010,7 @@ state: UT
 zip: 84525
 country: USA
 gps: 38.993577, -110.140513
+elevation: 1240
 url: http://www.teslamotors.com/supercharger/greenriver
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26516-Supercharger-Green-River-UT
 dateOpened: 2014-03-17
@@ -936,6 +1022,7 @@ state: UT
 zip: 84511
 country: USA
 gps: 38.573122, -109.552368
+elevation: 1224
 url: http://www.teslamotors.com/supercharger/moab
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21121-Utah-Super-Charger-Locations
 dateOpened: 2014-01-22
@@ -947,6 +1034,7 @@ state: UT
 zip: 84701
 country: USA
 gps: 38.788161, -112.083841
+elevation: 1659
 url: http://www.teslamotorsclub.com/showthread.php/29281-Richfield-Utah-Supercharger
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29281-Richfield-Utah-Supercharger
 status: CONSTRUCTION
@@ -958,6 +1046,7 @@ state: UT
 zip: 84770
 country: USA
 gps: 37.1253361, -113.6027197
+elevation: 887
 url: http://www.teslamotorsclub.com/showthread.php/27242-Supercharger-St-George-UT
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/27242-Supercharger-St-George-UT
 status: PERMIT
@@ -969,6 +1058,7 @@ state: VA
 zip: 23059
 country: USA
 gps: 37.669832, -77.461419
+elevation: 49
 url: http://www.teslamotors.com/supercharger/glenallen
 dateOpened: 2013-10-24
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -979,6 +1069,7 @@ state: VA
 zip: 22192
 country: USA
 gps: 38.6422662,-77.294923
+elevation: 63
 url: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
 status: CONSTRUCTION
@@ -990,6 +1081,7 @@ state: WA
 zip: 98233
 country: USA
 gps: 48.509772, -122.338625
+elevation: 7
 url: http://www.teslamotors.com/supercharger/burlington
 dateOpened: 2013-07-13
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1000,6 +1092,7 @@ state: WA
 zip: 98531
 country: USA
 gps: 46.729732, -122.977454
+elevation: 56
 url: http://www.teslamotors.com/supercharger/centralia
 dateOpened: 2013-07-17
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1010,6 +1103,7 @@ state: WA
 zip: 98926
 country: USA
 gps: 46.976918, -120.54162
+elevation: 454
 url: http://www.teslamotors.com/supercharger/ellensburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/23850-Ellensburg-Supercharger
 dateOpened: 2013-12-23
@@ -1021,6 +1115,7 @@ state: WI
 zip: 54701
 country: USA
 gps: 44.77083, -91.43711
+elevation: 293
 url: http://www.teslamotors.com/supercharger/eauclaire
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24337-Wisconsin-Supercharger-Discussion-amp-Tracking/page31
 dateOpened: 2014-01-30
@@ -1032,6 +1127,7 @@ state: WI
 zip: 54650
 country: USA
 gps: 43.879042, -91.188428
+elevation: 219
 url: http://www.teslamotors.com/supercharger/lacrosse
 dateOpened: 2014-01-05
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1042,6 +1138,7 @@ state: WI
 zip: 53704
 country: USA
 gps: 43.12669, -89.306896
+elevation: 267
 url: http://www.teslamotors.com/supercharger/madison
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21123-Madison-WI-Supercharger
 dateOpened: 2014-01-13
@@ -1053,6 +1150,7 @@ state: WI
 zip: 53948
 country: USA
 gps: 43.795551, -90.059358
+elevation: 265
 url: http://www.teslamotors.com/supercharger/mauston
 dateOpened: 2013-12-09
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1063,6 +1161,7 @@ state: WI
 zip: 53158
 country: USA
 gps: 42.518715, -87.950428
+elevation: 216
 url: http://www.teslamotors.com/supercharger/pleasantprairie/
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24337-Wisconsin-Supercharger-Discussion-Tracking
 dateOpened: 2014-02-13
@@ -1074,6 +1173,7 @@ state: WY
 zip: 82009
 country: USA
 gps: 41.161085, -104.804955
+elevation: 1859
 url: http://www.teslamotors.com/supercharger/cheyenne
 dateOpened: 2014-01-20
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1084,6 +1184,7 @@ state: WY
 zip: 82225
 country: USA
 gps: 42.75625, -104.45267
+elevation: 1529
 url: http://www.teslamotors.com/supercharger/lusk
 dateOpened: 2013-12-19
 
@@ -1101,9 +1202,10 @@ name: Squamish, BC
 street: 40147 Glenalder Pl
 city: Squamish
 state: BC
-zip:  V8B 0G2
+zip: V8B 0G2
 country: Canada
 gps: 49.7376745, -123.1337735
+elevation: -1
 url: http://squamish.ca/business-and-development/home-land-and-property-development/development-and-project-showcase/delegated-application-list/tesla-motors-inc.-dp-40147-glenalder-place/
 status: PERMIT
 
@@ -1119,139 +1221,153 @@ status: PERMIT
 name: St. Anton, Austria
 street: 73 Arlbergstrasse
 city: St. Anton am Arlberg
-state: 
+state:
 zip: 6580
 country: Austria
 gps: 47.130137, 10.269231
+elevation: -1
 url: http://www.teslamotors.com/supercharger/stanton
 dateOpened: 2013-12-19
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
 name: Aichstetten, Germany
 street: Am Waizenhof 12 (Autohof)
 city: Aichstetten
-state: 
+state:
 zip: 88317
 country: Germany
 gps: 47.8804833333, 10.0397833333
+elevation: -1
 url: http://www.teslamotors.com/supercharger/aichstetten
 dateOpened: 2013-12-14
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Bad Rappenau, Germany
 street: Buchäckerring 40 (Autohof)
 city: Bad Rappenau
-state: 
+state:
 zip: 74906
 country: Germany
 gps: 49.211936, 9.077322
+elevation: 207
 url: http://www.teslamotors.com/supercharger/badrappenau
 dateOpened: 2013-12-14
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Jettingen-Scheppach, Germany
 street: Robert-Bosch-Str. 10 (Autohof)
 city: Jettingen-Scheppach
-state: 
+state:
 zip: 89343
 country: Germany
 gps: 48.411685, 10.439755
+elevation: 462
 url: http://www.teslamotors.com/supercharger/jettingen
 dateOpened: 2013-12-13
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Wilnsdorf, Germany
 street: Elkersberg 2 (Autohof)
 city: Wilnsdorf
-state: 
+state:
 zip: 57234
 country: Germany
 gps: 50.817046, 8.087663
+elevation: 436
 url: http://www.teslamotors.com/supercharger/wilnsdorf
 dateOpened: 2013-12-13
 #-----------------------------------------------------------------------------------------------------------------------------| NETHERLANDS
 name: Oosterhout, Netherlands
 street: Beneluxweg 1
 city: Oosterhout
-state: 
+state:
 zip: 4904 SJ
 country: Netherlands
 gps: 51.626423, 4.869517
+elevation: 7
 url: http://www.teslamotors.com/supercharger/oosterhout
 dateOpened: 2013-12-06
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Zevenaar, Netherlands
 street: Doesburgseweg 39
 city: Zevenaar
-state: 
+state:
 zip: 6902 PL
 country: Netherlands
 gps: 51.94066, 6.08180
+elevation: 10
 url: http://www.teslamotors.com/supercharger/zevenaar
 dateOpened: 2013-12-06
 #-----------------------------------------------------------------------------------------------------------------------------| NORWAY
 name: Dombås, Norway
 street: P plass bak KIWI Mini Pris
 city: Dombås
-state: 
+state:
 zip: 2660
 country: Norway
 gps: 62.074926, 9.128281
+elevation: 659
 url: http://www.teslamotors.com/supercharger/dombas
 dateOpened: 2013-08-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Lillehammer, Norway
 street: Korgvegen 37
 city: Lillehammer
-state: 
+state:
 zip: 2619
 country: Norway
 gps: 61.13045, 10.43491
+elevation: 159
 url: http://www.teslamotors.com/supercharger/lillehammer
 dateOpened: 2013-08-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Gol, Norway
 street: Heradvegen 5
 city: Gol
-state: 
+state:
 zip: 3550
 country: Norway
 gps: 60.70232, 8.98620
+elevation: 201
 url: http://www.teslamotors.com/supercharger/gol
 dateOpened: 2013-08-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Aurland, Norway
 street: Nyheim Aurland
 city: Aurland
-state: 
+state:
 zip: 5745
 country: Norway
 gps: 60.89863, 7.21082
+elevation: 11
 url: http://www.teslamotors.com/supercharger/aurland
 dateOpened: 2013-08-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Cinderella, Norway
 street: Gnr 3 Bnr 318 Brokelandsheia
 city: Sundebru
-state: 
+state:
 zip: 4993
 country: Norway
 gps: 58.820783, 9.073746
+elevation: 99
 url: http://www.teslamotors.com/supercharger/cinderella
 dateOpened: 2013-08-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Lyngdal, Norway
 street: 1 Fiboveien
 city: Lyngdal
-state: 
+state:
 zip: 4580
 country: Norway
 gps: 58.15653, 7.10298
+elevation: 12
 url: http://www.teslamotors.com/supercharger/lyngdal
 dateOpened: 2013-08-30
 #-----------------------------------------------------------------------------------------------------------------------------| SWITZERLAND
 name: Lully, Switzerland
 street: Restoroute 1470 Lully FR (Autogrill)
 city: Lully
-state: 
+state:
 zip: 1470
 country: Switzerland
 gps: 46.832233, 6.859269
+elevation: 490
 url: http://www.teslamotors.com/supercharger/lully
 dateOpened: 2013-12-13
