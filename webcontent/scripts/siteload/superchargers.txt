@@ -857,6 +857,18 @@ url: http://www.teslamotors.com/supercharger/cranberry
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-PA-Supercharger-Location-(NW-of-Pittsburgh)
 dateOpened: 2014-04-04
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Whitehall, PA
+street: 250 Lehigh Valley Mall
+city: Whitehall
+state: PA
+zip: 18052
+country: USA
+gps: 40.630598, -75.479928
+elevation: 312
+url: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
+status: PERMIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Somerset, PA
 street: 1030 North Center Avenue
 city: Somerset
