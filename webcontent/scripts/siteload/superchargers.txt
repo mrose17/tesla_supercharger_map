@@ -853,8 +853,9 @@ zip: 16066
 country: USA
 gps: 40.683982, -80.10839
 elevation: 312
-url: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-PA-Supercharger-Location-(NW-of-Pittsburgh)
-status: CONSTRUCTION
+url: http://www.teslamotors.com/supercharger/cranberry
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-PA-Supercharger-Location-(NW-of-Pittsburgh)
+dateOpened: 2014-04-04
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Somerset, PA
 street: 1030 North Center Avenue
