@@ -864,7 +864,7 @@ state: PA
 zip: 18052
 country: USA
 gps: 40.630598, -75.479928
-elevation: 312
+elevation: 99
 url: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
 status: PERMIT
