@@ -1048,9 +1048,9 @@ zip: 84701
 country: USA
 gps: 38.788161, -112.083841
 elevation: 1659
-url: http://www.teslamotorsclub.com/showthread.php/29281-Richfield-Utah-Supercharger
+url: http://www.teslamotors.com/supercharger/richfield
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29281-Richfield-Utah-Supercharger
-status: CONSTRUCTION
+dateOpened: 2014-04-04
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: St George, UT
 street: 1091 N Bluff St
