@@ -706,7 +706,7 @@ gps: 42.7111943,-73.8180484
 elevation: 88
 url: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
-status: PERMIT
+status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: JFK Airport, NY
 street: 150th Ave and 147th St
