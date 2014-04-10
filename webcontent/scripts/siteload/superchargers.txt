@@ -1242,6 +1242,17 @@ elevation: -1
 url: http://www.teslamotors.com/supercharger/stanton
 dateOpened: 2013-12-19
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
+name: Magdeburg, Germany
+street: address: ?
+city: Magdeburg
+state:
+zip: ?????
+country: Germany
+gps: 52.1739629, 11.4942547
+elevation: -1
+url: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
+status: CONSTRUCTION
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Aichstetten, Germany
 street: Am Waizenhof 12 (Autohof)
 city: Aichstetten
