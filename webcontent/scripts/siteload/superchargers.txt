@@ -578,6 +578,18 @@ gps: 41.7174, -86.1887
 elevation: 234
 url: http://www.teslamotors.com/supercharger/mishawaka
 dateOpened: 2013-12-11
+#-----------------------------------------------------------------------------------------------------------------------------| Kansas
+name: Goodland, KS
+street: 2631 Enterprise Rd
+city: Goodland
+state: KS
+zip: 67735
+country: USA
+gps: 39.326253, -101.725171
+elevation: 1129
+url: http://www.teslamotorsclub.com/showthread.php/29807-Supercharger-%C2%96-Goodland-KS
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29807-Supercharger-%C2%96-Goodland-KS
+status: PERMIT
 #-----------------------------------------------------------------------------------------------------------------------------| Maryland
 name: Bethesda, MD
 street: 7101 Democracy Blvd
