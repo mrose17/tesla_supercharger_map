@@ -904,6 +904,18 @@ elevation: 73
 url: http://www.teslamotors.com/supercharger/eastgreenwich
 dateOpened: 2014-01-06
 #-----------------------------------------------------------------------------------------------------------------------------| South Carolina
+name: Greenville, SC
+street: 1140 Woodruff Rd
+city: Greenville
+state: SC
+zip: 29607
+country: USA
+gps: 34.825171, -82.299744
+elevation: 305
+url: http://www.teslamotorsclub.com/showthread.php/29790-Supercharger-Greenville-SC
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29790-Supercharger-Greenville-SC
+status: PERMIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Santee, SC
 street: 114 Bradford Blvd.
 city: Santee
