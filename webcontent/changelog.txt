@@ -1,3 +1,28 @@
+Sat Apr 12 2014 || supercharger added: Triadelphia, WV
+Fri Apr 11 2014 || supercharger added: Goodland, KS
+Thu Apr 10 2014 || supercharger added: Kastrup, Denmark
+Thu Apr 10 2014 || supercharger added: Magdeburg, Germany
+Sun Apr 6 2014 || supercharger updated: Albany, NY (construction)
+Fri Apr 4 2014 || supercharger live: Richfield, UT
+Fri Apr 4 2014 || supercharger added: Whitehall, PA
+Fri Apr 4 2014 || supercharger live: Cranberry, PA
+Wed Apr 2 2014 || supercharger updated: Woodbridge, VA (construction)
+Mon Mar 31 2014 || supercharger added: Beaver, UT
+Sun Mar 30 2014 || supercharger added: Richfield, UT
+Thu Mar 20 2014 || supercharger live: Buckeye, AZ
+Thu Mar 20 2014 || supercharger added: Hamilton Marketplace, NJ
+Mon Mar 17 2014 || supercharger live: Green River, UT
+Sat Mar 15 2014 || supercharger added: Oxnard, CA (permit)
+Sat Mar 15 2014 || supercharger updated: Roseville, CA (construction)
+Fri Mar 14 2014 || supercharger added: Indio, CA (permit)
+Wed Mar 12 2014 || supercharger live: Plymouth, NC
+Wed Feb 26 2014 || supercharger live: Lonetree, CO
+Mon Feb 24 2014 || supercharger live: Aurora, IL
+Mon Feb 24 2014 || supercharger added: Albany, NY
+Wed Feb 19 2014 || supercharger live: Las Vegas, NV
+Mon Feb 17 2014 || supercharger added: Squamish, BC, Canada
+Fri Feb 14 2014 || supercharger updated:  El Centro, CA (permit)
+Thu Feb 13 2014 || supercharger live: Pleasant Prairie, WI
 Thu Feb 13 2014 || supercharger added: Roseville, CA (permit)
 Wed Feb 12 2014 || supercharger live: Greenwich, CT (north+south)
 Sun Feb 9 2014 || supercharger added: Woodbridge, VA (permit)
@@ -21,7 +46,6 @@ Tue Jan 21 2014 || supercharger live: Greenwich, CT (north+south)
 Mon Jan 20 2014 || supercharger live: Cheyenne, WY
 Mon Jan 20 2014 || supercharger added: Yuma, AZ
 Sun Jan 19 2014 || supercharger live: Syosset, NY
-Sat Jan 18 2014 || Added 'Charts' page.
 Fri Jan 17 2014 || supercharger live: Lumberton, NC
 Wed Jan 15 2014 || supercharger live: Holbrook, AZ
 Wed Jan 15 2014 || supercharger live: Macedonia, OH
@@ -29,11 +53,9 @@ Wed Jan 15 2014 || supercharger added: Cranberry, PA
 Wed Jan 15 2014 || supercharger added: Syosset, NY
 Wed Jan 15 2014 || supercharger live: Albert Lea, MN
 Wed Jan 15 2014 || supercharger live: Savannah, GA
-Tue Jan 14 2014 || Added "Open Date" to supercharger table.
 Mon Jan 13 2014 || supercharger live: Madison, WI
 Mon Jan 13 2014 || supercharger live: Maumee, OH
 Mon Jan 13 2014 || supercharger live: Blanding, UT
-Mon Jan 13 2014 || deployed version 2.0 of this site
 Fri Jan 10 2014 || supercharger live: Somerset, PA
 Fri Jan 10 2014 || supercharger live: Farmington, NM
 Fri Jan 10 2014 || supercharger live: Flagstaff, AZ
