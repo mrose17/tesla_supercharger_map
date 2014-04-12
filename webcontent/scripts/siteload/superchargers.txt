@@ -1132,6 +1132,18 @@ elevation: 454
 url: http://www.teslamotors.com/supercharger/ellensburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/23850-Ellensburg-Supercharger
 dateOpened: 2013-12-23
+#-----------------------------------------------------------------------------------------------------------------------------| West Virginia
+name: Triadelphia, WV
+street: 35 Bob Wise Drive
+city: Triadelphia
+state: WV
+zip: 26059
+country: USA
+gps: 40.0619790, -80.6017110
+elevation: 397
+url: http://www.teslamotorsclub.com/showthread.php/28986-Wheeling-WV-Supercharger
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/28986-Wheeling-WV-Supercharger
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| Wisconsin
 name: Eau Claire, WI
 street: 4601 Keystone Crossing
