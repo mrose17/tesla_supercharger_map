@@ -27,7 +27,9 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects,
         if (!Objects.isNullOrUndef(supercharger.elevation)) {
             var targetUnits = controlState.range.getDisplayUnit().isKilometers() ? Units.M : Units.FT;
             var conversion = new UnitConversion(Units.M, targetUnits);
-            popupContent += "Elevation: " + conversion.convert(supercharger.elevation) + " " + targetUnits.abbrevation + "<br/>";
+            var elevationNumber = conversion.convert(supercharger.elevation);
+            var elevationString = elevationNumber.toLocaleString();
+            popupContent += "Elevation: " + elevationString + " " + targetUnits.abbrevation + "<br/>";
         }
 
         popupContent += buildLinksDiv(supercharger);
