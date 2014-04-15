@@ -21,9 +21,11 @@ define(['util/Objects'], function (Objects) {
         // Street Address
         //
         popupContent += supercharger.address.street + "<br/>";
-        
-        popupContent += "Elevation: " + supercharger.elevation + "m<br/>";
-        
+
+        if (!Objects.isNullOrUndef(supercharger.elevation)) {
+            popupContent += "Elevation: " + supercharger.elevation + "m<br/>";
+        }
+
         popupContent += buildLinksDiv(supercharger);
 
         popupContent += "</div>";
