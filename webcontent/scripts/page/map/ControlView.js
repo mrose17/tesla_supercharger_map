@@ -1,4 +1,4 @@
-define(['page/map/Range', 'page/map/RangeInput', 'lib/spectrum'], function (Range, RangeInput) {
+define(['page/map/Range', 'page/map/RangeInput', 'util/Units', 'lib/spectrum'], function (Range, RangeInput, Units) {
 
 
     /**
@@ -49,10 +49,10 @@ define(['page/map/Range', 'page/map/RangeInput', 'lib/spectrum'], function (Rang
         var miUnitLabel = $("#range-unit-mi-label");
         var kmUnitLabel = $("#range-unit-km-label");
         miUnitLabel.click(function () {
-            control.handleDistanceUnit("mi");
+            control.handleDistanceUnit(Units.MI);
         });
         kmUnitLabel.click(function () {
-            control.handleDistanceUnit("km");
+            control.handleDistanceUnit(Units.KM);
         });
         if (this.controlState.range.getDisplayUnit().isMiles()) {
             miUnitLabel.addClass("active");
@@ -151,8 +151,8 @@ define(['page/map/Range', 'page/map/RangeInput', 'lib/spectrum'], function (Rang
     /**
      * Handle changes to distance unit.
      */
-    ControlView.prototype.handleDistanceUnit = function (newUnitString) {
-        this.controlState.range.setUnitByString(newUnitString);
+    ControlView.prototype.handleDistanceUnit = function (newUnit) {
+        this.controlState.range.setUnit(newUnit);
         this.initRangeControl();
     };
 

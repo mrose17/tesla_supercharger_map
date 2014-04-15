@@ -60,10 +60,6 @@ define(['util/Unit'], function (Unit) {
         this.displayUnit = newUnit;
     };
 
-    Range.prototype.setUnitByString = function (newUnitString) {
-        this.displayUnit = Unit.fromString(newUnitString);
-    };
-
     Range.prototype.getDisplayUnit = function () {
         return this.displayUnit;
     };

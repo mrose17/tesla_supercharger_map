@@ -1,4 +1,4 @@
-define(['page/map/Range', 'util/QueryStrings', 'util/Unit'], function (Range, QueryStrings, Unit) {
+define(['page/map/Range', 'util/QueryStrings', 'util/Units'], function (Range, QueryStrings, Units) {
 
     /**
      *
@@ -24,11 +24,11 @@ define(['page/map/Range', 'util/QueryStrings', 'util/Unit'], function (Range, Qu
         var rangeKm = QueryStrings.getByName("RangeKm");
 
         if (rangeMi) {
-            this.range = new Range(Range.milesToMeters(rangeMi), Unit.forMiles());
+            this.range = new Range(Range.milesToMeters(rangeMi), Units.MI);
         } else if (rangeKm) {
-            this.range = new Range(Range.kilometersToMeters(rangeKm), Unit.forKilometers());
+            this.range = new Range(Range.kilometersToMeters(rangeKm), Units.KM);
         } else {
-            this.range = new Range(0, Unit.forMiles());
+            this.range = new Range(0, Units.MI);
         }
     };
 
