@@ -13,6 +13,10 @@ define(
 
             this.initMap();
 
+            this.markerFactory = new MarkerFactory(this.googleMap, this.controlState);
+
+            this.redraw(true);
+
             // handle clicks to toggle supercharger circle
             jQuery(document).on('click', '.circle-toggle-trigger', jQuery.proxy(this.handleCircleToggle, this));
             // handle clicks to remove supercharger marker
@@ -41,7 +45,7 @@ define(
         try // We don't want to interrupt the load because of bad parameters
         {
             var initialCenter = QueryStrings.getByName("Center");
-            if (QueryStrings.getByName("Center")) {
+            if (initialCenter) {
                 MapView.INITIAL_LAT = parseFloat(initialCenter.split(",")[0]);
                 MapView.INITIAL_LNG = parseFloat(initialCenter.split(",")[1]);
             }
@@ -91,7 +95,6 @@ define(
             };
 
             this.googleMap = new google.maps.Map(this.viewDiv.get(0), mapOptions);
-            this.redraw(true);
         };
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -111,7 +114,7 @@ define(
                     if (mapView.shouldDraw(supercharger)) {
                         if (drawMarkers) {
                             if (Objects.isNullOrUndef(supercharger.marker)) {
-                                supercharger.marker = MarkerFactory.createMarker(mapView.googleMap, supercharger);
+                                supercharger.marker = mapView.markerFactory.createMarker(supercharger);
                             }
                         }
 
@@ -176,7 +179,9 @@ define(
                 this.googleMap.setCenter(geometry.location);
                 this.googleMap.fitBounds(geometry.bounds);
             } else {
-                alert("result: " + status);
+                if (window.alert) {
+                    window.alert("result: " + status);
+                }
             }
         };
 
@@ -253,9 +258,9 @@ define(
                 markerDialog.modal("hide");
                 var markerName = markerNameInput.val();
                 var newCharger = Sites.addSupercharger(markerName, event.latLng);
-                newCharger.marker = MarkerFactory.createMarker(mapView.googleMap, newCharger);
+                newCharger.marker = mapView.markerFactory.createMarker(newCharger);
                 mapView.redraw(false);
-                InfoWindowRender.showInfoWindowForMarker(newCharger.marker, newCharger);
+                var showInfoWindowForNewMarker = new google.maps.event.trigger(newCharger.marker, 'click');
             });
 
             // Focus on input field after dialog is shown.

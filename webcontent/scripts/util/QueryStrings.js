@@ -1,15 +1,16 @@
 define([], function () {
 
-    var Parameters = {};
+    var QueryStrings = {};
 
     /**
-     *	Get a Query (URL) parameter by name (this is case sensitive)
+     * Get a Query (URL) parameter by name (this is case insensitive)
      */
-    Parameters.getByName = function(iName) {
-        return decodeURIComponent((new RegExp('[?|&]' + iName + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||"";
+    QueryStrings.getByName = function (parameterName) {
+        var paramRegex = new RegExp('[?|&]' + parameterName + '=' + '([^&;]+?)(&|#|;|$)', 'i');
+        var paramValueArray = (paramRegex.exec(location.search) || [, ""]);
+        var encodedParamValue = paramValueArray[1].replace(/\+/g, '%20');
+        return decodeURIComponent(encodedParamValue) || "";
     };
 
-
-    return Parameters;
-
+    return QueryStrings;
 });

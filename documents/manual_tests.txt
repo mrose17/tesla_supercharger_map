@@ -103,3 +103,17 @@ About Page
 () Verify email address is inserted correctly.
 () Email address should not appear followed by period or other punctuation that user will copy when copying-and-pasting into their mail client.
 () Verify version (last changed date) is loaded correctly.
+
+
+---------------------------------
+URL parameters
+---------------------------------
+
+() Site allows parameter names to have an case (upper or lower).
+() Page -- should work.
+() Zoom
+() Center
+() RangeMi/RangeKm
+    () Range circles should be enabled and have the range value indicated.
+    () Range control slider should be positioned correctly and its text label should show the correct range.
+    () Range unit selection (mi/km) should reflect the unit of the requested parameter, mi or km, for RangMi, RangeKm respectively.
