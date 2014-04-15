@@ -5,7 +5,7 @@ define(function () {
      */
     var Range = function (rangeMetersIn) {
         this.rangeMeters = rangeMetersIn;
-        this.unit = Range.Unit.miles;
+        this.displayUnit = Range.Unit.miles;
     };
 
     Range.MILES_MIN = 0;
@@ -21,14 +21,14 @@ define(function () {
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     Range.prototype.getCurrent = function () {
-        if (this.unit === Range.Unit.miles) {
+        if (this.displayUnit === Range.Unit.miles) {
             return Range.metersToMiles(this.rangeMeters);
         } else {
             return Range.metersToKilometers(this.rangeMeters);
         }
     };
     Range.prototype.setCurrent = function (newRange) {
-        if (this.unit === Range.Unit.miles) {
+        if (this.displayUnit === Range.Unit.miles) {
             this.rangeMeters = Range.milesToMeters(newRange);
         } else {
             this.rangeMeters = Range.kilometersToMeters(newRange);
@@ -36,7 +36,7 @@ define(function () {
     };
 
     Range.prototype.getMin = function () {
-        if (this.unit === Range.Unit.miles) {
+        if (this.displayUnit === Range.Unit.miles) {
             return Range.MILES_MIN;
         } else {
             return Range.milesToKilometers(Range.MILES_MIN);
@@ -44,7 +44,7 @@ define(function () {
     };
 
     Range.prototype.getMax = function () {
-        if (this.unit === Range.Unit.miles) {
+        if (this.displayUnit === Range.Unit.miles) {
             return Range.MILES_MAX;
         } else {
             return Range.milesToKilometers(Range.MILES_MAX);
@@ -52,7 +52,7 @@ define(function () {
     };
 
     Range.prototype.getUnitName = function () {
-        if (this.unit === Range.Unit.miles) {
+        if (this.displayUnit === Range.Unit.miles) {
             return "miles";
         } else {
             return "kilometers";
@@ -72,7 +72,7 @@ define(function () {
         if (newUnit !== Range.Unit.miles && newUnit !== Range.Unit.kilometers) {
             throw new Error("invalid unit=" + newUnit);
         }
-        this.unit = newUnit;
+        this.displayUnit = newUnit;
     };
 
 
