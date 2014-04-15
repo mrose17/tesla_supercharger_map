@@ -46,12 +46,21 @@ define(['page/map/Range', 'page/map/RangeInput', 'lib/spectrum'], function (Rang
 
     ControlView.prototype.initRangeUnitControls = function () {
         var control = this;
-        $("#range-unit-mi-label").click(function () {
+        var miUnitLabel = $("#range-unit-mi-label");
+        var kmUnitLabel = $("#range-unit-km-label");
+        miUnitLabel.click(function () {
             control.handleDistanceUnit("mi");
         });
-        $("#range-unit-km-label").click(function () {
+        kmUnitLabel.click(function () {
             control.handleDistanceUnit("km");
         });
+        if (this.controlState.range.getDisplayUnit().isMiles()) {
+            miUnitLabel.addClass("active");
+            kmUnitLabel.removeClass("active");
+        } else {
+            miUnitLabel.removeClass("active");
+            kmUnitLabel.addClass("active");
+        }
     };
 
     ControlView.prototype.initColorSliders = function () {
@@ -142,12 +151,8 @@ define(['page/map/Range', 'page/map/RangeInput', 'lib/spectrum'], function (Rang
     /**
      * Handle changes to distance unit.
      */
-    ControlView.prototype.handleDistanceUnit = function (newUnit) {
-        if (newUnit === "mi") {
-            this.controlState.range.setUnit(Range.Unit.miles);
-        } else if (newUnit === "km") {
-            this.controlState.range.setUnit(Range.Unit.kilometers);
-        }
+    ControlView.prototype.handleDistanceUnit = function (newUnitString) {
+        this.controlState.range.setUnitByString(newUnitString);
         this.initRangeControl();
     };
 

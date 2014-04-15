@@ -41,7 +41,7 @@ define(
         try // We don't want to interrupt the load because of bad parameters
         {
             var initialCenter = QueryStrings.getByName("Center");
-            if (QueryStrings.getByName("Center")) {
+            if (initialCenter) {
                 MapView.INITIAL_LAT = parseFloat(initialCenter.split(",")[0]);
                 MapView.INITIAL_LNG = parseFloat(initialCenter.split(",")[1]);
             }
@@ -176,7 +176,9 @@ define(
                 this.googleMap.setCenter(geometry.location);
                 this.googleMap.fitBounds(geometry.bounds);
             } else {
-                alert("result: " + status);
+                if (window.alert) {
+                    window.alert("result: " + status);
+                }
             }
         };
 

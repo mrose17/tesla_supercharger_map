@@ -1,11 +1,11 @@
-define(function () {
+define(['util/Unit'], function (Unit) {
 
     /**
-     * @constructor
+     * @constructor always takes *meters* as the initial magnitude, but the initial displayUnit value can be either unit.
      */
-    var Range = function (rangeMetersIn) {
+    var Range = function (rangeMetersIn, displayUnit) {
         this.rangeMeters = rangeMetersIn;
-        this.displayUnit = Range.Unit.miles;
+        this.displayUnit = displayUnit;
     };
 
     Range.MILES_MIN = 0;
@@ -13,22 +13,19 @@ define(function () {
     Range.METERS_PER_MILE = 1609.34;
     Range.METERS_PER_KM = 1000.0;
 
-    Range.Unit = { "miles": 1, "kilometers": 2};
-
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     Range.prototype.getCurrent = function () {
-        if (this.displayUnit === Range.Unit.miles) {
+        if (this.displayUnit.isMiles()) {
             return Range.metersToMiles(this.rangeMeters);
         } else {
             return Range.metersToKilometers(this.rangeMeters);
         }
     };
     Range.prototype.setCurrent = function (newRange) {
-        if (this.displayUnit === Range.Unit.miles) {
+        if (this.displayUnit.isMiles()) {
             this.rangeMeters = Range.milesToMeters(newRange);
         } else {
             this.rangeMeters = Range.kilometersToMeters(newRange);
@@ -36,7 +33,7 @@ define(function () {
     };
 
     Range.prototype.getMin = function () {
-        if (this.displayUnit === Range.Unit.miles) {
+        if (this.displayUnit.isMiles()) {
             return Range.MILES_MIN;
         } else {
             return Range.milesToKilometers(Range.MILES_MIN);
@@ -44,21 +41,12 @@ define(function () {
     };
 
     Range.prototype.getMax = function () {
-        if (this.displayUnit === Range.Unit.miles) {
+        if (this.displayUnit.isMiles()) {
             return Range.MILES_MAX;
         } else {
             return Range.milesToKilometers(Range.MILES_MAX);
         }
     };
-
-    Range.prototype.getUnitName = function () {
-        if (this.displayUnit === Range.Unit.miles) {
-            return "miles";
-        } else {
-            return "kilometers";
-        }
-    };
-
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // getters/setters
@@ -69,10 +57,15 @@ define(function () {
     };
 
     Range.prototype.setUnit = function (newUnit) {
-        if (newUnit !== Range.Unit.miles && newUnit !== Range.Unit.kilometers) {
-            throw new Error("invalid unit=" + newUnit);
-        }
         this.displayUnit = newUnit;
+    };
+
+    Range.prototype.setUnitByString = function (newUnitString) {
+        this.displayUnit = Unit.fromString(newUnitString);
+    };
+
+    Range.prototype.getDisplayUnit = function () {
+        return this.displayUnit;
     };
 
 
