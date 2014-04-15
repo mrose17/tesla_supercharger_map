@@ -1,14 +1,21 @@
 define(['page/map/InfoWindowRender', 'lib/jquery.browser'], function (InfoWindowRender, browser) {
 
-    var MarkerFactory = {};
+    /**
+     *
+     * @constructor
+     */
+    var MarkerFactory = function (googleMap, controlState) {
+        this.googleMap = googleMap;
+        this.controlState = controlState;
+    };
 
     /**
      * Creates a new marker for the given supercharger. Sets up click listener to display info-window when clicked.
      */
-    MarkerFactory.createMarker = function (googleMap, supercharger) {
+    MarkerFactory.prototype.createMarker = function (supercharger) {
         var markerOptions = {
             position: supercharger.location,
-            map: googleMap,
+            map: this.googleMap,
             title: supercharger.displayName,
             icon: {
                 url: supercharger.status.iconUrl,
@@ -25,8 +32,9 @@ define(['page/map/InfoWindowRender', 'lib/jquery.browser'], function (InfoWindow
 
         var marker = new google.maps.Marker(markerOptions);
 
+        var controlState = this.controlState;
         google.maps.event.addListener(marker, 'click', function () {
-            InfoWindowRender.showInfoWindowForMarker(marker, supercharger);
+            InfoWindowRender.showInfoWindowForMarker(marker, supercharger, controlState);
         });
 
         return marker;

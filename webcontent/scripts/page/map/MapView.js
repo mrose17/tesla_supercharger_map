@@ -13,6 +13,10 @@ define(
 
             this.initMap();
 
+            this.markerFactory = new MarkerFactory(this.googleMap, this.controlState);
+
+            this.redraw(true);
+
             // handle clicks to toggle supercharger circle
             jQuery(document).on('click', '.circle-toggle-trigger', jQuery.proxy(this.handleCircleToggle, this));
             // handle clicks to remove supercharger marker
@@ -91,7 +95,6 @@ define(
             };
 
             this.googleMap = new google.maps.Map(this.viewDiv.get(0), mapOptions);
-            this.redraw(true);
         };
 
 //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -111,7 +114,7 @@ define(
                     if (mapView.shouldDraw(supercharger)) {
                         if (drawMarkers) {
                             if (Objects.isNullOrUndef(supercharger.marker)) {
-                                supercharger.marker = MarkerFactory.createMarker(mapView.googleMap, supercharger);
+                                supercharger.marker = mapView.markerFactory.createMarker(supercharger);
                             }
                         }
 
@@ -255,7 +258,7 @@ define(
                 markerDialog.modal("hide");
                 var markerName = markerNameInput.val();
                 var newCharger = Sites.addSupercharger(markerName, event.latLng);
-                newCharger.marker = MarkerFactory.createMarker(mapView.googleMap, newCharger);
+                newCharger.marker = mapView.markerFactory.createMarker(newCharger);
                 mapView.redraw(false);
                 var showInfoWindowForNewMarker = new google.maps.event.trigger(newCharger.marker, 'click');
             });

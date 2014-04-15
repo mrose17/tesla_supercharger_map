@@ -1,8 +1,8 @@
-define(['util/Objects'], function (Objects) {
+define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects, Units, UnitConversion) {
 
     var Renderer = {};
 
-    Renderer.showInfoWindowForMarker = function (marker, supercharger) {
+    Renderer.showInfoWindowForMarker = function (marker, supercharger, controlState) {
         var popupContent = "<div class='info-window-content'>";
         //
         // Title/Supercharger-name
@@ -21,9 +21,13 @@ define(['util/Objects'], function (Objects) {
         // Street Address
         //
         popupContent += supercharger.address.street + "<br/>";
-
+        //
+        // Elevation
+        //
         if (!Objects.isNullOrUndef(supercharger.elevation)) {
-            popupContent += "Elevation: " + supercharger.elevation + "m<br/>";
+            var targetUnits = controlState.range.getDisplayUnit().isKilometers() ? Units.M : Units.FT;
+            var conversion = new UnitConversion(Units.M, targetUnits);
+            popupContent += "Elevation: " + conversion.convert(supercharger.elevation) + " " + targetUnits.abbrevation + "<br/>";
         }
 
         popupContent += buildLinksDiv(supercharger);
