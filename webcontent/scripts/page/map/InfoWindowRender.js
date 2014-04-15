@@ -47,9 +47,9 @@ define(['util/Objects'], function (Objects) {
 
         var count = 1;
         $.each(linkList, function (index, value) {
-            if (value != null) {
+            if (value !== null) {
                 content += value + "";
-                if (((count++) % 3 === 0) && (index != linkList.length - 1)) {
+                if (((count++) % 3 === 0) && (index !== linkList.length - 1)) {
                     content += "<br/>";
                 }
             }
