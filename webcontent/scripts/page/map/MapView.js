@@ -257,7 +257,7 @@ define(
                 var newCharger = Sites.addSupercharger(markerName, event.latLng);
                 newCharger.marker = MarkerFactory.createMarker(mapView.googleMap, newCharger);
                 mapView.redraw(false);
-                InfoWindowRender.showInfoWindowForMarker(newCharger.marker, newCharger);
+                var showInfoWindowForNewMarker = new google.maps.event.trigger(newCharger.marker, 'click');
             });
 
             // Focus on input field after dialog is shown.
