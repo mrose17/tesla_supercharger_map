@@ -53,8 +53,6 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         //
         popupContent += this.supercharger.address.street + "<br/>";
 
-        popupContent += buildLinksDiv(this.supercharger);
-
         if (this.showDetails) {
             popupContent += "<div class='info-window-details'>";
             popupContent += "<table>";
@@ -70,8 +68,10 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
                 popupContent += "<tr><th>Date Opened</th><td>" + this.supercharger.formatDateOpened() + "</td></tr>";
             }
             popupContent += "</table>";
-            popupContent += "<div>";
+            popupContent += "</div>";
         }
+
+        popupContent += buildLinksDiv(this.supercharger);
 
         popupContent += "</div>";
         return popupContent;
