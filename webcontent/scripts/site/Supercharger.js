@@ -1,4 +1,4 @@
-define(['site/Address', 'site/SiteStatus', 'util/Objects'], function (Address, Status, Objects) {
+define(['site/Address', 'site/SiteStatus', 'util/Objects', 'util/Dates'], function (Address, Status, Objects, Dates) {
 
 
         /**
@@ -48,6 +48,13 @@ define(['site/Address', 'site/SiteStatus', 'util/Objects'], function (Address, S
 
         Supercharger.prototype.toString = function () {
             return JSON.stringify(this);
+        };
+
+        Supercharger.prototype.formatLocation = function () {
+            return Objects.isNullOrUndef(this.location) ? "" : this.location.toUrlValue().replace(",", ", ");
+        };
+        Supercharger.prototype.formatDateOpened = function () {
+            return Objects.isNullOrUndef(this.dateOpened) ? "" : Dates.toString(this.dateOpened);
         };
 
         return Supercharger;

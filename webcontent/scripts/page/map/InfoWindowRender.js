@@ -1,72 +1,87 @@
 define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects, Units, UnitConversion) {
 
-    var marker;
-    var supercharger;
-    var controlState;
-
     /**
      *
      * @constructor
      */
     var Renderer = function (markerP, superchargerP, controlStateP) {
-        marker = markerP;
-        supercharger = superchargerP;
-        controlState = controlStateP;
+        this.marker = markerP;
+        this.supercharger = superchargerP;
+        this.controlState = controlStateP;
+        this.infoWindow = null;
+        this.showDetails = false;
+
+        var renderer = this;
+        jQuery(document).on('click', '.details-trigger', function (event) {
+            event.preventDefault();
+            renderer.infoWindow.close();
+            renderer.toggleDetails();
+            renderer.showWindow(true);
+        });
+
     };
 
     Renderer.prototype.showWindow = function () {
-        var popupContent = buildHtmlContent(supercharger, controlState);
-        var windowOptions = { content: popupContent };
-        var infoWindow = new google.maps.InfoWindow(windowOptions);
-        infoWindow.open(marker.map, marker);
+        var windowOptions = { content: this.buildHtmlContent() };
+        this.infoWindow = new google.maps.InfoWindow(windowOptions);
+        this.infoWindow.open(this.marker.map, this.marker);
     };
 
-    function buildHtmlContent() {
+    Renderer.prototype.toggleDetails = function () {
+        this.showDetails = !this.showDetails;
+    };
+
+    Renderer.prototype.buildHtmlContent = function () {
         var popupContent = "<div class='info-window-content'>";
         //
         // Title/Supercharger-name
         //
-        popupContent += "<div class='title'>" + supercharger.displayName + "</div>" + "";
+        popupContent += "<div class='title'>" + this.supercharger.displayName + "</div>" + "";
         //
         // Status: Construction/Permit
         //
-        if (supercharger.isConstruction()) {
+        if (this.supercharger.isConstruction()) {
             popupContent += "<div class='construction'>Status: Construction</div>";
         }
-        else if (supercharger.isPermit()) {
+        else if (this.supercharger.isPermit()) {
             popupContent += "<div class='permit'>Status: Permit</div>";
         }
         //
         // Street Address
         //
-        popupContent += supercharger.address.street + "<br/>";
-        //
-        // Elevation
-        //
-        if (!Objects.isNullOrUndef(supercharger.elevation)) {
-            var targetUnits = controlState.range.getDisplayUnit().isKilometers() ? Units.M : Units.FT;
-            var conversion = new UnitConversion(Units.M, targetUnits);
-            var elevationNumber = conversion.convert(supercharger.elevation);
-            var elevationString = elevationNumber.toLocaleString();
-            popupContent += "Elevation: " + elevationString + " " + targetUnits.abbrevation + "<br/>";
-        }
+        popupContent += this.supercharger.address.street + "<br/>";
 
-        popupContent += buildLinksDiv(supercharger);
+        popupContent += buildLinksDiv(this.supercharger);
+
+        if (this.showDetails) {
+            popupContent += "<table>";
+            if (!Objects.isNullOrUndef(this.supercharger.elevation)) {
+                var targetUnits = this.controlState.range.getDisplayUnit().isKilometers() ? Units.M : Units.FT;
+                var conversion = new UnitConversion(Units.M, targetUnits);
+                var elevationNumber = conversion.convert(this.supercharger.elevation);
+                var elevationString = elevationNumber.toLocaleString();
+                popupContent += "<tr><td>Elevation</td><td>" + elevationString + " " + targetUnits.abbrevation + "</td></tr>";
+            }
+            popupContent += "<tr><td>GPS</td><td>" + this.supercharger.formatLocation() + "</td></tr>";
+            popupContent += "<tr><td>Date Opened</td><td>" + this.supercharger.formatDateOpened() + "</td></tr>";
+            popupContent += "</table>";
+        }
 
         popupContent += "</div>";
         return popupContent;
-    }
+    };
 
-    function buildLinksDiv() {
+    function buildLinksDiv(supercharger) {
         var content = "<div class='links-container'>";
 
         var linkList = [
-            buildLinkZoom(),
-            buildLinkCircleToggle(),
-            buildLinkAddToRoute(),
-            buildLinkURL(),
-            buildLinkDiscussURL(),
-            buildLinkRemoveMarker()
+            buildLinkZoom(supercharger),
+            buildLinkCircleToggle(supercharger),
+            buildLinkAddToRoute(supercharger),
+            buildLinkURL(supercharger),
+            buildLinkDiscussURL(supercharger),
+            buildLinkRemoveMarker(supercharger),
+            buildLinkDetails(supercharger)
         ];
 
         var count = 1;
@@ -82,38 +97,42 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects,
         return content;
     }
 
-    function buildLinkZoom() {
+    function buildLinkZoom(supercharger) {
         return "<a class='zoom-to-site-trigger' href='" + supercharger.id + "'>zoom in</a>";
     }
 
-    function buildLinkCircleToggle() {
+    function buildLinkCircleToggle(supercharger) {
         var circleOnOffLabel = (Objects.isNotNullOrUndef(supercharger.circle) && supercharger.circle.getVisible()) ? "circle off" : "circle on";
         return "<a class='circle-toggle-trigger' href='" + supercharger.id + "'>" + circleOnOffLabel + "</a>";
     }
 
-    function buildLinkAddToRoute() {
+    function buildLinkAddToRoute(supercharger) {
         return "<a class='add-to-route-trigger' href='" + supercharger.id + "'>add to route</a>";
     }
 
-    function buildLinkURL() {
+    function buildLinkURL(supercharger) {
         if (Objects.isNotNullOrUndef(supercharger.url)) {
             return "<a target='_blank' href='" + supercharger.url + "'>web page</a>";
         }
         return null;
     }
 
-    function buildLinkDiscussURL() {
+    function buildLinkDiscussURL(supercharger) {
         if (Objects.isNotNullOrUndef(supercharger.urlDiscuss)) {
             return "<a target='_blank' href='" + supercharger.urlDiscuss + "'>discuss</a>";
         }
         return null;
     }
 
-    function buildLinkRemoveMarker() {
+    function buildLinkRemoveMarker(supercharger) {
         if (supercharger.isUserAdded()) {
             return "<a class='marker-toggle-trigger' href='" + supercharger.id + "'>remove</a>";
         }
         return null;
+    }
+
+    function buildLinkDetails(supercharger) {
+        return "<a class='details-trigger' href='" + supercharger.id + "'>details</a>";
     }
 
     return Renderer;
