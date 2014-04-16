@@ -1,4 +1,4 @@
-define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects, Units, UnitConversion) {
+define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], function (Objects, Units, UnitConversion, Events) {
 
     /**
      *
@@ -13,10 +13,12 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects,
 
         var renderer = this;
         jQuery(document).on('click', '.details-trigger', function (event) {
-            event.preventDefault();
-            renderer.infoWindow.close();
-            renderer.toggleDetails();
-            renderer.showWindow(true);
+            var eventDetail = Events.eventDetail(event);
+            if (parseInt(eventDetail.actionName) === renderer.supercharger.id) {
+                renderer.infoWindow.close();
+                renderer.toggleDetails();
+                renderer.showWindow(true);
+            }
         });
 
     };
@@ -54,17 +56,21 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects,
         popupContent += buildLinksDiv(this.supercharger);
 
         if (this.showDetails) {
+            popupContent += "<div class='info-window-details'>";
             popupContent += "<table>";
             if (!Objects.isNullOrUndef(this.supercharger.elevation)) {
                 var targetUnits = this.controlState.range.getDisplayUnit().isKilometers() ? Units.M : Units.FT;
                 var conversion = new UnitConversion(Units.M, targetUnits);
                 var elevationNumber = conversion.convert(this.supercharger.elevation);
                 var elevationString = elevationNumber.toLocaleString();
-                popupContent += "<tr><td>Elevation</td><td>" + elevationString + " " + targetUnits.abbrevation + "</td></tr>";
+                popupContent += "<tr><th>Elevation</th><td>" + elevationString + " " + targetUnits.abbrevation + "</td></tr>";
             }
-            popupContent += "<tr><td>GPS</td><td>" + this.supercharger.formatLocation() + "</td></tr>";
-            popupContent += "<tr><td>Date Opened</td><td>" + this.supercharger.formatDateOpened() + "</td></tr>";
+            popupContent += "<tr><th>GPS</th><td>" + this.supercharger.formatLocation() + "</td></tr>";
+            if (!Objects.isNullOrUndef(this.supercharger.dateOpened)) {
+                popupContent += "<tr><th>Date Opened</th><td>" + this.supercharger.formatDateOpened() + "</td></tr>";
+            }
             popupContent += "</table>";
+            popupContent += "<div>";
         }
 
         popupContent += "</div>";
@@ -132,7 +138,7 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects,
     }
 
     function buildLinkDetails(supercharger) {
-        return "<a class='details-trigger' href='" + supercharger.id + "'>details</a>";
+        return "<a class='details-trigger' href='#" + supercharger.id + "'>details</a>";
     }
 
     return Renderer;
