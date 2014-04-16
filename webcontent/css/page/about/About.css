@@ -10,23 +10,3 @@
     margin-left: 10px;
     list-style-type: disc;
 }
-
-#page-about h3 {
-    margin-top: 0;
-}
-
-#page-about h3.margin-top {
-    margin-top: 1.25em;
-}
-
-#page-about table {
-    border-collapse: collapse;
-}
-
-#page-about table td {
-    border: 1px solid #E0E0E0;
-}
-
-#page-about table th {
-    text-align: center;
-}
