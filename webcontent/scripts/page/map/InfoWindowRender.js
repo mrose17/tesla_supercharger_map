@@ -1,15 +1,34 @@
 define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects, Units, UnitConversion) {
 
-    var Renderer = {};
+    var marker;
+    var supercharger;
+    var controlState;
 
-    Renderer.showInfoWindowForMarker = function (marker, supercharger, controlState) {
+    /**
+     *
+     * @constructor
+     */
+    var Renderer = function (markerP, superchargerP, controlStateP) {
+        marker = markerP;
+        supercharger = superchargerP;
+        controlState = controlStateP;
+    };
+
+    Renderer.prototype.showWindow = function () {
+        var popupContent = buildHtmlContent(supercharger, controlState);
+        var windowOptions = { content: popupContent };
+        var infoWindow = new google.maps.InfoWindow(windowOptions);
+        infoWindow.open(marker.map, marker);
+    };
+
+    function buildHtmlContent() {
         var popupContent = "<div class='info-window-content'>";
         //
         // Title/Supercharger-name
         //
         popupContent += "<div class='title'>" + supercharger.displayName + "</div>" + "";
         //
-        // Construction
+        // Status: Construction/Permit
         //
         if (supercharger.isConstruction()) {
             popupContent += "<div class='construction'>Status: Construction</div>";
@@ -35,22 +54,19 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects,
         popupContent += buildLinksDiv(supercharger);
 
         popupContent += "</div>";
+        return popupContent;
+    }
 
-        var windowOptions = { content: popupContent };
-        var infoWindow = new google.maps.InfoWindow(windowOptions);
-        infoWindow.open(marker.map, marker);
-    };
-
-    function buildLinksDiv(supercharger) {
+    function buildLinksDiv() {
         var content = "<div class='links-container'>";
 
         var linkList = [
-            buildLinkZoom(supercharger),
-            buildLinkCircleToggle(supercharger),
-            buildLinkAddToRoute(supercharger),
-            buildLinkURL(supercharger),
-            buildLinkDiscussURL(supercharger),
-            buildLinkRemoveMarker(supercharger)
+            buildLinkZoom(),
+            buildLinkCircleToggle(),
+            buildLinkAddToRoute(),
+            buildLinkURL(),
+            buildLinkDiscussURL(),
+            buildLinkRemoveMarker()
         ];
 
         var count = 1;
@@ -66,34 +82,34 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion'], function (Objects,
         return content;
     }
 
-    function buildLinkZoom(supercharger) {
+    function buildLinkZoom() {
         return "<a class='zoom-to-site-trigger' href='" + supercharger.id + "'>zoom in</a>";
     }
 
-    function buildLinkCircleToggle(supercharger) {
+    function buildLinkCircleToggle() {
         var circleOnOffLabel = (Objects.isNotNullOrUndef(supercharger.circle) && supercharger.circle.getVisible()) ? "circle off" : "circle on";
         return "<a class='circle-toggle-trigger' href='" + supercharger.id + "'>" + circleOnOffLabel + "</a>";
     }
 
-    function buildLinkAddToRoute(supercharger) {
+    function buildLinkAddToRoute() {
         return "<a class='add-to-route-trigger' href='" + supercharger.id + "'>add to route</a>";
     }
 
-    function buildLinkURL(supercharger) {
+    function buildLinkURL() {
         if (Objects.isNotNullOrUndef(supercharger.url)) {
             return "<a target='_blank' href='" + supercharger.url + "'>web page</a>";
         }
         return null;
     }
 
-    function buildLinkDiscussURL(supercharger) {
+    function buildLinkDiscussURL() {
         if (Objects.isNotNullOrUndef(supercharger.urlDiscuss)) {
             return "<a target='_blank' href='" + supercharger.urlDiscuss + "'>discuss</a>";
         }
         return null;
     }
 
-    function buildLinkRemoveMarker(supercharger) {
+    function buildLinkRemoveMarker() {
         if (supercharger.isUserAdded()) {
             return "<a class='marker-toggle-trigger' href='" + supercharger.id + "'>remove</a>";
         }
