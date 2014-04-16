@@ -17,7 +17,7 @@ define(['siteload/SiteMapsRaw', 'siteload/FieldDefinitions', 'site/Supercharger'
         function transformSite(siteMap) {
 
             // if the field is required, verify that it is in the map
-            $.each(FieldDefinitions, function (fieldName, fieldDef) {
+            $.each(FieldDefinitions.LIST, function (index, fieldDef) {
                 assertFieldValuePresentIfRequired(fieldDef, siteMap);
             });
 
@@ -48,7 +48,7 @@ define(['siteload/SiteMapsRaw', 'siteload/FieldDefinitions', 'site/Supercharger'
         }
 
         function assertKeyHasFieldDefinition(key, siteMap) {
-            var fieldDef = FieldDefinitions[key];
+            var fieldDef = FieldDefinitions.MAP[key];
             if (Objects.isNullOrUndef(fieldDef)) {
                 throw new Error("unrecognized field '" + key + "' in " + JSON.stringify(siteMap));
             }
@@ -59,5 +59,4 @@ define(['siteload/SiteMapsRaw', 'siteload/FieldDefinitions', 'site/Supercharger'
         return SiteTransform;
 
     }
-
 );
