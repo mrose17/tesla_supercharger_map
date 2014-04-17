@@ -54,18 +54,7 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         popupContent += this.supercharger.address.street + "<br/>";
 
         if (this.showDetails) {
-            popupContent += "<div class='info-window-details'>";
-            popupContent += "<table>";
-            if (!Objects.isNullOrUndef(this.supercharger.elevation)) {
-                var targetUnits = this.controlState.range.getDisplayUnit().isKilometers() ? Units.M : Units.FT;
-                popupContent += "<tr><th>Elevation</th><td>" + this.supercharger.formatElevation(targetUnits) + "</td></tr>";
-            }
-            popupContent += "<tr><th>GPS</th><td>" + this.supercharger.formatLocation() + "</td></tr>";
-            if (!Objects.isNullOrUndef(this.supercharger.dateOpened)) {
-                popupContent += "<tr><th>Date Opened</th><td>" + this.supercharger.formatDateOpened() + "</td></tr>";
-            }
-            popupContent += "</table>";
-            popupContent += "</div>";
+            popupContent += buildDetailsDiv(this.supercharger, this.controlState.range.getDisplayUnit());
         }
 
         popupContent += buildLinksDiv(this.supercharger);
@@ -73,6 +62,23 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         popupContent += "</div>";
         return popupContent;
     };
+
+    function buildDetailsDiv(supercharger, displayUnit) {
+        var div = "";
+        div += "<div class='info-window-details'>";
+        div += "<table>";
+        if (!Objects.isNullOrUndef(supercharger.elevation)) {
+            var targetUnits = displayUnit.isKilometers() ? Units.M : Units.FT;
+            div += "<tr><th>Elevation</th><td>" + supercharger.formatElevation(targetUnits) + "</td></tr>";
+        }
+        div += "<tr><th>GPS</th><td>" + supercharger.formatLocation() + "</td></tr>";
+        if (!Objects.isNullOrUndef(supercharger.dateOpened)) {
+            div += "<tr><th>Date Opened</th><td>" + supercharger.formatDateOpened() + "</td></tr>";
+        }
+        div += "</table>";
+        div += "</div>";
+        return div;
+    }
 
     function buildLinksDiv(supercharger) {
         var content = "<div class='links-container'>";
