@@ -78,13 +78,17 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         var content = "<div class='links-container'>";
 
         var linkList = [
+
+            // links that are always present
             buildLinkZoom(supercharger),
             buildLinkCircleToggle(supercharger),
             buildLinkAddToRoute(supercharger),
+            buildLinkDetails(supercharger),
+
+            // links that are NOT always present.
             buildLinkURL(supercharger),
             buildLinkDiscussURL(supercharger),
-            buildLinkRemoveMarker(supercharger),
-            buildLinkDetails(supercharger)
+            buildLinkRemoveMarker(supercharger)
         ];
 
         var count = 1;
