@@ -1,2 +1,119 @@
-// http://joequery.github.io/Stupid-Table-Plugin/
-(function(d){d.fn.stupidtable=function(b){return this.each(function(){var a=d(this);b=b||{};b=d.extend({},d.fn.stupidtable.default_sort_fns,b);var n=function(a,b){for(var f=[],c=0,e=a.slice(0).sort(b),h=0;h<a.length;h++){for(c=d.inArray(a[h],e);-1!=d.inArray(c,f);)c++;f.push(c)}return f},q=function(a,b){for(var d=a.slice(0),c=0,e=0;e<b.length;e++)c=b[e],d[c]=a[e];return d};a.on("click","th",function(){var m=a.children("tbody").children("tr"),g=d(this),f=0,c=d.fn.stupidtable.dir;a.find("th").slice(0, g.index()).each(function(){var a=d(this).attr("colspan")||1;f+=parseInt(a,10)});var e=g.data("sort-default")||c.ASC;g.data("sort-dir")&&(e=g.data("sort-dir")===c.ASC?c.DESC:c.ASC);var h=g.data("sort")||null;null!==h&&(a.trigger("beforetablesort",{column:f,direction:e}),a.css("display"),setTimeout(function(){var l=[],p=b[h];m.each(function(a,b){var c=d(b).children().eq(f),e=c.data("sort-value"),c="undefined"!==typeof e?e:c.text();l.push(c)});var k;k=e==c.ASC?n(l,p):n(l,function(a,b){return-p(a,b)}); a.find("th").data("sort-dir",null).removeClass("sorting-desc sorting-asc");g.data("sort-dir",e).addClass("sorting-"+e);k=d(q(m,k));a.children("tbody").remove();a.append("<tbody />").append(k);a.trigger("aftertablesort",{column:f,direction:e});a.css("display")},10))})})};d.fn.stupidtable.dir={ASC:"asc",DESC:"desc"};d.fn.stupidtable.default_sort_fns={"int":function(b,a){return parseInt(b,10)-parseInt(a,10)},"float":function(b,a){return parseFloat(b)-parseFloat(a)},string:function(b,a){return b<a?-1: b>a?1:0},"string-ins":function(b,a){b=b.toLowerCase();a=a.toLowerCase();return b<a?-1:b>a?1:0}}})(jQuery);
+// Stupid jQuery table plugin.
+// Call on a table
+// sortFns: Sort functions for your datatypes.
+// https://github.com/joequery/Stupid-Table-Plugin
+// commit: 4942677587
+(function ($) {
+
+    $.fn.stupidtable = function (sortFns) {
+        return this.each(function () {
+            var $table = $(this);
+            sortFns = sortFns || {};
+
+            // Merge sort functions with some default sort functions.
+            sortFns = $.extend({}, $.fn.stupidtable.default_sort_fns, sortFns);
+
+
+            // ==================================================== //
+            //                  Begin execution!                    //
+            // ==================================================== //
+
+            // Do sorting when THs are clicked
+            $table.on("click.stupidtable", "th", function () {
+                var $this = $(this);
+                var th_index = 0;
+                var dir = $.fn.stupidtable.dir;
+
+                $table.find("th").slice(0, $this.index()).each(function () {
+                    var cols = $(this).attr("colspan") || 1;
+                    th_index += parseInt(cols, 10);
+                });
+
+                // Determine (and/or reverse) sorting direction, default `asc`
+                var sort_dir = $this.data("sort-default") || dir.ASC;
+                if ($this.data("sort-dir"))
+                    sort_dir = $this.data("sort-dir") === dir.ASC ? dir.DESC : dir.ASC;
+
+                // Choose appropriate sorting function.
+                var type = $this.data("sort") || null;
+
+                // Prevent sorting if no type defined
+                if (type === null) {
+                    return;
+                }
+
+                // Trigger `beforetablesort` event that calling scripts can hook into;
+                // pass parameters for sorted column index and sorting direction
+                $table.trigger("beforetablesort", {column: th_index, direction: sort_dir});
+                // More reliable method of forcing a redraw
+                $table.css("display");
+
+                // Run sorting asynchronously on a timout to force browser redraw after
+                // `beforetablesort` callback. Also avoids locking up the browser too much.
+                setTimeout(function () {
+                    // Gather the elements for this column
+                    var column = [];
+                    var sortMethod = sortFns[type];
+                    var trs = $table.children("tbody").children("tr");
+
+                    // Extract the data for the column that needs to be sorted and pair it up
+                    // with the TR itself into a tuple
+                    trs.each(function (index, tr) {
+                        var $e = $(tr).children().eq(th_index);
+                        var sort_val = $e.data("sort-value");
+                        var order_by = typeof(sort_val) !== "undefined" ? sort_val : $e.text();
+                        column.push([order_by, tr]);
+                    });
+
+                    // Sort by the data-order-by value
+                    column.sort(function (a, b) {
+                        return sortMethod(a[0], b[0]);
+                    });
+                    if (sort_dir != dir.ASC)
+                        column.reverse();
+
+                    // Replace the content of tbody with the sorted rows. Strangely (and
+                    // conveniently!) enough, .append accomplishes this for us.
+                    trs = $.map(column, function (kv) {
+                        return kv[1];
+                    });
+                    $table.children("tbody").append(trs);
+
+                    // Reset siblings
+                    $table.find("th").data("sort-dir", null).removeClass("sorting-desc sorting-asc");
+                    $this.data("sort-dir", sort_dir).addClass("sorting-" + sort_dir);
+
+                    // Trigger `aftertablesort` event. Similar to `beforetablesort`
+                    $table.trigger("aftertablesort", {column: th_index, direction: sort_dir});
+                    // More reliable method of forcing a redraw
+                    $table.css("display");
+                }, 10);
+            });
+        });
+    };
+
+    // Enum containing sorting directions
+    $.fn.stupidtable.dir = {ASC: "asc", DESC: "desc"};
+
+    $.fn.stupidtable.default_sort_fns = {
+        "int": function (a, b) {
+            return parseInt(a, 10) - parseInt(b, 10);
+        },
+        "float": function (a, b) {
+            return parseFloat(a) - parseFloat(b);
+        },
+        "string": function (a, b) {
+            if (a < b) return -1;
+            if (a > b) return +1;
+            return 0;
+        },
+        "string-ins": function (a, b) {
+            a = a.toLowerCase();
+            b = b.toLowerCase();
+            if (a < b) return -1;
+            if (a > b) return +1;
+            return 0;
+        }
+    };
+
+})(jQuery);

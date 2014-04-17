@@ -54,7 +54,12 @@ define(['util/Objects', 'site/SiteIterator', 'util/Dates', 'util/Units', 'lib/st
     }
 
     DataViewTable.prototype.setupTableSortPlugin = function () {
-        this.superChargerDataTable.stupidtable({});
+
+        this.superChargerDataTable.stupidtable({
+            "commaInteger": function (a, b) {
+                return parseInt(a.replace(/,/g, '')) - parseInt(b.replace(/,/g, ''));
+            }});
+
         this.superChargerDataTable.find("th.data-open-date").eq(0).click();
 
         this.superChargerDataTable.on("aftertablesort", function (event, data) {
