@@ -1017,16 +1017,16 @@ url: http://www.teslamotors.com/supercharger/waco
 dateOpened: 2013-09-07
 #-----------------------------------------------------------------------------------------------------------------------------| Utah
 name: Beaver, UT
-street: 15 N and 160
+street: Littlefield Interchange
 city: Beaver
 state: UT
 zip: 84713
 country: USA
-gps: 38.249281, -112.652903
+gps: 38.249149, -112.652524
 elevation: 1790
-url: http://www.teslamotorsclub.com/showthread.php/29316-Supercharger-Beaver-UT
+url: http://www.teslamotors.com/supercharger/beaver
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29316-Supercharger-Beaver-UT
-status: CONSTRUCTION
+dateOpened: 2014-04-14
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Blanding, UT
 street: 12 N Grayson Pkwy
