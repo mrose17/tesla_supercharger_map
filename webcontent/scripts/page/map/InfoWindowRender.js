@@ -67,14 +67,24 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         var div = "";
         div += "<div class='info-window-details'>";
         div += "<table>";
+
+        // Elevation
+        //
         if (!Objects.isNullOrUndef(supercharger.elevation)) {
             var targetUnits = displayUnit.isKilometers() ? Units.M : Units.FT;
             div += "<tr><th>Elevation</th><td>" + supercharger.formatElevation(targetUnits) + "</td></tr>";
         }
-        div += "<tr><th>GPS</th><td>" + supercharger.formatLocation() + "</td></tr>";
+
+        // Date Opened
+        //
         if (!Objects.isNullOrUndef(supercharger.dateOpened)) {
             div += "<tr><th>Date Opened</th><td>" + supercharger.formatDateOpened() + "</td></tr>";
         }
+
+        // GPS
+        //
+        div += "<tr><th>GPS</th><td>" + supercharger.formatLocation() + "</td></tr>";
+
         div += "</table>";
         div += "</div>";
         return div;
