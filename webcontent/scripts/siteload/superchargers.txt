@@ -1267,6 +1267,17 @@ status: PERMIT
 ##################################################################################################################
 
 #-----------------------------------------------------------------------------------------------------------------------------| AUSTRIA
+name: St. Anton, Austria
+street: 73 Arlbergstrasse
+city: St. Anton am Arlberg
+state:
+zip: 6580
+country: Austria
+gps: 47.130137, 10.269231
+elevation: 1287
+url: http://www.teslamotors.com/supercharger/stanton
+dateOpened: 2013-12-19
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Vienna, Austria
 street: Gutheil Schoder-Gasse 17
 city: Vienna
@@ -1288,17 +1299,6 @@ gps: 55.614447, 12.613535
 elevation: 2
 url: http://www.teslamotors.com/kastrup
 status: CONSTRUCTION
-#-----------------------------------------------------------------------------------------------------------------------------| GERMANY
-name: St. Anton, Austria
-street: 73 Arlbergstrasse
-city: St. Anton am Arlberg
-state:
-zip: 6580
-country: Austria
-gps: 47.130137, 10.269231
-elevation: 1287
-url: http://www.teslamotors.com/supercharger/stanton
-dateOpened: 2013-12-19
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
 name: Magdeburg, Germany
 street: Zum Raukler 1
