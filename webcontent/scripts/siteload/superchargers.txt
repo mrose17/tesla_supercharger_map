@@ -498,9 +498,20 @@ gps: 29.9207352, -81.416337
 elevation: 14
 url: http://www.teslamotorsclub.com/showthread.php/25177-St-Augustine-Supercharger
 dateOpened: 2014-01-03
-#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 #-----------------------------------------------------------------------------------------------------------------------------| Georgia
+name: Macon, GA
+street: 450 Martin Luther King Jr Blvd
+city: Macon
+state: GA
+zip: 31201
+country: USA
+gps: 32.8334275,-83.6255567
+elevation: 98
+url: http://www.teslamotors.com/supercharger/macon
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30079-Supercharger-Macon-GA
+status: PERMIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Savannah, GA
 street: 400 Airways Avenue
 city: Savannah
