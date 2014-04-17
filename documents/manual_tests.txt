@@ -37,17 +37,18 @@ Map Page
         () Each time the dialog appears the text input should be blank (After 'Add' or 'Cancel').
     () Info Window
         () User provided name shows up.
-        () Correct links show up: 'zoom in', 'circle off', 'add to route', 'remove',
+        () Correct links show up: 'zoom in', 'circle off', 'add to route', 'details', 'remove',
         () Links all work.
 
 () Map Normal Markers
     () Title is bold and larger font.
-    () Status is show orange for under construction markers and blue for permit.
+    () Status is show orange for under construction markers, blue for permit.
     () Street address is shown.
     () Actions
         () Zoom In
         () Toggle Circle
         () Add To Route
+        () Details
         () URL
         () URL Discuss
 
@@ -83,6 +84,7 @@ Data Page
 () Default sort should be by opened date descending (with null opened dates listed last/bottom).
 () Should NOT show custom markers.
 () GPS coordinates should be displayed in monospace font.
+() Elevation values should be in monospaced font, right aligned, and should sort correctly.
 () All three statuses should show up correctly in status column.
 () Status values should be colors (Construction=orange, Permit=blue)
 () Table should sort when clicking each table header.
@@ -92,9 +94,15 @@ Data Page
 Charts Page
 ---------------------------------
 
+() Superchargers over time.
+() Superchargers per US state.
+() Superchargers per country.
+
 ---------------------------------
 Changes Page
 ---------------------------------
+
+() Latest supercharger changes should be present.
 
 ---------------------------------
 About Page
