@@ -58,10 +58,7 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
             popupContent += "<table>";
             if (!Objects.isNullOrUndef(this.supercharger.elevation)) {
                 var targetUnits = this.controlState.range.getDisplayUnit().isKilometers() ? Units.M : Units.FT;
-                var conversion = new UnitConversion(Units.M, targetUnits);
-                var elevationNumber = conversion.convert(this.supercharger.elevation);
-                var elevationString = elevationNumber.toLocaleString();
-                popupContent += "<tr><th>Elevation</th><td>" + elevationString + " " + targetUnits.abbrevation + "</td></tr>";
+                popupContent += "<tr><th>Elevation</th><td>" + this.supercharger.formatElevation(targetUnits) + "</td></tr>";
             }
             popupContent += "<tr><th>GPS</th><td>" + this.supercharger.formatLocation() + "</td></tr>";
             if (!Objects.isNullOrUndef(this.supercharger.dateOpened)) {

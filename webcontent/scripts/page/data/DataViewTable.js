@@ -1,4 +1,4 @@
-define(['util/Objects', 'site/SiteIterator', 'util/Dates', 'lib/stupidtable' ], function (Objects, SiteIterator, Dates) {
+define(['util/Objects', 'site/SiteIterator', 'util/Dates', 'util/Units', 'lib/stupidtable' ], function (Objects, SiteIterator, Dates, Units) {
 
     /**
      * Constructor
@@ -24,20 +24,20 @@ define(['util/Objects', 'site/SiteIterator', 'util/Dates', 'lib/stupidtable' ], 
             .iterate(
             function (supercharger) {
                 tableBodyData.append("" +
-                    "<tr>" +
-                    "<td>" + supercharger.displayName + "</td>" +
-                    "<td>" + supercharger.address.street + "</td>" +
-                    "<td>" + supercharger.address.city + "</td>" +
-                    "<td>" + supercharger.address.state + "</td>" +
-                    "<td>" + supercharger.address.zip + "</td>" +
-                    "<td>" + supercharger.address.country + "</td>" +
-                    "<td class='gps'>" + supercharger.formatLocation() + "</td>" +
-                    "<td class='gps'>" + supercharger.elevation + "m</td>" +
-                    "<td class='" + supercharger.status.value + "'>" + supercharger.status.displayName + "</td>" +
-                    "<td>" + supercharger.formatDateOpened() + "</td>" +
-                    "<td class='link'>" + asLink(supercharger.url, "SC") + "</td>" +
-                    "<td class='link'>" + buildDiscussionLink(supercharger) + "</td>" +
-                    "</tr>"
+                        "<tr>" +
+                        "<td>" + supercharger.displayName + "</td>" +
+                        "<td>" + supercharger.address.street + "</td>" +
+                        "<td>" + supercharger.address.city + "</td>" +
+                        "<td>" + supercharger.address.state + "</td>" +
+                        "<td>" + supercharger.address.zip + "</td>" +
+                        "<td>" + supercharger.address.country + "</td>" +
+                        "<td class='gps'>" + supercharger.formatLocation() + "</td>" +
+                        "<td class='gps number'>" + supercharger.formatElevationNoUnits(Units.M) + "</td>" +
+                        "<td class='" + supercharger.status.value + "'>" + supercharger.status.displayName + "</td>" +
+                        "<td>" + supercharger.formatDateOpened() + "</td>" +
+                        "<td class='link'>" + asLink(supercharger.url, "SC") + "</td>" +
+                        "<td class='link'>" + buildDiscussionLink(supercharger) + "</td>" +
+                        "</tr>"
                 );
             }
         );

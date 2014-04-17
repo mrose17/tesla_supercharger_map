@@ -33,3 +33,7 @@
     font-family: monospace;
     font-size: .75em;
 }
+
+#supercharger-data-table td.number {
+    text-align: right;
+}

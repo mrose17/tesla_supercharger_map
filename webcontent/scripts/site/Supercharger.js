@@ -1,4 +1,5 @@
-define(['site/Address', 'site/SiteStatus', 'util/Objects', 'util/Dates'], function (Address, Status, Objects, Dates) {
+define(['site/Address', 'site/SiteStatus', 'util/Objects', 'util/Dates', 'util/Units', 'util/UnitConversion'],
+    function (Address, Status, Objects, Dates, Units, UnitConversion) {
 
 
         /**
@@ -56,6 +57,21 @@ define(['site/Address', 'site/SiteStatus', 'util/Objects', 'util/Dates'], functi
         Supercharger.prototype.formatDateOpened = function () {
             return Objects.isNullOrUndef(this.dateOpened) ? "" : Dates.toString(this.dateOpened);
         };
+        Supercharger.prototype.formatElevation = function (targetUnits) {
+            if (Objects.isNullOrUndef(this.elevation)) {
+                return "";
+            }
+            return this.formatElevationNoUnits(targetUnits) + " " + targetUnits.abbrevation;
+        };
+        Supercharger.prototype.formatElevationNoUnits = function (targetUnits) {
+            if (Objects.isNullOrUndef(this.elevation)) {
+                return "";
+            }
+            var conversion = new UnitConversion(Units.M, targetUnits);
+            var elevationNumber = conversion.convert(this.elevation);
+            return elevationNumber.toLocaleString();
+        };
+
 
         return Supercharger;
     }
