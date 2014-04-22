@@ -1,0 +1,29 @@
+{
+  "name"             : "tscsolver"
+, "version"          : "0.1.0"
+, "private"          : true
+, "description"      : ""
+, "author"           : {
+    "name"           : "Marshall Rose"
+  , "email"          : "mrose17@gmail.com"
+  }
+, "repository"       : {
+    "type"           : "git"
+  , "url"            : "https://github.com/TheThingSystem/node-tscsolver.git"
+  } 
+, "bugs"             : {
+    "url"            : "https://github.com/TheThingSystem/node-tscsolver/issues"
+  }
+, "dependencies"     : {
+    "geocoder"       : "0.1.0"
+  , "google-distance": "0.0.9"
+  , "sqlite3"        : "2.2.3"
+  , "underscore"     : "1.6.0"
+  }
+, "keywords"         : [ ]
+, "main"             : "./tcssolver.js"
+, "engines"          : {
+    "node"           : ">=0.8"
+  }
+, "readmeFilename"   : "README.md"
+}
