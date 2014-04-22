@@ -713,11 +713,11 @@ city: Hamilton Township
 state: NJ
 zip: 08691
 country: USA
-gps: 40.195655, -74.641185
+gps: 40.195539, -74.641375
 elevation: 21
-url: http://www.teslamotorsclub.com/showthread.php/28931-Supercharger-Hamilton-Marketplace-NJ
+url: http://www.teslamotors.com/supercharger/hamiltontownship
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/28931-Supercharger-Hamilton-Marketplace-NJ
-status: CONSTRUCTION
+dateOpened: 2014-04-22
 #-----------------------------------------------------------------------------------------------------------------------------| New York
 name: Albany, NY
 street: 131 Colonie Center
