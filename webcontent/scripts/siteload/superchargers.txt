@@ -1464,3 +1464,16 @@ gps: 46.832233, 6.859269
 elevation: 490
 url: http://www.teslamotors.com/supercharger/lully
 dateOpened: 2013-12-13
+
+#-----------------------------------------------------------------------------------------------------------------------------| UNITED KINGDOM
+name: South Mimms, United Kingdom
+street: M25, Junction 23
+city: South Mimms
+state:
+zip: EN6 3QQ
+country: United Kingdom
+gps: 51.686927,-0.222956
+elevation: 90
+url: http://www.teslamotorsclub.com/showthread.php/30148-First-UK-Superchargers-South-Mimms
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30148-First-UK-Superchargers-South-Mimms
+status: CONSTRUCTION
