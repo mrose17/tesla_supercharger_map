@@ -43,7 +43,9 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'util/Objects', 'li
                 enabled: true,
                 align: 'right',
                 verticalAlign: 'top',
-                floating: true
+                floating: true,
+                borderWidth: 0,
+                reversed: true
             },
             xAxis: {
                 categories: stateNameList
@@ -64,15 +66,18 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'util/Objects', 'li
             series: [
                 {
                     name: "Permit",
-                    data: statePermitCountList
+                    data: statePermitCountList,
+                    color: '#0000ff'
                 },
                 {
                     name: "Construction",
-                    data: stateConstructionCountList
+                    data: stateConstructionCountList,
+                    color: 'orange'
                 },
                 {
                     name: "Open",
-                    data: stateOpenCountList
+                    data: stateOpenCountList,
+                    color: '#460000'
                 }
 
             ]
