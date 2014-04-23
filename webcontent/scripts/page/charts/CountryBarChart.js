@@ -50,7 +50,9 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'page/charts/ChartC
             yAxis: {
                 title: {
                     text: 'Supercharger Count'
-                }
+                },
+                tickInterval: 2,
+                allowDecimals: false
             },
             plotOptions: {
                 column: {
