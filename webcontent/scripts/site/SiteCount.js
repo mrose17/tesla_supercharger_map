@@ -13,8 +13,8 @@ define(['site/SiteIterator'], function (SiteIterator) {
      * RETURNED ARRAY:
      *
      *  [
-     *   { countryName: 'USA',    open: 3, construction: 7, permit: 2  },
-     *   { countryName: 'Germany',open: 3, construction: 4, permit: 1   }
+     *   { key: 'USA',    open: 3, construction: 7, permit: 2  },
+     *   { key: 'Germany',open: 3, construction: 4, permit: 1   }
      *  ]
      *
      * REFERENCE MAP:
@@ -23,34 +23,30 @@ define(['site/SiteIterator'], function (SiteIterator) {
      *   de: arrayRef
      * }
      */
-    SiteCount.getCountList = function () {
-        var i = 0,
-            countryRefMap = {},
-            countryArray = [],
+    SiteCount.getCountListImpl = function (siteIterator, aggregateKey) {
+        var referenceMap = {},
+            returnedArray = [],
             totalOpen = 0,
             totalConstruction = 0,
             totalPermit = 0;
 
-        new SiteIterator()
-            .withPredicate(SiteIterator.PRED_NOT_USER_ADDED)
-            .withPredicate(SiteIterator.PRED_IS_COUNTED)
-            .iterate(function (supercharger) {
-                var countryName = supercharger.address.country;
-                if (!countryRefMap[countryName]) {
-                    var newEntry = { countryName: countryName, open: 0, construction: 0, permit: 0 };
-                    countryRefMap[countryName] = newEntry;
-                    countryArray.push(newEntry);
+        siteIterator.iterate(function (supercharger) {
+                var aggregateKeyValue = supercharger.address[aggregateKey];
+                if (!referenceMap[aggregateKeyValue]) {
+                    var newEntry = { key: aggregateKeyValue, open: 0, construction: 0, permit: 0 };
+                    referenceMap[aggregateKeyValue] = newEntry;
+                    returnedArray.push(newEntry);
                 }
                 if (supercharger.isConstruction()) {
-                    countryRefMap[countryName].construction++;
+                    referenceMap[aggregateKeyValue].construction++;
                     totalConstruction++;
                 }
                 else if (supercharger.isPermit()) {
-                    countryRefMap[countryName].permit++;
+                    referenceMap[aggregateKeyValue].permit++;
                     totalPermit++;
                 }
                 else if (supercharger.isOpen()) {
-                    countryRefMap[countryName].open++;
+                    referenceMap[aggregateKeyValue].open++;
                     totalOpen++;
                 } else {
                     throw new Error("unexpected supercharger status" + supercharger);
@@ -58,11 +54,20 @@ define(['site/SiteIterator'], function (SiteIterator) {
             }
         );
 
-        countryArray.push({ countryName: 'Total', open: totalOpen, construction: totalConstruction, permit: totalPermit });
-        countryArray.sort(SiteCount.sortByOpenCount);
-        return countryArray;
+        returnedArray.push({ key: 'Total', open: totalOpen, construction: totalConstruction, permit: totalPermit });
+        returnedArray.sort(SiteCount.sortByOpenCount);
+        return returnedArray;
     };
 
+    SiteCount.getCountListByCountry = function () {
+
+        var siteIterator = new SiteIterator()
+            .withPredicate(SiteIterator.PRED_NOT_USER_ADDED)
+            .withPredicate(SiteIterator.PRED_IS_COUNTED);
+
+        return SiteCount.getCountListImpl(siteIterator, 'country');
+
+    };
 
     SiteCount.sortByOpenCount = function (one, two) {
         return two.open - one.open;

@@ -7,7 +7,7 @@ define(['site/SiteCount'], function (SiteCount) {
      */
     var SuperchargerCarousel = function () {
         this.currentIndex = 0;
-        this.countryCountArray = SiteCount.getCountList();
+        this.countryCountArray = SiteCount.getCountListByCountry();
         this.table = $("#carousel-table");
 
         this.cellUp = this.table.find("td.up");
@@ -53,8 +53,8 @@ define(['site/SiteCount'], function (SiteCount) {
         nonControlCells.eq(0).text(countryEntry.open);
         nonControlCells.eq(1).text(countryEntry.construction);
         nonControlCells.eq(2).text(countryEntry.permit);
-        nonControlCells.eq(3).text(countryEntry.countryName);
-        if (countryEntry.countryName === "Total") {
+        nonControlCells.eq(3).text(countryEntry.key);
+        if (countryEntry.key === "Total") {
             row.addClass("emphasize");
         } else {
             row.removeClass("emphasize");
