@@ -60,6 +60,7 @@ define(['site/Sites', 'site/SiteIterator', 'lib/highcharts'], function (Sites, S
                 text: null
             },
             legend: {
+                borderWidth: 0,
                 enabled: true
             },
             xAxis: {

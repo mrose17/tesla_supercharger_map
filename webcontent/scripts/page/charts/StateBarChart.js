@@ -1,4 +1,4 @@
-define(['site/Sites', 'site/SiteIterator', 'util/Objects', 'lib/highcharts'], function (Sites, SiteIterator, Objects) {
+define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'page/charts/ChartColor', 'lib/highcharts'], function (Sites, SiteIterator, SiteCount, ChartColor) {
 
     /**
      *
@@ -10,37 +10,20 @@ define(['site/Sites', 'site/SiteIterator', 'util/Objects', 'lib/highcharts'], fu
 
     CountryBarChart.prototype.draw = function () {
 
-        var stateMap = {};
-
-        new SiteIterator()
-            .withPredicate(SiteIterator.PRED_IS_OPEN)
-            .withPredicate(SiteIterator.PRED_IS_COUNTED)
-            .withPredicate(SiteIterator.PRED_IS_USA)
-            .withSort(SiteIterator.FUN_SORT_BY_OPEN_DATE)
-            .iterate(function (supercharger) {
-                var state = supercharger.address.state;
-                if (Objects.isNullOrUndef(stateMap[state])) {
-                    stateMap[state] = 1;
-                } else {
-                    stateMap[state] = (stateMap[state] + 1);
-                }
-            });
-
-        var sortableList = [];
-        $.each(stateMap, function (key, value) {
-            sortableList.push({stateName: key, count: value});
-        });
-
-        sortableList.sort(function (a, b) {
-            return b.count - a.count;
-        });
+        var stateSiteCountList = SiteCount.getCountListByState();
 
         var stateNameList = [];
-        var stateCountList = [];
+        var stateOpenCountList = [];
+        var stateConstructionCountList = [];
+        var statePermitCountList = [];
 
-        $.each(sortableList, function (index, value) {
-            stateNameList.push(value.stateName);
-            stateCountList.push(value.count);
+        $.each(stateSiteCountList, function (index, value) {
+            if (value.key !== 'Total') {
+                stateNameList.push(value.key);
+                stateOpenCountList.push(value.open);
+                stateConstructionCountList.push(value.construction);
+                statePermitCountList.push(value.permit);
+            }
         });
 
         $("#chart-state-bar").highcharts({
@@ -57,7 +40,9 @@ define(['site/Sites', 'site/SiteIterator', 'util/Objects', 'lib/highcharts'], fu
                 text: null
             },
             legend: {
-                enabled: false
+                enabled: true,
+                borderWidth: 0,
+                reversed: true
             },
             xAxis: {
                 categories: stateNameList
@@ -65,19 +50,33 @@ define(['site/Sites', 'site/SiteIterator', 'util/Objects', 'lib/highcharts'], fu
             yAxis: {
                 title: {
                     text: 'Supercharger Count'
-                }
+                },
+                tickInterval: 2,
+                allowDecimals: false
             },
             plotOptions: {
-                bar: {
+                column: {
+                    stacking: 'normal',
                     dataLabels: {
-                        enabled: true
+                        enabled: false
                     }
                 }
             },
             series: [
                 {
-                    name: "Count",
-                    data: stateCountList
+                    name: "Permit",
+                    data: statePermitCountList,
+                    color: ChartColor.STATUS_PERMIT
+                },
+                {
+                    name: "Construction",
+                    data: stateConstructionCountList,
+                    color: ChartColor.STATUS_CONSTRUCTION
+                },
+                {
+                    name: "Open",
+                    data: stateOpenCountList,
+                    color: ChartColor.STATUS_OPEN
                 }
             ]
         });
