@@ -3,7 +3,7 @@ define([], function () {
     var ChartColor = {};
 
     ChartColor.STATUS_PERMIT = {
-        radialGradient: { cx: 0.5, cy: 0.5, r: 0.5 },
+        linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
         stops: [
             [0, '#003399'],
             [1, '#3366AA']
@@ -11,14 +11,20 @@ define([], function () {
     };
 
     ChartColor.STATUS_OPEN = {
-        radialGradient: { cx: 0.5, cy: 0.5, r: 0.5 },
+        linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
         stops: [
             [0, '#460000'],
             [1, '#970202']
         ]
     };
 
-    ChartColor.STATUS_CONSTRUCTION = 'orange';
+    ChartColor.STATUS_CONSTRUCTION = {
+        linearGradient: { x1: 0, x2: 0, y1: 0, y2: 1 },
+        stops: [
+            [0, '#ffa500'],
+            [1, '#df863c']
+        ]
+    };
 
     return ChartColor;
 
