@@ -1,4 +1,4 @@
-define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'util/Objects', 'lib/highcharts'], function (Sites, SiteIterator, SiteCount, Objects) {
+define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'page/charts/ChartColor', 'lib/highcharts'], function (Sites, SiteIterator, SiteCount, ChartColor) {
 
     /**
      *
@@ -67,19 +67,18 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'util/Objects', 'li
                 {
                     name: "Permit",
                     data: statePermitCountList,
-                    color: '#0000ff'
+                    color: ChartColor.STATUS_PERMIT
                 },
                 {
                     name: "Construction",
                     data: stateConstructionCountList,
-                    color: 'orange'
+                    color: ChartColor.STATUS_CONSTRUCTION
                 },
                 {
                     name: "Open",
                     data: stateOpenCountList,
-                    color: '#460000'
+                    color: ChartColor.STATUS_OPEN
                 }
-
             ]
         });
 
