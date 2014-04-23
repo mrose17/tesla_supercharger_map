@@ -7,6 +7,15 @@ define(['site/SiteIterator'], function (SiteIterator) {
     var SiteCount = function () {
     };
 
+    SiteCount.sortByOpenCount = function (one, two) {
+        return two.open - one.open;
+    };
+    SiteCount.sortByTotalCount = function (one, two) {
+        var count1 = one.open + one.construction + one.permit;
+        var count2 = two.open + two.construction + two.permit;
+        return count2 - count1;
+    };
+
     /**
      * Site count.
      *
@@ -23,7 +32,7 @@ define(['site/SiteIterator'], function (SiteIterator) {
      *   de: arrayRef
      * }
      */
-    SiteCount.getCountListImpl = function (siteIterator, aggregateKey) {
+    SiteCount.getCountListImpl = function (siteIterator, aggregateKey, sortFunction) {
         var referenceMap = {},
             returnedArray = [],
             totalOpen = 0,
@@ -55,7 +64,7 @@ define(['site/SiteIterator'], function (SiteIterator) {
         );
 
         returnedArray.push({ key: 'Total', open: totalOpen, construction: totalConstruction, permit: totalPermit });
-        returnedArray.sort(SiteCount.sortByOpenCount);
+        returnedArray.sort(sortFunction);
         return returnedArray;
     };
 
@@ -65,13 +74,21 @@ define(['site/SiteIterator'], function (SiteIterator) {
             .withPredicate(SiteIterator.PRED_NOT_USER_ADDED)
             .withPredicate(SiteIterator.PRED_IS_COUNTED);
 
-        return SiteCount.getCountListImpl(siteIterator, 'country');
+        return SiteCount.getCountListImpl(siteIterator, 'country', SiteCount.sortByOpenCount);
 
     };
 
-    SiteCount.sortByOpenCount = function (one, two) {
-        return two.open - one.open;
+    SiteCount.getCountListByState = function () {
+
+        var siteIterator = new SiteIterator()
+            .withPredicate(SiteIterator.PRED_NOT_USER_ADDED)
+            .withPredicate(SiteIterator.PRED_IS_COUNTED)
+            .withPredicate(SiteIterator.PRED_IS_USA);
+
+        return SiteCount.getCountListImpl(siteIterator, 'state', SiteCount.sortByTotalCount);
+
     };
+
 
     return SiteCount;
 
