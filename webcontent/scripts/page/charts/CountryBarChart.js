@@ -41,9 +41,6 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteCount', 'page/charts/ChartC
             },
             legend: {
                 enabled: true,
-                align: 'right',
-                verticalAlign: 'top',
-                floating: true,
                 borderWidth: 0,
                 reversed: true
             },
