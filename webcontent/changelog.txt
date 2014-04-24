@@ -113,7 +113,7 @@ Tue Dec 3 2013 || supercharger added: Wilnsdorf, Germany
 Mon Dec 2 2013 || supercharger added: Lusk, WY
 Sun Dec 1 2013 || supercharger added: Zevenaar, Netherlands
 Fri Nov 29 2013 || supercharger added: Lumberton, NC
-Wed Nov 27 2013 || supercharger added: Cheyenne, WY (removed Gila Bend, AZ)
+Wed Nov 27 2013 || supercharger added: Cheyenne, WY
 Tue Nov 26 2013 || supercharger added: St. Joseph, MI
 Mon Nov 25 2013 || supercharger added: Rapid City, SD
 Mon Nov 25 2013 || supercharger added: Detroit Lake, OR
