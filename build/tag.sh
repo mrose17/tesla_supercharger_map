@@ -1,10 +1,35 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
-    echo "usage: tag.sh [tag name]"
+if [ "$#" -ne 0 ]; then
+    echo "usage: tag.sh"
     exit
 fi
 
-git tag --annotate "$1" --message "$1"
+echo "------------------------------------------------------"
+echo "Existing tags:"
+echo "------------------------------------------------------"
 
-git push origin --tags
+git tag
+
+echo "------------------------------------------------------"
+
+while true; do
+    echo "Please enter release version: "
+    read newVersion
+
+    echo "You entered: \"${newVersion}\", is that correct [yes/no]?"
+    read confirmation
+
+    if [ "${confirmation}" = "yes" ]; then
+        echo "creating tag \"${newVersion}\""
+        git tag --annotate "$1" --message "$1"
+        echo "pushing tags"
+        git push origin --tags
+        echo "done"
+        break
+    fi
+
+done
+
+
+
