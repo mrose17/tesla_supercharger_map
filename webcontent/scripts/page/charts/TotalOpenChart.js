@@ -1,4 +1,4 @@
-define(['site/Sites', 'site/SiteIterator', 'lib/highcharts'], function (Sites, SiteIterator) {
+define(['site/Sites', 'site/SiteIterator', 'site/SiteSorting', 'lib/highcharts'], function (Sites, SiteIterator, SiteSorting) {
 
     /**
      *
@@ -25,7 +25,7 @@ define(['site/Sites', 'site/SiteIterator', 'lib/highcharts'], function (Sites, S
         new SiteIterator()
             .withPredicate(SiteIterator.PRED_IS_OPEN)
             .withPredicate(SiteIterator.PRED_IS_COUNTED)
-            .withSort(SiteIterator.FUN_SORT_BY_OPEN_DATE)
+            .withSort(SiteSorting.BY_OPENED_DATE)
             .iterate(function (supercharger) {
                 var date = supercharger.dateOpened;
                 var dateUTC = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());

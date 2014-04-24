@@ -3,7 +3,10 @@ define(['util/Objects'], function (Objects) {
 
     var SiteSorting = {};
 
-    SiteSorting.sortByOpenedDate = function (siteOne, siteTwo) {
+    /**
+     * @return {number}
+     */
+    SiteSorting.BY_OPENED_DATE = function (siteOne, siteTwo) {
         var oneNull = Objects.isNullOrUndef(siteOne.dateOpened);
         var twoNull = Objects.isNullOrUndef(siteTwo.dateOpened);
         if (oneNull && twoNull) {
@@ -24,8 +27,11 @@ define(['util/Objects'], function (Objects) {
         return 0;
     };
 
-    SiteSorting.sortByOpenedDateDesc = function (siteOne, siteTwo) {
-        return -1 * SiteSorting.sortByOpenedDate(siteOne, siteTwo);
+    /**
+     * @return {number}
+     */
+    SiteSorting.BY_OPENED_DATE_DESC = function (siteOne, siteTwo) {
+        return -1 * SiteSorting.BY_OPENED_DATE(siteOne, siteTwo);
     };
 
     return SiteSorting;

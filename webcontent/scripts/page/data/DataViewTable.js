@@ -1,4 +1,4 @@
-define(['util/Objects', 'site/SiteIterator', 'util/Dates', 'util/Units', 'lib/stupidtable' ], function (Objects, SiteIterator, Dates, Units) {
+define(['util/Objects', 'site/SiteIterator', 'site/SiteSorting', 'util/Dates', 'util/Units', 'lib/stupidtable' ], function (Objects, SiteIterator, SiteSorting, Dates, Units) {
 
     /**
      * Constructor
@@ -20,7 +20,7 @@ define(['util/Objects', 'site/SiteIterator', 'util/Dates', 'util/Units', 'lib/st
 
         new SiteIterator()
             .withPredicate(SiteIterator.PRED_NOT_USER_ADDED)
-            .withSort(SiteIterator.FUN_SORT_BY_OPEN_DATE_DESC)
+            .withSort(SiteSorting.BY_OPENED_DATE_DESC)
             .iterate(
             function (supercharger) {
                 tableBodyData.append("" +

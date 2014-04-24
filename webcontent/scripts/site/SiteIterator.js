@@ -9,9 +9,6 @@ define(['util/Objects', 'siteload/SiteTransform', 'site/SitePredicates', 'site/S
         this.sortFunction = null;
     };
 
-    SiteIterator.FUN_SORT_BY_OPEN_DATE = SiteSorting.sortByOpenedDate;
-    SiteIterator.FUN_SORT_BY_OPEN_DATE_DESC = SiteSorting.sortByOpenedDateDesc;
-
     SiteIterator.PRED_IS_OPEN = SitePredicates.open;
     SiteIterator.PRED_IS_USA = SitePredicates.isUSA;
     SiteIterator.PRED_IS_COUNTED = SitePredicates.counted;
