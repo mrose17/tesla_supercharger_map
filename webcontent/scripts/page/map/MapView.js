@@ -1,6 +1,7 @@
 define(
-    ['util/Events', 'util/Objects', 'site/SiteIterator', 'site/Sites', 'page/map/MapViewContextMenu', 'page/map/InfoWindowRender', 'page/map/MarkerFactory', 'page/map/RoutingWaypoint', 'util/QueryStrings'],
-    function (Events, Objects, SiteIterator, Sites, MapViewContextMenu, InfoWindowRender, MarkerFactory, RoutingWaypoint, QueryStrings) {
+    ['util/Events', 'util/Objects', 'site/SiteIterator', 'site/SitePredicates', 'site/Sites', 'page/map/MapViewContextMenu', 'page/map/InfoWindowRender',
+        'page/map/MarkerFactory', 'page/map/RoutingWaypoint', 'util/QueryStrings'],
+    function (Events, Objects, SiteIterator, SitePredicates, Sites, MapViewContextMenu, InfoWindowRender, MarkerFactory, RoutingWaypoint, QueryStrings) {
 
 
         /**
@@ -282,7 +283,7 @@ define(
 
         MapView.prototype.setAllRangeCircleVisibility = function (isVisible) {
             new SiteIterator()
-                .withPredicate(SiteIterator.PRED_HAS_CIRCLE)
+                .withPredicate(SitePredicates.HAS_CIRCLE)
                 .iterate(
                 function (supercharger) {
                     supercharger.circle.setVisible(isVisible);

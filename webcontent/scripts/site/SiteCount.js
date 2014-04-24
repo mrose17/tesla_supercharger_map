@@ -1,4 +1,4 @@
-define(['site/SiteIterator'], function (SiteIterator) {
+define(['site/SiteIterator', 'site/SitePredicates'], function (SiteIterator, SitePredicates) {
 
     /**
      *
@@ -71,8 +71,8 @@ define(['site/SiteIterator'], function (SiteIterator) {
     SiteCount.getCountListByCountry = function () {
 
         var siteIterator = new SiteIterator()
-            .withPredicate(SiteIterator.PRED_NOT_USER_ADDED)
-            .withPredicate(SiteIterator.PRED_IS_COUNTED);
+            .withPredicate(SitePredicates.NOT_USER_ADDED)
+            .withPredicate(SitePredicates.IS_COUNTED);
 
         return SiteCount.getCountListImpl(siteIterator, 'country', SiteCount.sortByOpenCount);
 
@@ -81,9 +81,9 @@ define(['site/SiteIterator'], function (SiteIterator) {
     SiteCount.getCountListByState = function () {
 
         var siteIterator = new SiteIterator()
-            .withPredicate(SiteIterator.PRED_NOT_USER_ADDED)
-            .withPredicate(SiteIterator.PRED_IS_COUNTED)
-            .withPredicate(SiteIterator.PRED_IS_USA);
+            .withPredicate(SitePredicates.NOT_USER_ADDED)
+            .withPredicate(SitePredicates.IS_COUNTED)
+            .withPredicate(SitePredicates.IS_USA);
 
         return SiteCount.getCountListImpl(siteIterator, 'state', SiteCount.sortByTotalCount);
 

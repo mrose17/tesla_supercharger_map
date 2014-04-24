@@ -1,4 +1,4 @@
-define(['site/Sites', 'site/SiteIterator', 'site/SiteSorting', 'lib/highcharts'], function (Sites, SiteIterator, SiteSorting) {
+define(['site/Sites', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredicates', 'lib/highcharts'], function (Sites, SiteIterator, SiteSorting, SitePredicates) {
 
     /**
      *
@@ -23,8 +23,8 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteSorting', 'lib/highcharts']
         }
 
         new SiteIterator()
-            .withPredicate(SiteIterator.PRED_IS_OPEN)
-            .withPredicate(SiteIterator.PRED_IS_COUNTED)
+            .withPredicate(SitePredicates.IS_OPEN)
+            .withPredicate(SitePredicates.IS_COUNTED)
             .withSort(SiteSorting.BY_OPENED_DATE)
             .iterate(function (supercharger) {
                 var date = supercharger.dateOpened;
