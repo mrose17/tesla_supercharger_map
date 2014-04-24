@@ -7,13 +7,18 @@ define(['site/SiteIterator', 'site/SitePredicates'], function (SiteIterator, Sit
     var SiteCount = function () {
     };
 
-    SiteCount.sortByOpenCount = function (one, two) {
-        return two.open - one.open;
+    SiteCount.sortByKeyStringValue = function (mapOne, mapTwo) {
+        return mapOne.key.localeCompare(mapTwo.key);
     };
-    SiteCount.sortByTotalCount = function (one, two) {
-        var count1 = one.open + one.construction + one.permit;
-        var count2 = two.open + two.construction + two.permit;
-        return count2 - count1;
+    SiteCount.sortByOpenCount = function (mapOne, mapTwo) {
+        var numberResult = mapTwo.open - mapOne.open;
+        return numberResult !== 0 ? numberResult : SiteCount.sortByKeyStringValue(mapOne, mapTwo);
+    };
+    SiteCount.sortByTotalCount = function (mapOne, mapTwo) {
+        var count1 = mapOne.open + mapOne.construction + mapOne.permit;
+        var count2 = mapTwo.open + mapTwo.construction + mapTwo.permit;
+        var numberResult = count2 - count1;
+        return numberResult !== 0 ? numberResult : SiteCount.sortByKeyStringValue(mapOne, mapTwo);
     };
 
     /**
