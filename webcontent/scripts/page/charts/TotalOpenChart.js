@@ -10,11 +10,13 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredica
 
     TotalOpenChart.prototype.draw = function () {
 
-        var livePerDateUS = [];
-        var livePerDateNotUS = [];
+        var livePerDateNorthAmerica = [];
+        var livePerDateAsia = [];
+        var livePerDateEurope = [];
 
-        var countUSA = 0;
-        var countNotUSA = 0;
+        var countNorthAmerica = 0;
+        var countAsia = 0;
+        var countEurope = 0;
 
         function removePreviousIfSameDate(array, dateUTC) {
             if (array.length > 0 && array[array.length - 1][0] === dateUTC) {
@@ -30,15 +32,20 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredica
                 var date = supercharger.dateOpened;
                 var dateUTC = Date.UTC(date.getFullYear(), date.getMonth(), date.getDate());
 
-                if (supercharger.address.isUSA()) {
-                    countUSA++;
-                    removePreviousIfSameDate(livePerDateUS, dateUTC);
-                    livePerDateUS.push([dateUTC, countUSA]);
+                if (supercharger.address.isNorthAmerica()) {
+                    countNorthAmerica++;
+                    removePreviousIfSameDate(livePerDateNorthAmerica, dateUTC);
+                    livePerDateNorthAmerica.push([dateUTC, countNorthAmerica]);
 
-                } else {
-                    countNotUSA++;
-                    removePreviousIfSameDate(livePerDateNotUS, dateUTC);
-                    livePerDateNotUS.push([dateUTC, countNotUSA]);
+                } else if (supercharger.address.isAsia()) {
+                    countAsia++;
+                    removePreviousIfSameDate(livePerDateAsia, dateUTC);
+                    livePerDateAsia.push([dateUTC, countAsia]);
+                }
+                else {
+                    countEurope++;
+                    removePreviousIfSameDate(livePerDateEurope, dateUTC);
+                    livePerDateEurope.push([dateUTC, countEurope]);
                 }
             });
 
@@ -87,16 +94,24 @@ define(['site/Sites', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredica
 
             series: [
                 {
-                    name: "US",
-                    data: livePerDateUS,
+                    name: "North America",
+                    data: livePerDateNorthAmerica,
                     lineWidth: 1,
                     marker: {
                         radius: 3
                     }
                 },
                 {
-                    name: "Outside US",
-                    data: livePerDateNotUS,
+                    name: "Europe",
+                    data: livePerDateEurope,
+                    lineWidth: 1,
+                    marker: {
+                        radius: 3
+                    }
+                },
+                {
+                    name: "Asia",
+                    data: livePerDateAsia,
                     lineWidth: 1,
                     marker: {
                         radius: 3

@@ -15,6 +15,12 @@ define(function () {
         Address.prototype.isUSA = function () {
             return this.country === "USA";
         };
+        Address.prototype.isNorthAmerica = function () {
+            return this.country === "USA" || this.country === "Canada";
+        };
+        Address.prototype.isAsia = function () {
+            return this.country === "China";
+        };
 
 
         return Address;

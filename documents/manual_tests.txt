@@ -95,6 +95,7 @@ Charts Page
 ---------------------------------
 
 () Superchargers over time.
+    () Individual curves should be correct: North America, Europe, Asia
 () Superchargers per US state.
 () Superchargers per country.
 
