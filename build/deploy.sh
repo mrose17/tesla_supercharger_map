@@ -26,4 +26,5 @@ rm -r ${WEB_APP_DIR}
 
 echo "${BANNER} changing dir perms   : ${DIR_DEPLOY}"
 ssh ${SSH_USER}@${REMOTE_HOST} chown -R ${SSH_USER}:www-data ${DIR_DEPLOY}
+ssh ${SSH_USER}@${REMOTE_HOST} chmod -R ug+rx ${DIR_DEPLOY}
 
