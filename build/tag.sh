@@ -22,7 +22,7 @@ while true; do
 
     if [ "${confirmation}" = "yes" ]; then
         echo "creating tag \"${newVersion}\""
-        git tag --annotate "$1" --message "$1"
+        git tag --annotate "${newVersion}" --message "${newVersion}"
         echo "pushing tags"
         git push origin --tags
         echo "done"
