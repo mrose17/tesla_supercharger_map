@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROJECT_VERSION='2.0'
+PROJECT_VERSION=`git tag | sort --version-sort | tail -1`
 BUILD_TIMESTAMP=`date +'%b %d, %I:%M %p %Z'`
 DIR_PROJECT='../webcontent'
 DIR_BUILT='../webcontent-built'
