@@ -1477,3 +1477,24 @@ elevation: 90
 url: http://www.teslamotorsclub.com/showthread.php/30148-First-UK-Superchargers-South-Mimms
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30148-First-UK-Superchargers-South-Mimms
 status: CONSTRUCTION
+
+##################################################################################################################
+##################################################################################################################
+###
+### Asia
+###
+##################################################################################################################
+##################################################################################################################
+
+#-----------------------------------------------------------------------------------------------------------------------------| China
+name: Beijing, China
+street: 10 JiuXianQiao Road
+city: Beijing
+state:
+zip: 100015
+country: China
+gps: 39.984162, 116.495744
+elevation: 0
+url: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
+dateOpened: 2014-04-23
