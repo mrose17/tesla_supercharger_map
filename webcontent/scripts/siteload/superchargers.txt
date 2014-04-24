@@ -1498,3 +1498,15 @@ elevation: 0
 url: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 dateOpened: 2014-04-23
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Shanghai, China
+street: 518 LanTian Road
+city: Shanghai
+state:
+zip: 201206
+country: China
+gps: 31.239993, 121.579461
+elevation: 0
+url: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
+dateOpened: 2014-04-23
