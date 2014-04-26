@@ -1494,7 +1494,7 @@ state:
 zip: 100015
 country: China
 gps: 39.984162, 116.495744
-elevation: 0
+elevation: 42
 url: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 dateOpened: 2014-04-23
@@ -1506,7 +1506,7 @@ state:
 zip: 201206
 country: China
 gps: 31.239993, 121.579461
-elevation: 0
+elevation: 2
 url: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 dateOpened: 2014-04-23
