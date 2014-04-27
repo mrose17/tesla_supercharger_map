@@ -53,6 +53,9 @@ db.serialize(function() {
          + 'PRIMARY KEY(origin, destination))');
   db.run('CREATE TRIGGER IF NOT EXISTS d01 AFTER UPDATE ON distances BEGIN '
          + 'UPDATE distances SET updated=datetime("now") WHERE origin=NEW.origin AND destination=NEW.destination; '
+         + 'END');
+  db.run('CREATE TRIGGER IF NOT EXISTS s02 AFTER DELETE ON sites BEGIN '
+         + 'DELETE FROM distances WHERE origin=OLD.address OR destination=OLD.address; '
          + 'END', function(err) {
     if (!!err) {
       console.log('sites.db: ' + err.message);
