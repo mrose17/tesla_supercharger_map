@@ -1356,6 +1356,18 @@ elevation: 462
 url: http://www.teslamotors.com/supercharger/jettingen
 dateOpened: 2013-12-13
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Regensburg, Germany
+street: ?
+city: Regensburg
+state:
+zip: ?
+country: Germany
+gps: 48.994967, 12.150416
+elevation: 333
+url: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
+urlDiscuss: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
+status: PERMIT
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Wilnsdorf, Germany
 street: Elkersberg 2 (Autohof)
 city: Wilnsdorf
