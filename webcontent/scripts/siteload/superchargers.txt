@@ -727,9 +727,9 @@ zip: 12205
 country: USA
 gps: 42.7111943,-73.8180484
 elevation: 88
-url: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
+url: http://www.teslamotors.com/supercharger/albany
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
-status: CONSTRUCTION
+dateOpened: 2014-04-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: JFK Airport, NY
 street: 150th Ave and 147th St
