@@ -304,16 +304,16 @@ urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24984-Supercharger-San
 status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Roseville, CA
-street: 1131 Galleria Blvd
+street: 1151 Galleria Blvd
 city: Roseville
 state: CA
 zip: 95678
 country: USA
-gps: 38.7712342,-121.2661786
+gps: 38.771208, -121.266149
 elevation: 66
-url: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
+url: http://www.teslamotors.com/supercharger/roseville
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
-status: CONSTRUCTION
+dateOpened: 2014-04-29
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Vacaville, CA
 street: 321 Nut Tree RD
