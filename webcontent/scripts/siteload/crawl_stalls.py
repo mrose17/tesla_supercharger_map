@@ -12,22 +12,22 @@ def main(argv):
     lines = sc_file.readlines()
 
     station = ''
-    gps_string = ''
+    elevation = ''
     for line in lines:
-        line=line.rstrip('\n')
+        raw_line=line.rstrip('\n')
 
         # Get station name
-        if "name:" in line:
-            words = line.split(": ")
+        if "name:" in raw_line:
+            words = raw_line.split(": ")
             station = words[1]
 
-        # Use GPS string to determine the location in data file to insert stall info
-        if "gps:" in line:
-            gps_string = line
+        # Use 'elevation' string for the future location in the data file for stall info
+        if "elevation:" in line:
+            elevation = line
 
         # Crawl supercharger webpage if it has an official page listed
-        if url_prefix in line:
-            url = line.split(" ")[1]
+        if url_prefix in raw_line:
+            url = raw_line.split(" ")[1]
             content = urllib.urlopen(url).read()
             doc = fromstring(content)
             elements = doc.find_class('stalls')
