@@ -1300,17 +1300,6 @@ elevation: 190
 url: http://www.teslamotors.com/supercharger/vienna
 urlDiscuss: http://tff-forum.de/viewtopic.php?f=55&t=3101
 dateOpened: 2014-04-30
-#-----------------------------------------------------------------------------------------------------------------------------| DENMARK
-name: Kastrup, Denmark
-street: Kirstinehøj 43
-city: Kastrup
-state:
-zip: 2770
-country: Denmark
-gps: 55.614447, 12.613535
-elevation: 2
-url: http://www.teslamotors.com/kastrup
-status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
 name: Magdeburg, Germany
 street: Zum Raukler 1
