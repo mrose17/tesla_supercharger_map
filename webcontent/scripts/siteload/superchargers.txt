@@ -1299,7 +1299,7 @@ gps: 48.156978, 16.333351
 elevation: 190
 url: http://www.teslamotors.com/supercharger/vienna
 urlDiscuss: http://tff-forum.de/viewtopic.php?f=55&t=3101
-status: CONSTRUCTION
+dateOpened: 2014-04-30
 #-----------------------------------------------------------------------------------------------------------------------------| DENMARK
 name: Kastrup, Denmark
 street: Kirstinehøj 43
