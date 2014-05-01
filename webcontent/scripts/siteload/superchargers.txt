@@ -1366,7 +1366,7 @@ gps: 48.994967, 12.150416
 elevation: 333
 url: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
 urlDiscuss: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
-status: PERMIT
+status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Wilnsdorf, Germany
 street: Elkersberg 2 (Autohof)
