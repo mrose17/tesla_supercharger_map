@@ -24,6 +24,7 @@
 # name         | string       | yes      |         | display name for the site
 # gps          | float, float | yes      |         | GPS coordinates
 # elevation    | integer      | yes      |         | Elevation relative to sea level in meters.
+# numStalls    | integer      | no       |         | Number of stalls at a supercharger station. Not required due to lack of data for new stations.
 # url          | string       | yes      |         | URL pointing to Tesla's web page for this supercharger
 # urlDiscuss   | string       | no       |         | URL pointing to discussion forum/thread for this supercharger
 # dateOpened   | string       | no       |         | date opened
