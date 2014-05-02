@@ -1118,9 +1118,9 @@ zip: 22192
 country: USA
 gps: 38.6422662,-77.294923
 elevation: 63
-url: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
+url: http://www.teslamotors.com/supercharger/woodbridge
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
-status: CONSTRUCTION
+dateOpened: 2014-05-02
 #-----------------------------------------------------------------------------------------------------------------------------| Washington
 name: Burlington, WA
 street: 9384 Old Highway 99
