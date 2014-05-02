@@ -1155,6 +1155,18 @@ elevation: 454
 url: http://www.teslamotors.com/supercharger/ellensburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/23850-Ellensburg-Supercharger
 dateOpened: 2013-12-23
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Ritzville, WA
+street: 105 Galbreath Way
+city: Ritzville
+state: WA
+zip: 99169
+country: USA
+gps: 47.116887, -118.367156
+elevation: 570
+url: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
+status: PERMIT
 #-----------------------------------------------------------------------------------------------------------------------------| West Virginia
 name: Triadelphia, WV
 street: 35 Bob Wise Drive
