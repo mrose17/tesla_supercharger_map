@@ -1164,8 +1164,8 @@ zip: 99169
 country: USA
 gps: 47.116887, -118.367156
 elevation: 570
-url: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
-urlDiscuss: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
+url: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
 status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| West Virginia
 name: Triadelphia, WV
