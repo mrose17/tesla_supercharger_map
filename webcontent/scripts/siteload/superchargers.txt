@@ -1166,7 +1166,7 @@ gps: 47.116887, -118.367156
 elevation: 570
 url: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
-status: PERMIT
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| West Virginia
 name: Triadelphia, WV
 street: 35 Bob Wise Drive
