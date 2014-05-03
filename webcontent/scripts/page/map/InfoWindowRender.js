@@ -68,6 +68,13 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         div += "<div class='info-window-details'>";
         div += "<table>";
 
+        //
+        // Number of charging stalls
+        //
+        if (!Objects.isNullOrUndef(supercharger.numStalls)) {
+            div += "<tr><th>Stalls</th><td>" + this.supercharger.numStalls + "</td></tr>";
+        }
+
         // Elevation
         //
         if (!Objects.isNullOrUndef(supercharger.elevation)) {
