@@ -725,7 +725,7 @@ city: Albany
 state: NJ
 zip: 12205
 country: USA
-gps: 42.7111943,-73.8180484
+gps: 42.710356, -73.819109
 elevation: 88
 url: http://www.teslamotors.com/supercharger/albany
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
@@ -1111,12 +1111,12 @@ url: http://www.teslamotors.com/supercharger/glenallen
 dateOpened: 2013-10-24
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Woodbridge, VA
-street: Potomac Mills Circle
+street: 2700 Potomac Mills Circle
 city: Woodbridge
 state: VA
 zip: 22192
 country: USA
-gps: 38.6422662,-77.294923
+gps: 38.640820, -77.296330
 elevation: 63
 url: http://www.teslamotors.com/supercharger/woodbridge
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
