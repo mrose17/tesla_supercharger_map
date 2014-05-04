@@ -727,9 +727,9 @@ zip: 12205
 country: USA
 gps: 42.7111943,-73.8180484
 elevation: 88
-url: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
+url: http://www.teslamotors.com/supercharger/albany
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
-status: CONSTRUCTION
+dateOpened: 2014-04-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: JFK Airport, NY
 street: 150th Ave and 147th St
@@ -888,8 +888,8 @@ zip: 18052
 country: USA
 gps: 40.630598, -75.479928
 elevation: 99
-url: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
-urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
+url: http://www.teslamotorsclub.com/showthread.php/30668-Whitehall-%28-Allentown%29-Superchargers-Updates
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30668-Whitehall-%28-Allentown%29-Superchargers-Updates
 status: PERMIT
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Somerset, PA
@@ -1118,9 +1118,9 @@ zip: 22192
 country: USA
 gps: 38.6422662,-77.294923
 elevation: 63
-url: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
+url: http://www.teslamotors.com/supercharger/woodbridge
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
-status: CONSTRUCTION
+dateOpened: 2014-05-02
 #-----------------------------------------------------------------------------------------------------------------------------| Washington
 name: Burlington, WA
 street: 9384 Old Highway 99
@@ -1155,6 +1155,18 @@ elevation: 454
 url: http://www.teslamotors.com/supercharger/ellensburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/23850-Ellensburg-Supercharger
 dateOpened: 2013-12-23
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Ritzville, WA
+street: 105 Galbreath Way
+city: Ritzville
+state: WA
+zip: 99169
+country: USA
+gps: 47.116887, -118.367156
+elevation: 570
+url: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| West Virginia
 name: Triadelphia, WV
 street: 35 Bob Wise Drive
@@ -1298,18 +1310,8 @@ country: Austria
 gps: 48.156978, 16.333351
 elevation: 190
 url: http://www.teslamotors.com/supercharger/vienna
-status: CONSTRUCTION
-#-----------------------------------------------------------------------------------------------------------------------------| DENMARK
-name: Kastrup, Denmark
-street: Kirstinehøj 43
-city: Kastrup
-state:
-zip: 2770
-country: Denmark
-gps: 55.614447, 12.613535
-elevation: 2
-url: http://www.teslamotors.com/kastrup
-status: CONSTRUCTION
+urlDiscuss: http://tff-forum.de/viewtopic.php?f=55&t=3101
+dateOpened: 2014-04-30
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
 name: Magdeburg, Germany
 street: Zum Raukler 1
@@ -1319,8 +1321,9 @@ zip: 39326
 country: Germany
 gps: 52.1739629, 11.4942547
 elevation: 131
-url: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
-status: CONSTRUCTION
+url: http://www.teslamotors.com/magdeburg
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
+dateOpened: 2014-04-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Aichstetten, Germany
 street: Am Waizenhof 12 (Autohof)
@@ -1354,6 +1357,18 @@ gps: 48.411685, 10.439755
 elevation: 462
 url: http://www.teslamotors.com/supercharger/jettingen
 dateOpened: 2013-12-13
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Regensburg, Germany
+street: ?
+city: Regensburg
+state:
+zip: ?
+country: Germany
+gps: 48.994967, 12.150416
+elevation: 333
+url: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
+urlDiscuss: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
+status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Wilnsdorf, Germany
 street: Elkersberg 2 (Autohof)
@@ -1487,26 +1502,26 @@ status: CONSTRUCTION
 ##################################################################################################################
 
 #-----------------------------------------------------------------------------------------------------------------------------| China
-name: Beijing, China
-street: 10 JiuXianQiao Road
-city: Beijing
+name: Jiading, China
+street: near Jiading Auto City
+city: Shanghai
 state:
-zip: 100015
+zip: ?
 country: China
-gps: 39.984162, 116.495744
-elevation: 42
-url: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
+gps: 31.281500, 121.162917
+elevation: 4
+url: http://www.teslamotors.com/supercharger/jiading
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 dateOpened: 2014-04-23
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-name: Shanghai, China
-street: 518 LanTian Road
+name: Jinqiao, China
+street: No.518 lantian RD, jinqiao Pudong district
 city: Shanghai
 state:
-zip: 201206
+zip: ?
 country: China
-gps: 31.239993, 121.579461
-elevation: 2
-url: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
+gps: 31.242917, 121.575333
+elevation: 4
+url: http://www.teslamotors.com/supercharger/jinqiao
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 dateOpened: 2014-04-23
