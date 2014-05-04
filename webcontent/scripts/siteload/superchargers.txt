@@ -889,8 +889,8 @@ zip: 18052
 country: USA
 gps: 40.630598, -75.479928
 elevation: 99
-url: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
-urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-Township-PA-Supercharger-Location-(NW-of-Pittsburgh)
+url: http://www.teslamotorsclub.com/showthread.php/30668-Whitehall-%28-Allentown%29-Superchargers-Updates
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30668-Whitehall-%28-Allentown%29-Superchargers-Updates
 status: PERMIT
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Somerset, PA
@@ -1165,9 +1165,9 @@ zip: 99169
 country: USA
 gps: 47.116887, -118.367156
 elevation: 570
-url: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
-urlDiscuss: http://www.teslamotorsclub.com/showthread.php/10354-Pacific-NW-Superchargers/page20
-status: PERMIT
+url: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| West Virginia
 name: Triadelphia, WV
 street: 35 Bob Wise Drive
