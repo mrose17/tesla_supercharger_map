@@ -523,6 +523,18 @@ elevation: 6
 url: http://www.teslamotors.com/supercharger/savannah
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24771-Supercharger-Savannah-GA
 dateOpened: 2014-01-15
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Tifton, GA
+street: 1310 U.S. 82
+city: Tifton
+state: GA
+zip: 31794
+country: USA
+gps: 31.448583, -83.534472
+elevation: 6
+url: http://www.teslamotorsclub.com/showthread.php/30773-Supercharger-Tifton-GA
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30773-Supercharger-Tifton-GA
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| Illinois
 name: Aurora, IL
 street: 205 N. Broadway
