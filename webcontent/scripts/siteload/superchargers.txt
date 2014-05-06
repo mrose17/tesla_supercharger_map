@@ -531,7 +531,7 @@ state: GA
 zip: 31794
 country: USA
 gps: 31.448583, -83.534472
-elevation: 6
+elevation: 92
 url: http://www.teslamotorsclub.com/showthread.php/30773-Supercharger-Tifton-GA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30773-Supercharger-Tifton-GA
 status: CONSTRUCTION
