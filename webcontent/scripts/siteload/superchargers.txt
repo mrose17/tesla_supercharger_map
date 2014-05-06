@@ -299,9 +299,9 @@ zip: 92675
 country: USA
 gps: 33.498458, -117.6632
 elevation: 30
-url: http://www.teslamotorsclub.com/showthread.php/24984-Supercharger-San-Juan-Capistrano-CA
+url: http://www.teslamotors.com/supercharger/sanjuancapistrano
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24984-Supercharger-San-Juan-Capistrano-CA
-status: CONSTRUCTION
+dateOpened: 2014-05-06
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Roseville, CA
 street: 1151 Galleria Blvd
