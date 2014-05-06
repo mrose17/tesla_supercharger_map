@@ -13,12 +13,19 @@ echo "DIR_PROJECT    : ${DIR_PROJECT}"
 echo "DIR_BUILT      : ${DIR_BUILT}"
 echo "------------------------------------------------"
 
+NODE_CMD="nodejs"
+
+# Check if script is running on a Mac
+if [[ $OSTYPE == darwin* ]] 
+then
+    NODE_CMD="node"
+fi
 
 # CSS
-nodejs r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
+$NODE_CMD r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
 
 # JS
-nodejs r.js -o build.js
+$NODE_CMD r.js -o build.js
 
 
 cp -R ${DIR_PROJECT}/fonts ${DIR_BUILT}
