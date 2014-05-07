@@ -784,7 +784,7 @@ numStalls: 6
 name: Albany, NY
 street: 131 Colonie Center
 city: Albany
-state: NJ
+state: NY
 zip: 12205
 country: USA
 gps: 42.710356, -73.819109
