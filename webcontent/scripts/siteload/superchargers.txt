@@ -1273,11 +1273,12 @@ city: Triadelphia
 state: WV
 zip: 26059
 country: USA
-gps: 40.0619790, -80.6017110
+gps: 40.060757, -80.602874
 elevation: 397
-url: http://www.teslamotorsclub.com/showthread.php/28986-Wheeling-WV-Supercharger
+url: http://www.teslamotors.com/supercharger/triadelphia
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/28986-Wheeling-WV-Supercharger
-status: CONSTRUCTION
+dateOpened: 2014-05-07
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| Wisconsin
 name: Eau Claire, WI
 street: 4601 Keystone Crossing
