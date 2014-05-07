@@ -7,11 +7,11 @@ from lxml.html import fromstring
 
 def main(argv):
     url_prefix = "url: http://www.teslamotors.com/supercharger/"
-    readonly_sc_file = open("superchargers.txt","r")
+    readonly_sc_file = open("../../webcontent/scripts/siteload/superchargers.txt","r")
     sc_lines = readonly_sc_file.readlines()
     readonly_sc_file.close()
 
-    sc_file = open("superchargers.txt","w+")
+    sc_file = open("../../webcontent/scripts/siteload/superchargers.txt","w+")
     station = ''
     num_stalls = -1 # -1 means stall count for station has not been retrieved
 
