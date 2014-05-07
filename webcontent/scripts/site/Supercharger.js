@@ -51,6 +51,9 @@ define(['site/Address', 'site/SiteStatus', 'util/Objects', 'util/Dates', 'util/U
             return JSON.stringify(this);
         };
 
+        Supercharger.prototype.formatStalls = function () {
+            return Objects.isNullOrUndef(this.numStalls) ? "" : this.numStalls;
+        };
         Supercharger.prototype.formatLocation = function () {
             return Objects.isNullOrUndef(this.location) ? "" : this.location.toUrlValue().replace(",", ", ");
         };

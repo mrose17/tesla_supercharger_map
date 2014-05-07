@@ -32,7 +32,7 @@ define(['siteload/FieldDefinition', 'siteload/FieldParsing'], function (FieldDef
 
         new FieldDefinition('count', false, FieldParsing.BOOLEAN),
 
-        new FieldDefinition('numStalls', false, FieldParsing.I),
+        new FieldDefinition('numStalls', false, FieldParsing.I)
     ];
 
     /**

@@ -72,7 +72,7 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         // Number of charging stalls
         //
         if (!Objects.isNullOrUndef(supercharger.numStalls)) {
-            div += "<tr><th>Stalls</th><td>" + this.supercharger.numStalls + "</td></tr>";
+            div += "<tr><th>Stalls</th><td>" + supercharger.formatStalls() + "</td></tr>";
         }
 
         // Elevation

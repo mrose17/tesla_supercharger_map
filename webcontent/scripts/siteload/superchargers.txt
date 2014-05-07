@@ -320,6 +320,7 @@ elevation: 30
 url: http://www.teslamotors.com/supercharger/sanjuancapistrano
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24984-Supercharger-San-Juan-Capistrano-CA
 dateOpened: 2014-05-06
+numStalls: 7
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Roseville, CA
 street: 1151 Galleria Blvd
@@ -530,9 +531,10 @@ zip: 32092
 country: USA
 gps: 29.9207352, -81.416337
 elevation: 14
-url: http://www.teslamotorsclub.com/showthread.php/25177-St-Augustine-Supercharger
+url: http://www.teslamotors.com/supercharger/staugustine
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25177-St-Augustine-Supercharger
 dateOpened: 2014-01-03
-
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| Georgia
 name: Macon, GA
 street: 450 Martin Luther King Jr Blvd
@@ -1430,6 +1432,7 @@ elevation: 131
 url: http://www.teslamotors.com/supercharger/magdeburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
 dateOpened: 2014-04-30
+numStalls: 2
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Aichstetten, Germany
 street: Am Waizenhof 12 (Autohof)

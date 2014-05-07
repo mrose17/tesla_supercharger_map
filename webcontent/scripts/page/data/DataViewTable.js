@@ -32,7 +32,7 @@ define(['util/Objects', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredi
                             "<td>" + supercharger.address.state + "</td>" +
                             "<td>" + supercharger.address.zip + "</td>" +
                             "<td>" + supercharger.address.country + "</td>" +
-                            "<td>" + supercharger.numStalls + "</td>" +
+                            "<td>" + supercharger.formatStalls() + "</td>" +
                             "<td class='gps'>" + supercharger.formatLocation() + "</td>" +
                             "<td class='gps number'>" + supercharger.formatElevationNoUnits(Units.M) + "</td>" +
                             "<td class='" + supercharger.status.value + "'>" + supercharger.status.displayName + "</td>" +
