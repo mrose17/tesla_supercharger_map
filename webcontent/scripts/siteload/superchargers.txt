@@ -24,6 +24,7 @@
 # name         | string       | yes      |         | display name for the site
 # gps          | float, float | yes      |         | GPS coordinates
 # elevation    | integer      | yes      |         | Elevation relative to sea level in meters.
+# numStalls    | integer      | no       |         | Number of stalls at a supercharger station. Not required due to lack of data for new stations.
 # url          | string       | yes      |         | URL pointing to Tesla's web page for this supercharger
 # urlDiscuss   | string       | no       |         | URL pointing to discussion forum/thread for this supercharger
 # dateOpened   | string       | no       |         | date opened
@@ -50,6 +51,7 @@ elevation: 338
 url: http://www.teslamotors.com/supercharger/buckeye
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25317-Supercharger-Buckeye-AZ
 dateOpened: 2014-03-20
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Flagstaff, AZ
 street: 2650 S Beulah Blvd
@@ -62,6 +64,7 @@ elevation: 2106
 url: http://www.teslamotors.com/supercharger/flagstaff
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24922-Supercharger-Flagstaff-AZ
 dateOpened: 2014-01-10
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Gila Bend, AZ
 street: 826 W Pima St
@@ -86,6 +89,7 @@ elevation: 1596
 url: http://www.teslamotors.com/supercharger/holbrook
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25375-Supercharger-Holbrook-AZ
 dateOpened: 2014-01-15
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Kingman, AZ
 street: 789 West Beale Street
@@ -98,6 +102,7 @@ elevation: 1025
 url: http://www.teslamotors.com/supercharger/kingman
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25072-Supercharger-Kingman-AZ
 dateOpened: 2014-01-22
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Quartzsite, AZ
 street: 1451 W Main St
@@ -109,6 +114,7 @@ gps: 33.661314, -114.242174
 elevation: 280
 url: http://www.teslamotors.com/supercharger/quartzsite
 dateOpened: 2013-11-14
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Wickenburg, AZ
 street: 155 N Tegner Tt
@@ -133,6 +139,7 @@ elevation: 43
 url: http://www.teslamotors.com/supercharger/yuma
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26337-Supercharger-Yuma-AZ
 dateOpened: 2014-02-04
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| California
 name: Atascadero, CA
 street: 6950 El Camino Real
@@ -144,6 +151,7 @@ gps: 35.48656, -120.66633
 elevation: 262
 url: http://www.teslamotors.com/supercharger/atascadero
 dateOpened: 2013-07-03
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Barstow, CA
 street: 2812 Lenwood Rd
@@ -155,6 +163,7 @@ gps: 34.849129, -117.085446
 elevation: 725
 url: http://www.teslamotors.com/supercharger/barstow
 dateOpened: 2012-11-19
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Buellton, CA
 street: 555 McMurray RD
@@ -166,6 +175,7 @@ gps: 34.614560, -120.188387
 elevation: 114
 url: http://www.teslamotors.com/supercharger/buellton
 dateOpened: 2012-07-03
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Corning, CA
 street: 950 Hwy 99
@@ -177,6 +187,7 @@ gps: 39.926454, -122.198393
 elevation: 87
 url: http://www.teslamotors.com/supercharger/corning
 dateOpened: 2013-10-18
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: El Centro, CA
 street: 3451 S Dogwood Rd
@@ -200,6 +211,7 @@ gps: 38.64258, -121.18806
 elevation: 63
 url: http://www.teslamotors.com/supercharger/folsom
 dateOpened: 2013-11-19
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Fremont, CA
 street: 45500 Fremont Blvd
@@ -211,6 +223,7 @@ gps: 37.493447, -121.945654
 elevation: 6
 url: http://www.teslamotors.com/supercharger/fremont
 dateOpened: 2013-08-16
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Gilroy, CA
 street: 681 Leavesley Road
@@ -222,6 +235,7 @@ gps: 37.02493, -121.56542
 elevation: 63
 url: http://www.teslamotors.com/supercharger/gilroy
 dateOpened: 2012-11-19
+numStalls: 10
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Harris Ranch, CA
 street: 24505 W. Dorris Ave
@@ -233,6 +247,7 @@ gps: 36.254150, -120.237896
 elevation: 139
 url: http://www.teslamotors.com/supercharger/harrisranch
 dateOpened: 2012-11-19
+numStalls: 7
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Hawthorne, CA
 street: 1 Rocket Rd
@@ -244,6 +259,7 @@ gps: 33.921068, -118.330054
 elevation: 18
 url: http://www.teslamotors.com/supercharger/losangeles
 dateOpened: 2012-11-19
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Indio, CA
 street: 42100 Jackson St
@@ -267,6 +283,7 @@ gps: 41.310233, -122.317278
 elevation: 1066
 url: http://www.teslamotors.com/supercharger/mtshasta
 dateOpened: 2013-10-23
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Oxnard, CA
 street: Collection at Riverpark
@@ -290,6 +307,7 @@ gps: 34.98734, -118.94623
 elevation: 337
 url: http://www.teslamotors.com/supercharger/tejonranch
 dateOpened: 2012-11-19
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: San Juan Capistrano, CA
 street: 31971 Camino Capistrano
@@ -314,6 +332,7 @@ elevation: 66
 url: http://www.teslamotors.com/supercharger/roseville
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25321-Supercharger-Roseville-CA
 dateOpened: 2014-04-29
+numStalls: 7
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Vacaville, CA
 street: 321 Nut Tree RD
@@ -326,6 +345,7 @@ elevation: 34
 url: http://www.teslamotors.com/supercharger/vacaville
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24773-Supercharger-Vacaville-CA
 dateOpened: 2013-12-19
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| Colorado
 name: Glenwood Springs, CO
 street: 125 Wulfsohn Rd
@@ -337,6 +357,7 @@ gps: 39.552680, -107.340168
 elevation: 1762
 url: http://www.teslamotors.com/supercharger/glenwoodsprings
 dateOpened: 2012-09-17
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Grand Junction, CO
 street: 2420 U.S. 6
@@ -349,6 +370,7 @@ elevation: 1386
 url: http://www.teslamotors.com/supercharger/grandjunction
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24867-Grand-Junction-CO-Supercharger
 dateOpened: 2014-01-10
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Lone Tree, CO
 street: 8401 Park Meadows Center Dr
@@ -361,6 +383,7 @@ elevation: 1785
 url: http://www.teslamotors.com/supercharger/lonetree
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/27255-Supercharger-Lonetree-CO
 dateOpened: 2014-02-26
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Silverthorne, CO
 street: 309 Rainbow Dr
@@ -372,6 +395,7 @@ gps: 39.631457, -106.070816
 elevation: 2670
 url: http://www.teslamotors.com/supercharger/silverthorne
 dateOpened: 2013-10-03
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| Connecticut
 name: Milford, CT (north)
 street: 1 CT Turnpike N
@@ -383,6 +407,7 @@ gps: 41.245814, -73.008988
 elevation: 19
 url: http://www.teslamotors.com/supercharger/milfordnorth
 dateOpened: 2012-12-16
+numStalls: 2
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Milford, CT (south)
 street: 1 CT Turnpike N
@@ -394,6 +419,7 @@ gps: 41.246232, -73.010529
 elevation: 19
 url: http://www.teslamotors.com/supercharger/milfordsouth
 dateOpened: 2012-12-16
+numStalls: 2
 count: false
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Darien, CT (north)
@@ -406,6 +432,7 @@ gps: 41.080599, -73.461905
 elevation: 13
 url: http://www.teslamotors.com/supercharger/dariennorth
 dateOpened: 2013-06-19
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Darien, CT (south)
 street: I-95 South after exit 10
@@ -417,6 +444,7 @@ gps: 41.068167, -73.504659
 elevation: 14
 url: http://www.teslamotors.com/supercharger/dariensouth
 dateOpened: 2013-06-19
+numStalls: 4
 count: false
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Greenwich, CT (north)
@@ -430,6 +458,7 @@ elevation: 82
 url: http://www.teslamotors.com/supercharger/greenwichnorth
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25176-Greenwich-CT-Merritt-Parkway-Supercharger
 dateOpened: 2014-02-12
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Greenwich, CT (south)
 street: 2000 Merritt Parkway
@@ -442,6 +471,7 @@ elevation: 81
 url: http://www.teslamotors.com/supercharger/greenwichsouth
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25176-Greenwich-CT-Merritt-Parkway-Supercharger
 dateOpened: 2014-02-12
+numStalls: 4
 count: false
 #-----------------------------------------------------------------------------------------------------------------------------| Delaware
 name: Newark, DE
@@ -454,6 +484,7 @@ gps: 39.662313, -75.691980
 elevation: 18
 url: http://www.teslamotors.com/supercharger/newark
 dateOpened: 2012-12-21
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| Florida
 name: Fort Myers, FL
 street: 9903 Gulf Coast Main Street
@@ -465,6 +496,7 @@ gps: 26.485640, -81.787136
 elevation: 6
 url: http://www.teslamotors.com/supercharger/fortmyers
 dateOpened: 2013-07-25
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Port Orange, FL
 street: 5302 S. Williamson Blvd
@@ -476,6 +508,7 @@ gps: 29.108566, -81.034569
 elevation: 7
 url: http://www.teslamotors.com/supercharger/portorange
 dateOpened: 2013-09-13
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Port St. Lucie, FL
 street: 1773 N.W. St. Lucie W. Boulevard
@@ -487,6 +520,7 @@ gps: 27.313023, -80.406688
 elevation: 8
 url: http://www.teslamotors.com/supercharger/portstlucie
 dateOpened: 2013-07-24
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: St Augustine, FL
 street: 2700 State Road 16, Suite 200
@@ -523,6 +557,7 @@ elevation: 6
 url: http://www.teslamotors.com/supercharger/savannah
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24771-Supercharger-Savannah-GA
 dateOpened: 2014-01-15
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Tifton, GA
 street: 1310 U.S. 82
@@ -546,6 +581,7 @@ gps: 41.760671, -88.309184
 elevation: 197
 url: http://www.teslamotors.com/supercharger/aurora
 dateOpened: 2014-02-24
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Highland Park, IL Service Center
 street: 1200 Old Skokie Road
@@ -557,6 +593,7 @@ gps: 42.17434, -87.816626
 elevation: 195
 url: http://www.teslamotors.com/supercharger/highlandpark
 dateOpened: 2013-12-20
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Rockford, IL
 street: 7200 Harrison Ave
@@ -568,6 +605,7 @@ gps: 42.243896, -88.978877
 elevation: 238
 url: http://www.teslamotors.com/supercharger/rockford
 dateOpened: 2013-09-12
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Normal, IL
 street: Uptown Station Parking Deck 11 Uptown Circle
@@ -579,6 +617,7 @@ gps: 40.508497, -88.985575
 elevation: 236
 url: http://www.teslamotors.com/supercharger/normal
 dateOpened: 2013-06-26
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| Indiana
 name: Angola, IN
 street: 3855 Indiana Rte 127
@@ -590,6 +629,7 @@ gps: 41.699048, -85.000326
 elevation: 329
 url: http://www.teslamotors.com/supercharger/angola
 dateOpened: 2013-12-09
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Mishawaka, IN
 street: 6501 Grape Rd
@@ -601,6 +641,7 @@ gps: 41.7174, -86.1887
 elevation: 234
 url: http://www.teslamotors.com/supercharger/mishawaka
 dateOpened: 2013-12-11
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| Kansas
 name: Goodland, KS
 street: 2631 Enterprise Rd
@@ -625,6 +666,7 @@ elevation: 92
 url: http://www.teslamotors.com/supercharger/bethesda
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26484-Supercharger-Bethesda-MD
 dateOpened: 2014-01-30
+numStalls: 2
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Hagerstown, MD
 street: 495 Premium Outlets Blvd
@@ -637,6 +679,7 @@ elevation: 164
 url: http://www.teslamotors.com/supercharger/hagerstown
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25085-Maryland-Superchargers?p=523453#post523453
 dateOpened: 2014-01-23
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| Minnesota
 name: Albert Lea, MN
 street: 811 East Plaza St
@@ -649,6 +692,7 @@ elevation: 383
 url: http://www.teslamotors.com/supercharger/albertlea
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25097-Minnesota-Supercharging-Discussion-amp-Tracking
 dateOpened: 2014-01-15
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Worthington, MN
 street: 1290 Ryan's Rd
@@ -660,6 +704,7 @@ gps: 43.63385, -95.595647
 elevation: 478
 url: http://www.teslamotors.com/supercharger/worthington
 dateOpened: 2013-12-11
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| Michigan
 name: St. Joseph, MI
 street: 3260 Niles Rd
@@ -671,6 +716,7 @@ gps: 42.056357, -86.456352
 elevation: 210
 url: http://www.teslamotors.com/supercharger/stjoseph
 dateOpened: 2013-11-26
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| New Mexico
 name: Farmington, NM
 street: 4200 Sierra Vista Dr
@@ -682,6 +728,7 @@ gps: 36.766371, -108.144047
 elevation: 1673
 url: http://www.teslamotors.com/supercharger/farmington
 dateOpened: 2014-01-10
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Gallup, NM
 street: 111 Twin Buttes Rd
@@ -694,6 +741,7 @@ elevation: 1970
 url: http://www.teslamotors.com/supercharger/gallup
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24954-Supercharger-Gallup-NM
 dateOpened: 2014-01-07
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| Nevada
 name: Las Vegas, NV
 street: 701 Bridger Ave
@@ -706,6 +754,7 @@ elevation: 609
 url: http://www.teslamotors.com/supercharger/lasvegas
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24924-Supercharger-Las-Vegas-NV
 dateOpened: 2014-02-19
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| New Jersey
 name: Edison, NJ
 street: 199 Lafayette Ave
@@ -730,6 +779,7 @@ elevation: 21
 url: http://www.teslamotors.com/supercharger/hamiltontownship
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/28931-Supercharger-Hamilton-Marketplace-NJ
 dateOpened: 2014-04-22
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| New York
 name: Albany, NY
 street: 131 Colonie Center
@@ -742,6 +792,7 @@ elevation: 88
 url: http://www.teslamotors.com/supercharger/albany
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25874-Albany-Supercharger-Updates
 dateOpened: 2014-04-30
+numStalls: 3
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: JFK Airport, NY
 street: 150th Ave and 147th St
@@ -753,6 +804,7 @@ gps: 40.66319, -73.793192
 elevation: 3
 url: http://www.teslamotors.com/supercharger/jfk
 dateOpened: 2013-12-23
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Syosset, NY
 street: 7 Aeriel Way
@@ -765,6 +817,7 @@ elevation: 56
 url: http://www.teslamotors.com/supercharger/syosset
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26175-Supercharger-Syosset-NY
 dateOpened: 2014-01-18
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| North Carolina
 name: Burlington, NC
 street: 1080 Piper Ln
@@ -776,6 +829,7 @@ gps: 36.070790, -79.511211
 elevation: 197
 url: http://www.teslamotors.com/supercharger/burlingtonnc
 dateOpened: 2013-10-16
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Lumberton, NC
 street: 5093 Fayetteville Road
@@ -788,6 +842,7 @@ elevation: 40
 url: http://www.teslamotors.com/supercharger/lumberton
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24770-Supercharger-Lumberton-NC
 dateOpened: 2014-01-17
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Plymouth, NC
 street: 840 U.S. 64
@@ -800,6 +855,7 @@ elevation: 5
 url: http://www.teslamotors.com/supercharger/plymouth
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/22396-Plymouth-NC-Supercharger-Location
 dateOpened: 2014-03-12
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Rocky Mount, NC
 street: 651 N. Winstead Avenue
@@ -811,6 +867,7 @@ gps: 35.972874, -77.846870
 elevation: 40
 url: http://www.teslamotors.com/supercharger/rockymount
 dateOpened: 2013-11-08
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| Ohio
 name: Macedonia, OH
 street: 8210 Macedonia Commons Blvd
@@ -823,6 +880,7 @@ elevation: 296
 url: http://www.teslamotors.com/supercharger/macedonia
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24872-Supercharger-Macedonia-OH
 dateOpened: 2014-01-15
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Maumee, OH
 street: 1391 Conant Street
@@ -835,6 +893,7 @@ elevation: 192
 url: http://www.teslamotors.com/supercharger/maumee
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25482-Supercharger-Maumee-OH
 dateOpened: 2014-01-13
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| Oregon
 name: Detroit Lake, OR
 street: 210 D Street
@@ -846,6 +905,7 @@ gps: 44.737025, -122.152108
 elevation: 492
 url: http://www.teslamotors.com/supercharger/detroitlake
 dateOpened: 2013-12-23
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Grants Pass, OR
 street: 1900 NW 6th St.
@@ -857,6 +917,7 @@ gps: 42.460883, -123.324124
 elevation: 335
 url: http://www.teslamotors.com/supercharger/grantspass
 dateOpened: 2013-10-22
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Springfield, OR
 street: 919 Kruse Way
@@ -868,6 +929,7 @@ gps: 44.082605, -123.037471
 elevation: 133
 url: http://www.teslamotors.com/supercharger/springfield
 dateOpened: 2013-11-02
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Woodburn, OR
 street: 255 N Arney Rd
@@ -879,6 +941,7 @@ gps: 45.15313, -122.881254
 elevation: 56
 url: http://www.teslamotors.com/supercharger/woodburn
 dateOpened: 2013-08-28
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| Pennsylvania
 name: Cranberry, PA
 street: 1308 Freedom Rd
@@ -891,6 +954,7 @@ elevation: 312
 url: http://www.teslamotors.com/supercharger/cranberry
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25840-Cranberry-PA-Supercharger-Location-(NW-of-Pittsburgh)
 dateOpened: 2014-04-04
+numStalls: 3
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Whitehall, PA
 street: 250 Lehigh Valley Mall
@@ -915,6 +979,7 @@ elevation: 640
 url: http://www.teslamotors.com/supercharger/somerset
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25319-Somerset-PA-Supercharger-(confirmed!)
 dateOpened: 2014-01-10
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| Rhode Island
 name: East Greenwich, RI
 street: 1000 Division St
@@ -926,6 +991,7 @@ gps: 41.660517, -71.497242
 elevation: 73
 url: http://www.teslamotors.com/supercharger/eastgreenwich
 dateOpened: 2014-01-06
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| South Carolina
 name: Greenville, SC
 street: 1140 Woodruff Rd
@@ -950,6 +1016,7 @@ elevation: 39
 url: http://www.teslamotors.com/supercharger/santee
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/25065-Supercharger-Santee-SC
 dateOpened: 2013-12-27
+numStalls: 6
 #-----------------------------------------------------------------------------------------------------------------------------| South Dakota
 name: Mitchell, SD
 street: 1305 W. Havens Street
@@ -961,6 +1028,7 @@ gps: 43.701129, -98.04449999999997
 elevation: 410
 url: http://www.teslamotors.com/supercharger/mitchell
 dateOpened: 2013-12-18
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Murdo, SD
 street: 302 W 5th St
@@ -972,6 +1040,7 @@ gps: 43.886915, -100.716887
 elevation: 691
 url: http://www.teslamotors.com/supercharger/murdo
 dateOpened: 2013-12-31
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Rapid City, SD
 street: 2200 N. Maple Ave
@@ -983,6 +1052,7 @@ gps: 44.105601, -103.212569
 elevation: 1006
 url: http://www.teslamotors.com/supercharger/rapidcity
 dateOpened: 2013-11-25
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| Texas
 name: Columbus, TX
 street: 2535 Texas 71
@@ -994,6 +1064,7 @@ gps: 29.690062, -96.537725
 elevation: 57
 url: http://www.teslamotors.com/supercharger/columbus
 dateOpened: 2013-10-07
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Corsicana, TX
 street: 2035 Interstate 45 Frontage Rd
@@ -1005,6 +1076,7 @@ gps: 32.068577, -96.448229
 elevation: 132
 url: http://www.teslamotors.com/supercharger/corsicana
 dateOpened: 2013-11-15
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Huntsville, TX
 street: 148 Interstate 45
@@ -1016,6 +1088,7 @@ gps: 30.716158, -95.565944
 elevation: 123
 url: http://www.teslamotors.com/supercharger/huntsville
 dateOpened: 2013-11-20
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: San Marcos, TX
 street: 3939 Interstate 35
@@ -1027,6 +1100,7 @@ gps: 29.827692, -97.979677
 elevation: 202
 url: http://www.teslamotors.com/supercharger/sanmarcos
 dateOpened: 2013-08-20
+numStalls: 5
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Waco, TX
 street: 701 Interstate 35
@@ -1038,6 +1112,7 @@ gps: 31.58224, -97.10915
 elevation: 124
 url: http://www.teslamotors.com/supercharger/waco
 dateOpened: 2013-09-07
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| Utah
 name: Beaver, UT
 street: Littlefield Interchange
@@ -1050,6 +1125,7 @@ elevation: 1790
 url: http://www.teslamotors.com/supercharger/beaver
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29316-Supercharger-Beaver-UT
 dateOpened: 2014-04-14
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Blanding, UT
 street: 12 N Grayson Pkwy
@@ -1062,6 +1138,7 @@ elevation: 1849
 url: http://www.teslamotors.com/supercharger/blanding
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21121-Utah-Super-Charger-Locations
 dateOpened: 2014-01-13
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Green River, UT
 street: 1765 East Main St
@@ -1074,6 +1151,7 @@ elevation: 1240
 url: http://www.teslamotors.com/supercharger/greenriver
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26516-Supercharger-Green-River-UT
 dateOpened: 2014-03-17
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Moab, UT
 street: 16 South Main St.
@@ -1086,6 +1164,7 @@ elevation: 1224
 url: http://www.teslamotors.com/supercharger/moab
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21121-Utah-Super-Charger-Locations
 dateOpened: 2014-01-22
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Richfield, UT
 street: 20 W 1400 N
@@ -1098,6 +1177,7 @@ elevation: 1659
 url: http://www.teslamotors.com/supercharger/richfield
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29281-Richfield-Utah-Supercharger
 dateOpened: 2014-04-04
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: St George, UT
 street: 1091 N Bluff St
@@ -1121,6 +1201,7 @@ gps: 37.669832, -77.461419
 elevation: 49
 url: http://www.teslamotors.com/supercharger/glenallen
 dateOpened: 2013-10-24
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Woodbridge, VA
 street: 2700 Potomac Mills Circle
@@ -1133,6 +1214,7 @@ elevation: 63
 url: http://www.teslamotors.com/supercharger/woodbridge
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26526-Supercharger-Woodbridge-VA
 dateOpened: 2014-05-02
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| Washington
 name: Burlington, WA
 street: 9384 Old Highway 99
@@ -1144,6 +1226,7 @@ gps: 48.509772, -122.338625
 elevation: 7
 url: http://www.teslamotors.com/supercharger/burlington
 dateOpened: 2013-07-13
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Centralia, WA
 street: 1200 Lum Rd
@@ -1155,6 +1238,7 @@ gps: 46.729732, -122.977454
 elevation: 56
 url: http://www.teslamotors.com/supercharger/centralia
 dateOpened: 2013-07-17
+numStalls: 10
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Ellensburg, WA
 street: 1620 Canyon Rd
@@ -1167,6 +1251,7 @@ elevation: 454
 url: http://www.teslamotors.com/supercharger/ellensburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/23850-Ellensburg-Supercharger
 dateOpened: 2013-12-23
+numStalls: 5
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Ritzville, WA
 street: 105 Galbreath Way
@@ -1203,6 +1288,7 @@ elevation: 293
 url: http://www.teslamotors.com/supercharger/eauclaire
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24337-Wisconsin-Supercharger-Discussion-amp-Tracking/page31
 dateOpened: 2014-01-30
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: La Crosse, WI
 street: 2845 Midwest Dr
@@ -1214,6 +1300,7 @@ gps: 43.879042, -91.188428
 elevation: 219
 url: http://www.teslamotors.com/supercharger/lacrosse
 dateOpened: 2014-01-05
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Madison, WI
 street: 89 E Towne Mall
@@ -1226,6 +1313,7 @@ elevation: 267
 url: http://www.teslamotors.com/supercharger/madison
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21123-Madison-WI-Supercharger
 dateOpened: 2014-01-13
+numStalls: 3
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Mauston, WI
 street: 640 Mc Evoy St
@@ -1237,6 +1325,7 @@ gps: 43.795551, -90.059358
 elevation: 265
 url: http://www.teslamotors.com/supercharger/mauston
 dateOpened: 2013-12-09
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Pleasant Prairie, WI
 street: 11211 120th Avenue
@@ -1249,6 +1338,7 @@ elevation: 216
 url: http://www.teslamotors.com/supercharger/pleasantprairie/
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/24337-Wisconsin-Supercharger-Discussion-Tracking
 dateOpened: 2014-02-13
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| Wyoming
 name: Cheyenne, WY
 street: 1400 Dell Range Blvd
@@ -1260,6 +1350,7 @@ gps: 41.161085, -104.804955
 elevation: 1859
 url: http://www.teslamotors.com/supercharger/cheyenne
 dateOpened: 2014-01-20
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Lusk, WY
 street: 730 S. Main St
@@ -1271,6 +1362,7 @@ gps: 42.75625, -104.45267
 elevation: 1529
 url: http://www.teslamotors.com/supercharger/lusk
 dateOpened: 2013-12-19
+numStalls: 4
 
 
 
@@ -1312,6 +1404,7 @@ gps: 47.130137, 10.269231
 elevation: 1287
 url: http://www.teslamotors.com/supercharger/stanton
 dateOpened: 2013-12-19
+numStalls: 2
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Vienna, Austria
 street: Gutheil Schoder-Gasse 17
@@ -1324,6 +1417,7 @@ elevation: 190
 url: http://www.teslamotors.com/supercharger/vienna
 urlDiscuss: http://tff-forum.de/viewtopic.php?f=55&t=3101
 dateOpened: 2014-04-30
+numStalls: 2
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
 name: Magdeburg, Germany
 street: Zum Raukler 1
@@ -1333,7 +1427,7 @@ zip: 39326
 country: Germany
 gps: 52.1739629, 11.4942547
 elevation: 131
-url: http://www.teslamotors.com/magdeburg
+url: http://www.teslamotors.com/supercharger/magdeburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
 dateOpened: 2014-04-30
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1347,6 +1441,7 @@ gps: 47.8804833333, 10.0397833333
 elevation: 630
 url: http://www.teslamotors.com/supercharger/aichstetten
 dateOpened: 2013-12-14
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Bad Rappenau, Germany
 street: Buchäckerring 40 (Autohof)
@@ -1358,6 +1453,7 @@ gps: 49.211936, 9.077322
 elevation: 207
 url: http://www.teslamotors.com/supercharger/badrappenau
 dateOpened: 2013-12-14
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Jettingen-Scheppach, Germany
 street: Robert-Bosch-Str. 10 (Autohof)
@@ -1369,6 +1465,7 @@ gps: 48.411685, 10.439755
 elevation: 462
 url: http://www.teslamotors.com/supercharger/jettingen
 dateOpened: 2013-12-13
+numStalls: 7
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Regensburg, Germany
 street: ?
@@ -1392,6 +1489,7 @@ gps: 50.817046, 8.087663
 elevation: 436
 url: http://www.teslamotors.com/supercharger/wilnsdorf
 dateOpened: 2013-12-13
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| NETHERLANDS
 name: Oosterhout, Netherlands
 street: Beneluxweg 1
@@ -1403,6 +1501,7 @@ gps: 51.626423, 4.869517
 elevation: 7
 url: http://www.teslamotors.com/supercharger/oosterhout
 dateOpened: 2013-12-06
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Zevenaar, Netherlands
 street: Doesburgseweg 39
@@ -1414,6 +1513,7 @@ gps: 51.94066, 6.08180
 elevation: 10
 url: http://www.teslamotors.com/supercharger/zevenaar
 dateOpened: 2013-12-06
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| NORWAY
 name: Dombås, Norway
 street: P plass bak KIWI Mini Pris
@@ -1425,6 +1525,7 @@ gps: 62.074926, 9.128281
 elevation: 659
 url: http://www.teslamotors.com/supercharger/dombas
 dateOpened: 2013-08-30
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Lillehammer, Norway
 street: Korgvegen 37
@@ -1436,6 +1537,7 @@ gps: 61.13045, 10.43491
 elevation: 159
 url: http://www.teslamotors.com/supercharger/lillehammer
 dateOpened: 2013-08-30
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Gol, Norway
 street: Heradvegen 5
@@ -1447,6 +1549,7 @@ gps: 60.70232, 8.98620
 elevation: 201
 url: http://www.teslamotors.com/supercharger/gol
 dateOpened: 2013-08-30
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Aurland, Norway
 street: Nyheim Aurland
@@ -1458,6 +1561,7 @@ gps: 60.89863, 7.21082
 elevation: 11
 url: http://www.teslamotors.com/supercharger/aurland
 dateOpened: 2013-08-30
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Cinderella, Norway
 street: Gnr 3 Bnr 318 Brokelandsheia
@@ -1469,6 +1573,7 @@ gps: 58.820783, 9.073746
 elevation: 99
 url: http://www.teslamotors.com/supercharger/cinderella
 dateOpened: 2013-08-30
+numStalls: 4
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Lyngdal, Norway
 street: 1 Fiboveien
@@ -1480,6 +1585,7 @@ gps: 58.15653, 7.10298
 elevation: 12
 url: http://www.teslamotors.com/supercharger/lyngdal
 dateOpened: 2013-08-30
+numStalls: 8
 #-----------------------------------------------------------------------------------------------------------------------------| SWITZERLAND
 name: Lully, Switzerland
 street: Restoroute 1470 Lully FR (Autogrill)
@@ -1491,6 +1597,7 @@ gps: 46.832233, 6.859269
 elevation: 490
 url: http://www.teslamotors.com/supercharger/lully
 dateOpened: 2013-12-13
+numStalls: 2
 
 #-----------------------------------------------------------------------------------------------------------------------------| UNITED KINGDOM
 name: South Mimms, United Kingdom
@@ -1525,6 +1632,7 @@ elevation: 4
 url: http://www.teslamotors.com/supercharger/jiading
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 dateOpened: 2014-04-23
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Jinqiao, China
 street: No.518 lantian RD, jinqiao Pudong district
@@ -1537,3 +1645,4 @@ elevation: 4
 url: http://www.teslamotors.com/supercharger/jinqiao
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
 dateOpened: 2014-04-23
+numStalls: 6
