@@ -68,6 +68,12 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
         div += "<div class='info-window-details'>";
         div += "<table>";
 
+        // Date Opened
+        //
+        if (!Objects.isNullOrUndef(supercharger.dateOpened)) {
+            div += "<tr><th>Date Opened</th><td>" + supercharger.formatDateOpened() + "</td></tr>";
+        }
+
         // Elevation
         //
         if (!Objects.isNullOrUndef(supercharger.elevation)) {
@@ -75,15 +81,16 @@ define(['util/Objects', 'util/Units', 'util/UnitConversion', 'util/Events'], fun
             div += "<tr><th>Elevation</th><td>" + supercharger.formatElevation(targetUnits) + "</td></tr>";
         }
 
-        // Date Opened
-        //
-        if (!Objects.isNullOrUndef(supercharger.dateOpened)) {
-            div += "<tr><th>Date Opened</th><td>" + supercharger.formatDateOpened() + "</td></tr>";
-        }
-
         // GPS
         //
         div += "<tr><th>GPS</th><td>" + supercharger.formatLocation() + "</td></tr>";
+
+        //
+        // Number of charging stalls
+        //
+        if (!Objects.isNullOrUndef(supercharger.numStalls)) {
+            div += "<tr><th>Stalls</th><td>" + supercharger.formatStalls() + "</td></tr>";
+        }
 
         div += "</table>";
         div += "</div>";

@@ -25,7 +25,7 @@ define(['siteload/SiteMapsRaw', 'siteload/FieldDefinitions', 'site/Supercharger'
 
             $.each(siteMap, function (key, value) {
                 var fieldDef = assertKeyHasFieldDefinition(key, siteMap);
-                fieldDef.parseFunciton(supercharger, key, value);
+                fieldDef.parseFunction(supercharger, key, value);
             });
 
             return supercharger;

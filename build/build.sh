@@ -13,12 +13,19 @@ echo "DIR_PROJECT    : ${DIR_PROJECT}"
 echo "DIR_BUILT      : ${DIR_BUILT}"
 echo "------------------------------------------------"
 
+NODE_CMD="nodejs"
+
+# Check if script is running on a Mac
+if [[ $OSTYPE == darwin* ]] 
+then
+    NODE_CMD="node"
+fi
 
 # CSS
-nodejs r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
+$NODE_CMD r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
 
 # JS
-nodejs r.js -o build.js
+$NODE_CMD r.js -o build.js
 
 
 cp -R ${DIR_PROJECT}/fonts ${DIR_BUILT}
@@ -39,7 +46,7 @@ sed -i "s/\${project.version}/${PROJECT_VERSION}/g" ${DIR_BUILT}/version.json
 #
 TEMP_FILE=/tmp/newlog.txt
 
-git log --grep='@changeLog' --pretty=format:'%cd || %s' --date=local --since 'Sat Apr 12 14:00:00 2014 -0600' | sed 's/ [0-9]*:[0-9]*:[0-9]*//' > ${TEMP_FILE}
+git log --grep='@changeLog' --pretty=format:'%cd || %s' --date=local --since 'Mon May 5 18:38:00 2014 -0600' | sed 's/ [0-9]*:[0-9]*:[0-9]*//' > ${TEMP_FILE}
 printf "\n" >> ${TEMP_FILE}
 cat ${TEMP_FILE} ${FILE_CHANGE_LOG} > ${FILE_CHANGE_LOG}.tmp
 mv ${FILE_CHANGE_LOG}.tmp ${FILE_CHANGE_LOG}

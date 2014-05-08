@@ -12,7 +12,7 @@ define([], function () {
     var FieldDefinition = function (name, required, parseFunction) {
         this.name = name;
         this.required = required;
-        this.parseFunciton = parseFunction;
+        this.parseFunction = parseFunction;
     };
 
     return FieldDefinition;
