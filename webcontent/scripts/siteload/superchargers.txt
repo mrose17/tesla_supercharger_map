@@ -1625,6 +1625,19 @@ status: CONSTRUCTION
 ##################################################################################################################
 
 #-----------------------------------------------------------------------------------------------------------------------------| China
+name: Beijing, China
+street: No. 10 Jiaxiangao Road
+city: Beijing
+state:
+zip: 100015
+country: China
+gps: 39.976016, 116.486761
+elevation: 42
+url: http://www.teslamotors.com/supercharger/beijing
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30064-Elon-will-deliver-the-first-batch-of-Model-S-to-Chinese-customers-on-April-22nd
+status: CONSTRUCTION
+numStalls: 1
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Jiading, China
 street: near Jiading Auto City
 city: Shanghai
