@@ -544,9 +544,10 @@ zip: 31201
 country: USA
 gps: 32.8334275,-83.6255567
 elevation: 98
-url: http://www.teslamotorsclub.com/showthread.php/30079-Supercharger-Macon-GA
+url: http://www.teslamotors.com/supercharger/macon
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30079-Supercharger-Macon-GA
-status: CONSTRUCTION
+dateOpened: 2014-05-08
+numStalls: 7
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Savannah, GA
 street: 400 Airways Avenue
