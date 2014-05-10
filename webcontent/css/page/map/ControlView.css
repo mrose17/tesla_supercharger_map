@@ -13,6 +13,7 @@
 .slider-control {
     display: inline-block !important;
     width: 270px !important;
+    vertical-align: middle;
 }
 
 label.control {
