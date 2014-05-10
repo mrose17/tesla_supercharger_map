@@ -17,8 +17,8 @@
 
 label.control {
     font-size: larger;
-    margin-right: .6em;
-    margin-left: 1em;
+    margin: 0 .6em 0 1em;
+    vertical-align: middle;
 }
 
 .status-checkbox-panel {
