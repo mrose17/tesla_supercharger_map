@@ -24,9 +24,9 @@ define(['page/map/InfoWindowRender', 'lib/jquery.browser'], function (InfoWindow
         };
 
         /**
-         * The animation seems to crash Safari on iOS 7
+         * The animation seems to crash Safari on iOS 7.0.  Would render oddly (draw markers, then animate) on android.
          */
-        if (!($.browser.iphone || $.browser.ipad)) {
+        if (!$.browser.mobile) {
             markerOptions.animation = google.maps.Animation.DROP;
         }
 
