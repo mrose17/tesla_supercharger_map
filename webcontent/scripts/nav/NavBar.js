@@ -1,17 +1,19 @@
 define(
     [
-        'util/Events', 'nav/NavBarDropdown',
+        'util/Events', 'util/QueryStrings', 'nav/NavBarDropdown',
         'page/map/MapPage', 'page/data/DataPage', "page/charts/ChartsPage", 'page/changes/ChangesPage', 'page/about/AboutPage'
     ],
-    function (Events, NavBarDropdown, MapPage, DataPage, ChartsPage, ChangesPage, AboutPage) {
+    function (Events, QueryStrings, NavBarDropdown, MapPage, DataPage, ChartsPage, ChangesPage, AboutPage) {
 
+        var PAGE_DEFAULT = "map";
+        var PAGE_OPTIONS = ['map', 'data', 'charts', 'changes', 'about'];
 
         /**
          * Constructor
          */
         var NavBar = function () {
             this.navBarDropdown = new NavBarDropdown();
-            this.currentPage = "map";
+            this.currentPage = PAGE_DEFAULT;
 
             this.mapPage = new MapPage();
             this.dataPage = new DataPage();
@@ -20,6 +22,16 @@ define(
             this.aboutPage = new AboutPage();
 
             this.initListeners();
+        };
+
+
+        NavBar.prototype.setInitialPage = function () {
+            var directNav = QueryStrings.getByName('Page').toLowerCase();
+            if (PAGE_OPTIONS.indexOf(directNav) > -1) {
+                this.changePage(directNav);
+            } else {
+                this.changePage(PAGE_DEFAULT);
+            }
         };
 
         NavBar.prototype.initListeners = function () {
