@@ -1472,6 +1472,18 @@ urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCh
 dateOpened: 2014-04-30
 numStalls: 2
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Münchberg-Nord, Germany
+street: 12 August-Horch-Strasse
+city: Münchberg
+state:
+zip: 95213
+country: Germany
+gps: 50.202872, 11.776552
+elevation: 593
+url: http://www.teslamotors.com/de_DE/supercharger/munchbergnord
+dateOpened: 2014-05-12
+numStalls: 4
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Regensburg, Germany
 street: ?
 city: Regensburg
