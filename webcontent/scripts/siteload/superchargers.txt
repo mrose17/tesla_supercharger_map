@@ -1423,19 +1423,6 @@ urlDiscuss: http://tff-forum.de/viewtopic.php?f=55&t=3101
 dateOpened: 2014-04-30
 numStalls: 2
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
-name: Magdeburg, Germany
-street: Zum Raukler 1
-city: Magdeburg
-state:
-zip: 39326
-country: Germany
-gps: 52.1739629, 11.4942547
-elevation: 131
-url: http://www.teslamotors.com/supercharger/magdeburg
-urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
-dateOpened: 2014-04-30
-numStalls: 2
-#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Aichstetten, Germany
 street: Am Waizenhof 12 (Autohof)
 city: Aichstetten
@@ -1471,6 +1458,19 @@ elevation: 462
 url: http://www.teslamotors.com/supercharger/jettingen
 dateOpened: 2013-12-13
 numStalls: 7
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Magdeburg, Germany
+street: Zum Raukler 1
+city: Magdeburg
+state:
+zip: 39326
+country: Germany
+gps: 52.1739629, 11.4942547
+elevation: 131
+url: http://www.teslamotors.com/supercharger/magdeburg
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
+dateOpened: 2014-04-30
+numStalls: 2
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Regensburg, Germany
 street: ?
