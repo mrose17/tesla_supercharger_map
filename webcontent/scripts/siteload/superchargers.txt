@@ -1459,6 +1459,19 @@ url: http://www.teslamotors.com/supercharger/jettingen
 dateOpened: 2013-12-13
 numStalls: 7
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Lutterberg, Germany
+street: Triftstraße 11
+city: Staufenberg
+state:
+zip: 34355
+country: Germany
+gps: 51.370407, 9.632811
+elevation: 376
+url: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1260
+urlDiscuss: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1260
+numStalls: 0
+status: CONSTRUCTION
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Magdeburg, Germany
 street: Zum Raukler 1
 city: Magdeburg
@@ -1494,6 +1507,7 @@ gps: 48.994967, 12.150416
 elevation: 333
 url: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
 urlDiscuss: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1060#p36149
+numStalls: 0
 status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Wilnsdorf, Germany
