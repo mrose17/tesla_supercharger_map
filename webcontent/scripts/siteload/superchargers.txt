@@ -1469,7 +1469,7 @@ gps: 51.370407, 9.632811
 elevation: 376
 url: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1260
 urlDiscuss: http://www.tff-forum.de/viewtopic.php?f=55&t=1453&start=1260
-numStalls: 0
+numStalls: 6
 status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Magdeburg, Germany
@@ -1483,7 +1483,7 @@ elevation: 131
 url: http://www.teslamotors.com/supercharger/magdeburg
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/21267-European-SuperCharger-rollout-updated/page17
 dateOpened: 2014-04-30
-numStalls: 2
+numStalls: 6
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Münchberg-Nord, Germany
 street: 12 August-Horch-Strasse
