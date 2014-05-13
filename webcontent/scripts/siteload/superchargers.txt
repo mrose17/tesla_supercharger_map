@@ -656,7 +656,7 @@ gps: 39.326253, -101.725171
 elevation: 1129
 url: http://www.teslamotorsclub.com/showthread.php/29807-Supercharger-%C2%96-Goodland-KS
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/29807-Supercharger-%C2%96-Goodland-KS
-status: PERMIT
+status: CONSTRUCTION
 #-----------------------------------------------------------------------------------------------------------------------------| Maryland
 name: Bethesda, MD
 street: 7101 Democracy Blvd
