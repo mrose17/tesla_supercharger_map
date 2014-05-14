@@ -269,9 +269,9 @@ zip: 92203
 country: USA
 gps: 33.741484, -116.215019
 elevation: -3
-url: http://www.teslamotors.com/forum/forums/supercharger-dashboard-update
-urlDiscuss: http://www.teslamotors.com/forum/forums/supercharger-dashboard-update
-status: PERMIT
+url: http://www.teslamotorsclub.com/showthread.php/26868-Supercharger-Cabazon-Indio
+urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26868-Supercharger-Cabazon-Indio
+status: CONSTRUCTION
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Mt Shasta, CA
 street: 111 Morgan Way
