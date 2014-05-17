@@ -1447,6 +1447,19 @@ url: http://www.teslamotors.com/supercharger/badrappenau
 dateOpened: 2013-12-14
 numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Erbshausen, Germany
+street: A7 exit Gramschatzer Wald
+city: Erbshausen
+state:
+zip: 97262
+country: Germany
+gps: 49.9117871,10.0024854
+elevation: 307
+url: http://tff-forum.de/viewtopic.php?f=55&t=1453&start=1440#p38865
+urlDiscuss: http://tff-forum.de/viewtopic.php?f=55&t=1453&start=1440#p38865
+numStalls: 6
+status: CONSTRUCTION
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Jettingen-Scheppach, Germany
 street: Robert-Bosch-Str. 10 (Autohof)
 city: Jettingen-Scheppach
