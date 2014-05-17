@@ -1630,6 +1630,18 @@ elevation: 12
 url: http://www.teslamotors.com/supercharger/lyngdal
 dateOpened: 2013-08-30
 numStalls: 8
+#- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+name: Tingvoll, Norway
+street: Fjordkroa AS - Restaurant
+city: Øydegard
+state:
+zip: 6670
+country: Norway
+gps: 63.011511, 7.975911
+elevation: 7
+url: http://innsyn.tingvoll.kommune.no/RegistryEntry/DocumentDetails/65073
+status: PERMIT
+numStalls: 0
 #-----------------------------------------------------------------------------------------------------------------------------| SWITZERLAND
 name: Lully, Switzerland
 street: Restoroute 1470 Lully FR (Autogrill)
