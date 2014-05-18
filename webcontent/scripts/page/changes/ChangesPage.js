@@ -12,7 +12,7 @@ define([], function () {
 
     ChangesPage.prototype.onPageShow = function () {
         if (!this.changesPage.data(ChangesPage.INIT_PROP)) {
-            jQuery.getJSON("http://supercharge.info/service/supercharge/allChanges", "", jQuery.proxy(this.handleChangesJson, this), "html");
+            jQuery.getJSON("http://supercharge.info/service/supercharge/allChanges", jQuery.proxy(this.handleChangesJson, this));
         }
     };
 
