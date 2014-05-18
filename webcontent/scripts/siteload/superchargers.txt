@@ -1263,11 +1263,10 @@ city: Ritzville
 state: WA
 zip: 99169
 country: USA
-gps: 47.116887, -118.367156
+gps: 47.116887,-118.367156
 elevation: 570
 url: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/30658-Supercharger-Ritzville-WA
-status: OPEN
 dateOpened: 2014-05-18
 #-----------------------------------------------------------------------------------------------------------------------------| West Virginia
 name: Triadelphia, WV
