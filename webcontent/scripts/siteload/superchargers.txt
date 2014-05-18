@@ -76,7 +76,7 @@ gps: 32.943969, -112.733506
 elevation: 221
 url: http://www.teslamotors.com/supercharger/gilabend
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26077-Supercharger-Gila-Bend-AZ
-dateOpened: 2015-05-18
+dateOpened: 2014-05-17
 numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Holbrook, AZ
