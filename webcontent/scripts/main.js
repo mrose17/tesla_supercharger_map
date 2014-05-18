@@ -1,7 +1,9 @@
 requirejs.config(
     {
+        inlineJSON: false,
         paths: {
-            json: 'lib/json'
+            text: 'lib/text', //text is required
+            json: 'lib/json' //alias to plugin
         }
     }
 );
