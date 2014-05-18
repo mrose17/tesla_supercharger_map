@@ -2,8 +2,8 @@ requirejs.config(
     {
         inlineJSON: false,
         paths: {
-            text: 'lib/text', //text is required
-            json: 'lib/json' //alias to plugin
+            text: 'lib/text',
+            json: 'lib/json'
         }
     }
 );
