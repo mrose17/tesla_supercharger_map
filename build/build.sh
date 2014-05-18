@@ -22,10 +22,10 @@ then
 fi
 
 # CSS
-$NODE_CMD r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
+${NODE_CMD} r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
 
 # JS
-$NODE_CMD r.js -o build.js
+${NODE_CMD} r.js -o build.js
 
 
 cp -R ${DIR_PROJECT}/fonts ${DIR_BUILT}
