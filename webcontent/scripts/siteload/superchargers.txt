@@ -74,9 +74,10 @@ zip: 85337
 country: USA
 gps: 32.943969, -112.733506
 elevation: 221
-url: http://www.teslamotorsclub.com/showthread.php/26077-Supercharger-Gila-Bend-AZ
+url: http://www.teslamotors.com/supercharger/gilabend
 urlDiscuss: http://www.teslamotorsclub.com/showthread.php/26077-Supercharger-Gila-Bend-AZ
-status: CONSTRUCTION
+dateOpened: 2015-05-18
+numStalls: 8
 #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 name: Holbrook, AZ
 street: 2096 Navajo Blvd
@@ -1421,7 +1422,7 @@ elevation: 190
 url: http://www.teslamotors.com/supercharger/vienna
 urlDiscuss: http://tff-forum.de/viewtopic.php?f=55&t=3101
 dateOpened: 2014-04-30
-numStalls: 2
+numStalls: 4
 #-----------------------------------------------------------------------------------------------------------------------------| GERMANY
 name: Aichstetten, Germany
 street: Am Waizenhof 12 (Autohof)
