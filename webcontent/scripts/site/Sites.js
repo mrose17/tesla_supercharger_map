@@ -1,4 +1,4 @@
-define(['util/Asserts', 'site/Supercharger', 'json!http://localhost:8080/supercharge/allSites'], function (Asserts, Supercharger, SiteList) {
+define(['util/Asserts', 'site/Supercharger', 'json!http://supercharge.info/service/supercharge/allSites'], function (Asserts, Supercharger, SiteList) {
 
     var Sites = {};
 
