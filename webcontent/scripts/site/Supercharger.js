@@ -19,6 +19,22 @@ define(['site/Address', 'site/SiteStatus', 'util/Objects', 'util/Dates', 'util/U
             this.status = Status.OPEN;
         };
 
+        Supercharger.fromJSON = function (jsonObject) {
+            var supercharger = new Supercharger();
+            supercharger.id = jsonObject.id;
+            supercharger.displayName = jsonObject.name;
+            supercharger.status = Status.fromString(jsonObject.status);
+            supercharger.address = Address.fromJSON(jsonObject.address);
+            supercharger.location = new google.maps.LatLng(jsonObject.gps.latitude, jsonObject.gps.longitude);
+            supercharger.elevation = jsonObject.elevationMeters;
+            supercharger.url = jsonObject.url;
+            supercharger.urlDiscuss = jsonObject.urlDiscuss;
+            supercharger.count = jsonObject.counted;
+            supercharger.dateOpened = Objects.isNullOrUndef(jsonObject.dateOpened) ? null : Dates.fromString(jsonObject.dateOpened);
+            supercharger.numStalls = jsonObject.stallCount;
+            return supercharger;
+        };
+
         Supercharger.buildNewCustom = function (id, displayName, location) {
             var supercharger = new Supercharger();
             supercharger.id = id;

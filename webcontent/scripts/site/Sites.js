@@ -1,8 +1,12 @@
-define(['util/Asserts', 'site/Supercharger', 'siteload/SiteTransform'], function (Asserts, Supercharger, SiteList) {
+define(['util/Asserts', 'site/Supercharger', 'json!http://localhost:8080/supercharge/allSites'], function (Asserts, Supercharger, SiteList) {
 
     var Sites = {};
 
-    Sites.LIST = SiteList;
+    Sites.LIST = [];
+
+    jQuery.each(SiteList, function (index, site) {
+        Sites.LIST.push(Supercharger.fromJSON(site));
+    });
 
     Sites.getById = function (id) {
         Asserts.isInteger(id, "id must be an integer");
