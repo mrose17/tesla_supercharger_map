@@ -138,6 +138,16 @@ var look = function(range, callback) {
   });
   routes = underscore.sortBy(routes, function(route) { return route.distance; });
   if (routes.length > 3) routes = routes.slice(0, 3);
+  underscore.each(routes, function(route) {
+    var path = [];
+    underscore.each(route.path, function(point) {
+      var site = sites[point];
+
+      if (!!site) point += ' (' + site.name + ')';
+      path.push(point);
+    });
+    route.path = path;
+  });
 
   underscore.each(underscore.keys(tails), function(point) {
     var gps1, gps2;
