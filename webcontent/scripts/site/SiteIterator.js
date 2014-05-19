@@ -1,4 +1,4 @@
-define(['util/Objects', 'siteload/SiteTransform', 'site/SitePredicates', 'site/SiteSorting'], function (Objects, SiteList, SitePredicates, SiteSorting) {
+define(['util/Objects', 'site/Sites', 'site/SitePredicates', 'site/SiteSorting'], function (Objects, Sites, SitePredicates, SiteSorting) {
 
     /**
      *
@@ -21,15 +21,15 @@ define(['util/Objects', 'siteload/SiteTransform', 'site/SitePredicates', 'site/S
 
 
     SiteIterator.prototype.iterate = function (applyFunction) {
-        var LENGTH = SiteList.length,
+        var LENGTH = Sites.LIST.length,
             i = 0;
 
         if (this.sortFunction !== null) {
-            SiteList.sort(this.sortFunction);
+            Sites.LIST.sort(this.sortFunction);
         }
 
         for (; i < LENGTH; i++) {
-            var site = SiteList[i];
+            var site = Sites.LIST[i];
             if (this.predicates.length === 0 || this.predicatesApply(site)) {
                 applyFunction(site);
             }
