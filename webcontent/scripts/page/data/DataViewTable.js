@@ -1,5 +1,5 @@
-define(['util/Objects', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredicates', 'util/Dates', 'util/Units', 'lib/stupidtable' ],
-    function (Objects, SiteIterator, SiteSorting, SitePredicates, Dates, Units) {
+define(['util/Objects', 'util/Strings', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredicates', 'util/Dates', 'util/Units', 'lib/stupidtable' ],
+    function (Objects, Strings, SiteIterator, SiteSorting, SitePredicates, Dates, Units) {
 
         /**
          * Constructor
@@ -24,14 +24,15 @@ define(['util/Objects', 'site/SiteIterator', 'site/SiteSorting', 'site/SitePredi
                 .withSort(SiteSorting.BY_OPENED_DATE_DESC)
                 .iterate(
                 function (supercharger) {
+                    var address = supercharger.address;
                     tableBodyData.append("" +
                             "<tr>" +
                             "<td>" + supercharger.displayName + "</td>" +
-                            "<td>" + supercharger.address.street + "</td>" +
-                            "<td>" + supercharger.address.city + "</td>" +
-                            "<td>" + supercharger.address.state + "</td>" +
-                            "<td>" + supercharger.address.zip + "</td>" +
-                            "<td>" + supercharger.address.country + "</td>" +
+                            "<td>" + address.street + "</td>" +
+                            "<td>" + address.city + "</td>" +
+                            "<td>" + Strings.emptyIfNull(address.state) + "</td>" +
+                            "<td>" + Strings.emptyIfNull(address.zip) + "</td>" +
+                            "<td>" + address.country + "</td>" +
                             "<td>" + supercharger.formatStalls() + "</td>" +
                             "<td class='gps'>" + supercharger.formatLocation() + "</td>" +
                             "<td class='gps number'>" + supercharger.formatElevationNoUnits(Units.M) + "</td>" +
