@@ -22,10 +22,10 @@ then
 fi
 
 # CSS
-$NODE_CMD r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
+${NODE_CMD} r.js -o cssIn=${DIR_PROJECT}/css/main.css out=${DIR_BUILT}/css/main.css
 
 # JS
-$NODE_CMD r.js -o build.js
+${NODE_CMD} r.js -o build.js
 
 
 cp -R ${DIR_PROJECT}/fonts ${DIR_BUILT}
@@ -39,14 +39,3 @@ cp ${DIR_PROJECT}/scripts/require.js ${DIR_BUILT}/scripts
 #
 sed -i "s/\${build.timestamp}/${BUILD_TIMESTAMP}/g" ${DIR_BUILT}/version.json
 sed -i "s/\${project.version}/${PROJECT_VERSION}/g" ${DIR_BUILT}/version.json
-
-
-#
-# change log
-#
-TEMP_FILE=/tmp/newlog.txt
-
-git log --grep='@changeLog' --pretty=format:'%cd || %s' --date=local --since 'Mon May 5 18:38:00 2014 -0600' | sed 's/ [0-9]*:[0-9]*:[0-9]*//' > ${TEMP_FILE}
-printf "\n" >> ${TEMP_FILE}
-cat ${TEMP_FILE} ${FILE_CHANGE_LOG} > ${FILE_CHANGE_LOG}.tmp
-mv ${FILE_CHANGE_LOG}.tmp ${FILE_CHANGE_LOG}

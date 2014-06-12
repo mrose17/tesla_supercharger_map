@@ -12,6 +12,15 @@ define(function () {
             this.country = country;
         };
 
+        Address.fromJSON = function (jsonObject) {
+            return new Address(
+                jsonObject.street,
+                jsonObject.city,
+                jsonObject.state,
+                jsonObject.zip,
+                jsonObject.country);
+        };
+
         Address.prototype.isUSA = function () {
             return this.country === "USA";
         };

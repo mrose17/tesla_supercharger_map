@@ -1,4 +1,4 @@
-define([], function () {
+define(['common/ServiceURL'], function (ServiceURL) {
     /**
      *
      * @constructor
@@ -20,11 +20,11 @@ define([], function () {
     };
 
     AboutPage.prototype.loadVersionInfo = function () {
-        jQuery.getJSON("version.json", jQuery.proxy(this.insertVersionInfo, this));
+        jQuery.getJSON(ServiceURL.DB_INFO, jQuery.proxy(this.insertVersionInfo, this));
     };
 
-    AboutPage.prototype.insertVersionInfo = function (data) {
-        this.versionContainer.append("<b>Last Updated: </b>" + data.buildTimestamp);
+    AboutPage.prototype.insertVersionInfo = function (databaseInfo) {
+        this.versionContainer.append("<b>Last Updated: </b>" + databaseInfo.lastModifiedString);
     };
 
     AboutPage.prototype.insertEmailAddress = function (data) {
